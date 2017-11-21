@@ -178,15 +178,20 @@ sources = [
 qxorm_inc = include_directories('include')
 
 
-qxorm_eprocessed = qt.preprocess(
+qxorm_preprocessed = qt.preprocess(
       moc_headers : ['include/QxModelView/IxModel.h',
                      'include/QxDao/QxDaoAsync.h']
       )
 
-qxorm_lib = library('QxOrm',sources,qxorm_eprocessed,
+qxorm_lib = library('QxOrm',sources,qxorm_preprocessed,
 	include_directories : qxorm_inc,
 	dependencies : [qt5core, qt5sql]
 )
+
+qxorm_dep = declare_dependency(link_with : qxorm_lib,
+	                                include_directories : qxorm_inc,
+	                                dependencies : [qt5core, qt5sql])
+
 pkg.generate(libraries : qxorm_lib,
              subdirs : 'include',
              version : '1.4.4',
