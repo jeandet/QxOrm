@@ -600,6 +600,11 @@ target_compile_definitions(QxOrm PRIVATE -D_QX_BUILDING_QX_ORM)
 
 target_link_libraries(QxOrm ${QX_LIBRARIES})
 
+target_include_directories(QxOrm PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+    )
+
 set_target_properties(QxOrm PROPERTIES
                       ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib"
                       LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib"
