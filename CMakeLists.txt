@@ -627,6 +627,13 @@ set_target_properties(QxOrm PROPERTIES
 qx_auto_source_group("${QX_SRCS};${QX_HEADERS};${QX_INLS}")
 
 # Define CMAKE_INSTALL_PREFIX variable to put the location where to copy all files
-install(TARGETS QxOrm DESTINATION lib)
-install(DIRECTORY ./include/ DESTINATION include)
-install(DIRECTORY ./inl/ DESTINATION inl)
+
+install(TARGETS QxOrm EXPORT QxOrmConfig
+	    ARCHIVE  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	    LIBRARY  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+	    RUNTIME  DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+
+install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(EXPORT QxOrmConfig DESTINATION share/QxOrm/cmake)
+export(TARGETS QxOrm FILE QxOrmConfig.cmake)
