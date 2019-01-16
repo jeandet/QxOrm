@@ -13,6 +13,9 @@ qt5core = dependency('qt5', modules : 'Core')
 qt5sql = dependency('qt5', modules : 'Sql')
 qt5test = dependency('qt5', modules : 'Test')
 qt5gui = dependency('qt5', modules : 'Gui', required: gui)
+qt5quick =  dependency('qt5', modules : 'Quick')
+qt5widgets =  dependency('qt5', modules : 'Widgets')
+qt5qml =  dependency('qt5', modules : 'Qml')
 
 
 if gui ==  true
@@ -185,7 +188,8 @@ qxorm_preprocessed = qt.preprocess(
 
 qxorm_lib = library('QxOrm',sources,qxorm_preprocessed,
 	include_directories : qxorm_inc,
-	dependencies : [qt5core, qt5sql]
+	dependencies : [qt5core, qt5sql],
+        install: true
 )
 
 qxorm_dep = declare_dependency(link_with : qxorm_lib,
@@ -198,3 +202,6 @@ pkg.generate(libraries : qxorm_lib,
              name : 'libQxOrm',
              filebase : 'QxOrm',
              description : 'QxOrm Library.')
+
+subdir('test')
+
