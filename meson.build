@@ -13,9 +13,6 @@ qt5core = dependency('qt5', modules : 'Core')
 qt5sql = dependency('qt5', modules : 'Sql')
 qt5test = dependency('qt5', modules : 'Test')
 qt5gui = dependency('qt5', modules : 'Gui', required: gui)
-qt5quick =  dependency('qt5', modules : 'Quick')
-qt5widgets =  dependency('qt5', modules : 'Widgets')
-qt5qml =  dependency('qt5', modules : 'Qml')
 
 
 if gui ==  true
@@ -202,6 +199,4 @@ pkg.generate(libraries : qxorm_lib,
              name : 'libQxOrm',
              filebase : 'QxOrm',
              description : 'QxOrm Library.')
-
-subdir('test')
 
