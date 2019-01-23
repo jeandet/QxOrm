@@ -1,5 +1,5 @@
-project('QxOrm', 'cpp',default_options : ['cpp_std=c++11'])
-add_project_arguments(['-D_QX_BUILDING_QX_ORM','-D_QX_MODE_RELEASE', '-D_QX_BUILDING_QX_ORM'],language: 'cpp')
+project('QxOrm', 'cpp',default_options : ['cpp_std=c++14'])
+add_project_arguments(['-D_QX_BUILDING_QX_ORM', '-D_QX_MODE_RELEASE', '-D_QX_NO_PRECOMPILED_HEADER'],language: 'cpp')
 
 gui = get_option('qt_gui')
 network = get_option('qt_network')
@@ -63,6 +63,7 @@ sources = [
 'src/QxDao/QxSession.cpp',
 'src/QxDao/IxDao_Helper.cpp',
 'src/QxDao/IxPersistable.cpp',
+'src/QxDao/IxPersistableCollection.cpp',
 'src/QxDao/QxSqlRelationLinked.cpp',
 'src/QxDao/QxDaoAsync.cpp',
 'src/QxDao/QxSqlRelationParams.cpp',
@@ -92,6 +93,7 @@ sources = [
 
 'src/QxDao/QxRepository/IxRepository.cpp',
 'src/QxDao/QxRepository/QxRepositoryX.cpp',
+'src/QxDao/QxMongoDB/QxMongoDB_Helper.cpp',
 
 'src/QxSerialize/QxSerializeCheckInstance.cpp',
 
@@ -180,6 +182,8 @@ qxorm_inc = include_directories('include')
 
 qxorm_preprocessed = qt.preprocess(
       moc_headers : ['include/QxModelView/IxModel.h',
+                     'include/QxService/QxThread.h',
+                     'include/QxService/QxThreadPool.h',
                      'include/QxDao/QxDaoAsync.h']
       )
 
@@ -195,7 +199,7 @@ qxorm_dep = declare_dependency(link_with : qxorm_lib,
 
 pkg.generate(libraries : qxorm_lib,
              subdirs : 'include',
-             version : '1.4.4',
+             version : '1.4.5',
              name : 'libQxOrm',
              filebase : 'QxOrm',
              description : 'QxOrm Library.')
