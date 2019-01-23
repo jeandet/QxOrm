@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -192,6 +192,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>clearAllDatabases()
 : <a class="el" href="classqx_1_1_qx_sql_database.html#a5f4b4ca77d1c6012dc3ff1f350d116ee">qx::QxSqlDatabase</a>
 </li>
+<li>clearAllSettingsForCurrentThread()
+: <a class="el" href="classqx_1_1_qx_sql_database.html#a9138958e97c061db44f956bd9b446708">qx::QxSqlDatabase</a>
+</li>
+<li>clearAllSettingsForDatabase()
+: <a class="el" href="classqx_1_1_qx_sql_database.html#a1d5f2c180d02b95164e1361e8cdd5f5c">qx::QxSqlDatabase</a>
+</li>
+<li>clearCurrentDatabaseByThread()
+: <a class="el" href="classqx_1_1_qx_sql_database.html#afc015fd694c891e5d3f2cb29e5f373c0">qx::QxSqlDatabase</a>
+</li>
 <li>clearData()
 : <a class="el" href="classqx_1_1service_1_1_qx_thread.html#a1a0c569a39bdeaddc84f6f7cfd8b9791">qx::service::QxThread</a>
 </li>
@@ -274,11 +283,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1_qx_collection.html#ab8f0528865494102febab56031988a9a">qx::QxCollection&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1cache_1_1detail_1_1_qx_cache.html#ab067d9579be9aad05fc0eaac3b3c0d9d">qx::cache::detail::QxCache</a>
 , <a class="el" href="classqx_1_1_qx_repository.html#aaeaf116e22bb483dee412fa844688bfe">qx::QxRepository&lt; T &gt;</a>
-, <a class="el" href="classqx_1_1_qx_session.html#ab3574e71efb4a67aa844b24cb543334b">qx::QxSession</a>
+, <a class="el" href="classqx_1_1_qx_session.html#a47ba970a328f4bc8dd3759b9b9f98d74">qx::QxSession</a>
 , <a class="el" href="classqx_1_1_ix_data_member_x.html#a6426edb6b8c72ad9b595e463e34d5203">qx::IxDataMemberX</a>
-, <a class="el" href="classqx_1_1memory_1_1bool__array.html#ad4e9cdf7ed75e1cd07b2ad8c37fefee7">qx::memory::bool_array</a>
-, <a class="el" href="classqx_1_1_qx_invalid_value_x.html#a9149bdc4d76d0682d4bbe96f64cdfff8">qx::QxInvalidValueX</a>
 , <a class="el" href="classqx_1_1memory_1_1bool__array.html#a1d738999e6924ff92fe7f3202e236a72">qx::memory::bool_array</a>
+, <a class="el" href="classqx_1_1_qx_invalid_value_x.html#a9149bdc4d76d0682d4bbe96f64cdfff8">qx::QxInvalidValueX</a>
+, <a class="el" href="classqx_1_1_qx_session.html#ab3574e71efb4a67aa844b24cb543334b">qx::QxSession</a>
+, <a class="el" href="classqx_1_1memory_1_1bool__array.html#ad4e9cdf7ed75e1cd07b2ad8c37fefee7">qx::memory::bool_array</a>
 </li>
 <li>count_WithDaoStrategy()
 : <a class="el" href="classqx_1_1_ix_data_member_x.html#a18a059cb07e8fcfe57e8de65930f1eb4">qx::IxDataMemberX</a>
@@ -291,14 +301,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1_qx_property_bag.html#afca20059f17f5eb773919cb6ac28905e">qx::QxPropertyBag</a>
 </li>
 <li>create()
-: <a class="el" href="classqx_1_1_qx_class_x.html#aa0862876d51932ef9a3644ce6ff86eb9">qx::QxClassX</a>
-, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance.html#a7e81892f082c845f323b3a867fcca833">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; bIsAbstract, dummy &gt;</a>
-, <a class="el" href="classqx_1_1memory_1_1bool__array.html#a6e6e76b0a3916923a48ea30db0f7aa08">qx::memory::bool_array</a>
-, <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___generic.html#a753a28da2b6c16b315b6524d5002a87f">qx::model_view::detail::QxNestedModel_Generic&lt; T, M &gt;</a>
-, <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___container.html#ab8ee1a754e9dc64e0d492389f829ed8e">qx::model_view::detail::QxNestedModel_Container&lt; T, M &gt;</a>
+: <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model.html#a105a978407d3d33b6e7ccbd1d3e1376e">qx::model_view::detail::QxNestedModel&lt; T, M &gt;</a>
 , <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___ptr.html#a5ac4f4c8ed6a121e0888ccbb7dd0385a">qx::model_view::detail::QxNestedModel_Ptr&lt; T, M &gt;</a>
-, <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model.html#a105a978407d3d33b6e7ccbd1d3e1376e">qx::model_view::detail::QxNestedModel&lt; T, M &gt;</a>
-, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance_3_01true_00_01dummy_01_4.html#a45e93ecb729cb2b468f6c0326acd18a0">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; true, dummy &gt;</a>
+, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance.html#af4c0bfbfa630e3618e874b14658594ab">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; bIsAbstract, dummy &gt;</a>
+, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance_3_01true_00_01dummy_01_4.html#adeb27d70849ab38bb600158e7acc8859">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; true, dummy &gt;</a>
+, <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___container.html#ab8ee1a754e9dc64e0d492389f829ed8e">qx::model_view::detail::QxNestedModel_Container&lt; T, M &gt;</a>
+, <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___generic.html#a753a28da2b6c16b315b6524d5002a87f">qx::model_view::detail::QxNestedModel_Generic&lt; T, M &gt;</a>
+, <a class="el" href="classqx_1_1memory_1_1bool__array.html#a6e6e76b0a3916923a48ea30db0f7aa08">qx::memory::bool_array</a>
+, <a class="el" href="classqx_1_1_qx_class_x.html#aa0862876d51932ef9a3644ce6ff86eb9">qx::QxClassX</a>
 </li>
 <li>create_Helper()
 : <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___ptr.html#acdad6cca3344e17551c2ff3bc9309017">qx::model_view::detail::QxNestedModel_Ptr&lt; T, M &gt;</a>
@@ -306,56 +316,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>create_NullHelper()
 : <a class="el" href="structqx_1_1model__view_1_1detail_1_1_qx_nested_model___ptr.html#a86da812920b549d850c3af7b365b38be">qx::model_view::detail::QxNestedModel_Ptr&lt; T, M &gt;</a>
 </li>
-<li>createDatabase()
-: <a class="el" href="classqx_1_1_qx_sql_database.html#a89043b7052162cb1e39c730a34266a1d">qx::QxSqlDatabase</a>
-</li>
 <li>createExtraTable()
-: <a class="el" href="classqx_1_1_qx_sql_relation___many_to_many.html#a2e2b29edd1dc43c27884faac60ff478b">qx::QxSqlRelation_ManyToMany&lt; DataType, Owner &gt;</a>
+: <a class="el" href="classqx_1_1_ix_sql_relation.html#ac00591a4faa8fb09e60b1a3dbdf6108f">qx::IxSqlRelation</a>
+, <a class="el" href="classqx_1_1_qx_sql_relation___many_to_many.html#a2e2b29edd1dc43c27884faac60ff478b">qx::QxSqlRelation_ManyToMany&lt; DataType, Owner &gt;</a>
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6ec80753fc6f2a90a737cc3a6003bb40">qx::QxSqlRelation_OneToMany&lt; DataType, Owner &gt;</a>
-, <a class="el" href="classqx_1_1_qx_sql_relation___many_to_one.html#a00a35ce0b1e84114f3a0f2242c15e953">qx::QxSqlRelation_ManyToOne&lt; DataType, Owner &gt;</a>
-, <a class="el" href="classqx_1_1_ix_sql_relation.html#ac00591a4faa8fb09e60b1a3dbdf6108f">qx::IxSqlRelation</a>
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_one.html#a8b14c7c15f98ddf6380bc7d0f57b602a">qx::QxSqlRelation_OneToOne&lt; DataType, Owner &gt;</a>
+, <a class="el" href="classqx_1_1_qx_sql_relation___many_to_one.html#a00a35ce0b1e84114f3a0f2242c15e953">qx::QxSqlRelation_ManyToOne&lt; DataType, Owner &gt;</a>
 </li>
 <li>createExtraTable_ManyToMany()
 : <a class="el" href="classqx_1_1_ix_sql_relation.html#a5afd55f94812c9be5a034fb3f762fc3b">qx::IxSqlRelation</a>
 </li>
 <li>createInstance()
-: <a class="el" href="classqx_1_1_qx_factory_x.html#af9b04a4abe05555e9ca62ead8730f294">qx::QxFactoryX</a>
+: <a class="el" href="classqx_1_1_qx_factory_x.html#aae57b1c5abf045acff7160bb89329c2e">qx::QxFactoryX</a>
 </li>
 <li>createInstanceNudePtr()
 : <a class="el" href="classqx_1_1_qx_factory_x.html#acdf35e63f5c8f040d3ea6cac10bae5e2">qx::QxFactoryX</a>
 </li>
 <li>createItem()
-: <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__key__value__std__style.html#a9496917e2b557451ad0373d2b7343961">qx::trait::detail::generic_container_base_key_value_std_style&lt; Container, Key, Value &gt;</a>
-, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__multi__set.html#a0ca52daaef30906825acfbf7d02298f8">qx::trait::detail::generic_container_base_multi_set&lt; Container, Item &gt;</a>
-, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__key__value__multi__std__style.html#a7714badc2fab660e5be813a5f0bc324f">qx::trait::detail::generic_container_base_key_value_multi_std_style&lt; Container, Key, Value &gt;</a>
-, <a class="el" href="structqx_1_1trait_1_1generic__container_3_01qx_1_1_qx_collection_3_01_key_00_01_value_01_4_01_4.html#a15074e8682eea3e82836283fa840c417">qx::trait::generic_container&lt; qx::QxCollection&lt; Key, Value &gt; &gt;</a>
-, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__without__reserve.html#aa05089c972793fdff54003e8bdafddce">qx::trait::detail::generic_container_base_without_reserve&lt; Container, Item &gt;</a>
-, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__set.html#ae4483374be3abaeb51905fe220ad535b">qx::trait::detail::generic_container_base_set&lt; Container, Item &gt;</a>
+: <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__multi__set.html#a0ca52daaef30906825acfbf7d02298f8">qx::trait::detail::generic_container_base_multi_set&lt; Container, Item &gt;</a>
 , <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__key__value__qt__style.html#a26c91089853ab6dda1f4e279252409c2">qx::trait::detail::generic_container_base_key_value_qt_style&lt; Container, Key, Value &gt;</a>
-, <a class="el" href="classqx_1_1_qx_sql_relation.html#a394fcd53b79345d684d351fd00881eb1">qx::QxSqlRelation&lt; DataType, Owner &gt;</a>
+, <a class="el" href="structqx_1_1trait_1_1generic__container_3_01qx_1_1_qx_collection_3_01_key_00_01_value_01_4_01_4.html#a15074e8682eea3e82836283fa840c417">qx::trait::generic_container&lt; qx::QxCollection&lt; Key, Value &gt; &gt;</a>
 , <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base.html#a0ce0c648fb3019471dbf3e891468f2a9">qx::trait::detail::generic_container_base&lt; Container, Item &gt;</a>
+, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__key__value__std__style.html#a9496917e2b557451ad0373d2b7343961">qx::trait::detail::generic_container_base_key_value_std_style&lt; Container, Key, Value &gt;</a>
+, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__set.html#ae4483374be3abaeb51905fe220ad535b">qx::trait::detail::generic_container_base_set&lt; Container, Item &gt;</a>
+, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__key__value__multi__std__style.html#a7714badc2fab660e5be813a5f0bc324f">qx::trait::detail::generic_container_base_key_value_multi_std_style&lt; Container, Key, Value &gt;</a>
+, <a class="el" href="classqx_1_1_qx_sql_relation.html#a394fcd53b79345d684d351fd00881eb1">qx::QxSqlRelation&lt; DataType, Owner &gt;</a>
+, <a class="el" href="structqx_1_1trait_1_1detail_1_1generic__container__base__without__reserve.html#aa05089c972793fdff54003e8bdafddce">qx::trait::detail::generic_container_base_without_reserve&lt; Container, Item &gt;</a>
 </li>
 <li>createNudePtr()
-: <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance.html#ab6a921b8d1bd1b6c7059787fba42380c">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; bIsAbstract, dummy &gt;</a>
-, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance_3_01true_00_01dummy_01_4.html#a0e9bf133a8b237164c59c1d51c4ff5e0">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; true, dummy &gt;</a>
+: <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance_3_01true_00_01dummy_01_4.html#a0e9bf133a8b237164c59c1d51c4ff5e0">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; true, dummy &gt;</a>
+, <a class="el" href="structqx_1_1_qx_factory_1_1qx_create_instance.html#ab6a921b8d1bd1b6c7059787fba42380c">qx::QxFactory&lt; T &gt;::qxCreateInstance&lt; bIsAbstract, dummy &gt;</a>
 </li>
 <li>createObject()
-: <a class="el" href="classqx_1_1_qx_factory_x.html#ae7b5eb875c4e4f1925f66daf248ae9c6">qx::QxFactoryX</a>
-, <a class="el" href="classqx_1_1_ix_factory.html#aff124019b41acde194a1a3ac66f1241a">qx::IxFactory</a>
-, <a class="el" href="classqx_1_1_qx_factory.html#aac1bedf0ab47689e78500eae88813c39">qx::QxFactory&lt; T &gt;</a>
+: <a class="el" href="classqx_1_1_qx_factory_x.html#a489bb354e7ba38b48c47ab8850f64d4e">qx::QxFactoryX</a>
+, <a class="el" href="classqx_1_1_qx_factory.html#a9ff66b54c277a703d6dee0874da1743c">qx::QxFactory&lt; T &gt;</a>
+, <a class="el" href="classqx_1_1_ix_factory.html#a1bf403f455edff812d608137ce318c36">qx::IxFactory</a>
 </li>
 <li>createObjectNudePtr()
-: <a class="el" href="classqx_1_1_ix_factory.html#a633004a534c460ecf85b315ea64f3856">qx::IxFactory</a>
+: <a class="el" href="classqx_1_1_qx_factory.html#a7e36ecf1e0632ebcf1a0c618463844a9">qx::QxFactory&lt; T &gt;</a>
+, <a class="el" href="classqx_1_1_ix_factory.html#a633004a534c460ecf85b315ea64f3856">qx::IxFactory</a>
 , <a class="el" href="classqx_1_1_qx_factory_x.html#af320f30affff505d682f48a54b11ddd9">qx::QxFactoryX</a>
-, <a class="el" href="classqx_1_1_qx_factory.html#a7e36ecf1e0632ebcf1a0c618463844a9">qx::QxFactory&lt; T &gt;</a>
 </li>
 <li>createTable()
-: <a class="el" href="classqx_1_1_qx_sql_relation___one_to_one.html#adf17cbd38a84bddf81f2068ca3fe0142">qx::QxSqlRelation_OneToOne&lt; DataType, Owner &gt;</a>
-, <a class="el" href="classqx_1_1_ix_sql_relation.html#a2a7d3f37758642b7d95005b9dac8c6db">qx::IxSqlRelation</a>
-, <a class="el" href="classqx_1_1_qx_sql_relation___many_to_many.html#a9dcd1a1ef60b0c7d0e5b7ed7aae0dea3">qx::QxSqlRelation_ManyToMany&lt; DataType, Owner &gt;</a>
-, <a class="el" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6164efb46cd614351da2f36710c18fdc">qx::QxSqlRelation_OneToMany&lt; DataType, Owner &gt;</a>
+: <a class="el" href="classqx_1_1_qx_sql_relation___many_to_many.html#a9dcd1a1ef60b0c7d0e5b7ed7aae0dea3">qx::QxSqlRelation_ManyToMany&lt; DataType, Owner &gt;</a>
 , <a class="el" href="classqx_1_1_qx_sql_relation___many_to_one.html#aa2f436c208d0f3b8ae20a828ce0f9599">qx::QxSqlRelation_ManyToOne&lt; DataType, Owner &gt;</a>
+, <a class="el" href="classqx_1_1_qx_sql_relation___one_to_one.html#adf17cbd38a84bddf81f2068ca3fe0142">qx::QxSqlRelation_OneToOne&lt; DataType, Owner &gt;</a>
+, <a class="el" href="classqx_1_1_ix_sql_relation.html#a2a7d3f37758642b7d95005b9dac8c6db">qx::IxSqlRelation</a>
+, <a class="el" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6164efb46cd614351da2f36710c18fdc">qx::QxSqlRelation_OneToMany&lt; DataType, Owner &gt;</a>
 </li>
 <li>createTable_ManyToOne()
 : <a class="el" href="classqx_1_1_ix_sql_relation.html#a23e7c323cbc83f42480bab043699cc0a">qx::IxSqlRelation</a>
@@ -386,7 +393,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:20 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:24 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

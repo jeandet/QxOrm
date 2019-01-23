@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -102,7 +102,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a>  </div>
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">eos::portable_iarchive Class Reference</div>  </div>
 </div>
@@ -120,36 +121,42 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr><td class="memTemplItemLeft" align="right" valign="top">boost::disable_if<br class="typebreak"/>
-&lt; boost::is_arithmetic&lt; T &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a631092f514c8ab02978c0a01f95cb131">load</a> (T &amp;t, <a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 1 &gt;=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Default fall through for non-arithmetic types (ie. strings)  <a href="#a631092f514c8ab02978c0a01f95cb131"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a61fe6428b7fa845c152bfd1c45c9665e">portable_iarchive</a> (std::istream &amp;is, unsigned flags=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor on a stream using ios::binary mode!  <a href="#a61fe6428b7fa845c152bfd1c45c9665e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#ac0c195d4ab890e7ecfc7d72719b1abff">load</a> (std::string &amp;s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load narrow strings.  <a href="#ac0c195d4ab890e7ecfc7d72719b1abff"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a200055573ddc1b1eff27028d5efc6a50">load</a> (std::wstring &amp;s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load wide strings.  <a href="#a200055573ddc1b1eff27028d5efc6a50"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a4067389ec38e5b69c49dbd2314c07085">load</a> (bool &amp;b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading bool type.  <a href="#a4067389ec38e5b69c49dbd2314c07085"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">boost::enable_if<br class="typebreak"/>
-&lt; std::is_integral&lt; T &gt;<br class="typebreak"/>
- &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a069cd4c8654dda2e7611794685235afd">load</a> (T &amp;t, <a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 2 &gt;=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load integer types.  <a href="#a069cd4c8654dda2e7611794685235afd"></a><br/></td></tr>
+&lt; boost::is_integral&lt; T &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#ae4a8d09c896094b29de77b1ea419d399">load</a> (T &amp;t, <a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 2 &gt;=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load integer types.  <a href="#ae4a8d09c896094b29de77b1ea419d399"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">boost::enable_if<br class="typebreak"/>
 &lt; boost::is_floating_point&lt; T &gt;<br class="typebreak"/>
  &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a2cc32b4f86f4fcba5c0481ada47f4505">load</a> (T &amp;t, <a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 3 &gt;=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Load floating point types.  <a href="#a2cc32b4f86f4fcba5c0481ada47f4505"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a61fe6428b7fa845c152bfd1c45c9665e">portable_iarchive</a> (std::istream &amp;is, unsigned flags=0)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">always construct on a stream using ios::binary mode!  <a href="#a61fe6428b7fa845c152bfd1c45c9665e"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">boost::disable_if<br class="typebreak"/>
+&lt; boost::is_arithmetic&lt; T &gt;<br class="typebreak"/>
+ &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a570dd9f5d56b5fb741753d58fee77195">load</a> (T &amp;t, <a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 4 &gt;=0)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">signed char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#ad3ee71758c04224aeb8d174468b95ef4">load_signed_char</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a045fce67f8a76cd34a82686554e2cddc">init</a> (unsigned flags)</td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Friends</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeos_1_1portable__iarchive.html#a80e8142015e4de3d31409eb708ec841c">boost::archive::basic_binary_iarchive&lt; portable_iarchive &gt;</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Portable binary input archive using little endian format. </p>
 <p>This archive addresses integer size, endianness and floating point types so that data can be transferred across different systems. There may still be constraints as to what systems are compatible and the user will have to take care that e.g. a very large int being saved on a 64 bit machine will result in a <a class="el" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a> if loaded into an int on a 32 bit system. A possible workaround to this would be to use fixed types like boost::uint64_t in your serialization structures.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>The class is based on the portable binary example by Robert Ramey and uses Beman Dawes endian library plus fp_utilities by Johan Rade.</dd>
-<dd>
-Robert Ramey changed his example in boost 1.36 and no longer inherits from binary_iarchive_impl but goes down to basic_binary_iprimitive!? </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The class is based on the portable binary example by Robert Ramey and uses Beman Dawes endian library plus fp_utilities by Johan Rade. </dd></dl>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00152">152</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00187">187</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a61fe6428b7fa845c152bfd1c45c9665e"></a><!-- doxytag: member="eos::portable_iarchive::portable_iarchive" ref="a61fe6428b7fa845c152bfd1c45c9665e" args="(std::istream &amp;is, unsigned flags=0)" -->
 <div class="memitem">
@@ -176,43 +183,75 @@ Robert Ramey changed his example in boost 1.36 and no longer inherits from binar
 </div>
 <div class="memdoc">
 
-<p>always construct on a stream using ios::binary mode! </p>
+<p>Constructor on a stream using ios::binary mode! </p>
+<p>We cannot call basic_binary_iprimitive::init which tries to detect if the binary archive stems from a different platform by examining type sizes.</p>
+<p>We could have called basic_binary_iarchive::init which would create the <a class="el" href="namespaceboost_1_1serialization.html">boost::serialization</a> standard archive header containing also the library version. Due to efficiency we stick with our own. </p>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00278">278</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00254">254</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a631092f514c8ab02978c0a01f95cb131"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="a631092f514c8ab02978c0a01f95cb131" args="(T &amp;t, dummy&lt; 1 &gt;=0)" -->
+<a class="anchor" id="a045fce67f8a76cd34a82686554e2cddc"></a><!-- doxytag: member="eos::portable_iarchive::init" ref="a045fce67f8a76cd34a82686554e2cddc" args="(unsigned flags)" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::disable_if&lt;boost::is_arithmetic&lt;T&gt; &gt;::type eos::portable_iarchive::load </td>
+          <td class="memname">void eos::portable_iarchive::init </td>
           <td>(</td>
-          <td class="paramtype">T &amp;&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 1 &gt;&#160;</td>
-          <td class="paramname"> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td><code> [inline, private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Default fall through for non-arithmetic types (ie. strings) </p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00214">214</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00175">175</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+</div>
+</div>
+<a class="anchor" id="ac0c195d4ab890e7ecfc7d72719b1abff"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="ac0c195d4ab890e7ecfc7d72719b1abff" args="(std::string &amp;s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eos::portable_iarchive::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Load narrow strings. </p>
+
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00275">275</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a200055573ddc1b1eff27028d5efc6a50"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="a200055573ddc1b1eff27028d5efc6a50" args="(std::wstring &amp;s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eos::portable_iarchive::load </td>
+          <td>(</td>
+          <td class="paramtype">std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Load wide strings. </p>
+<p>This is rather tricky to get right for true portability as there are so many different character encodings around. However, wide strings that are encoded in one of the Unicode schemes only need to be _transcoded_ which is a lot easier actually.</p>
+<p>We generate the output string to be encoded in the system's native format, ie. UTF-16 on Windows and UTF-32 on Linux machines. Don't know about Mac here so I can't really say about that. </p>
+
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00293">293</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
@@ -230,20 +269,23 @@ template&lt;class T &gt; </div>
       </table>
 </div>
 <div class="memdoc">
-<p>Special case loading bool type, preserving compatibility to integer types - this is somewhat redundant but simply treating bool as integer type generates lots of warnings </p>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00183">183</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Loading bool type. </p>
+<p>Byte pattern is same as with integer types, so this function is somewhat redundant but treating bool as integer generates a lot of compiler warnings.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>If you cannot compile your application and it says something about load(bool) cannot convert your type A&amp; into bool&amp; then you should check your BOOST_CLASS_IMPLEMENTATION setting for A, as portable_archive is not able to handle custom primitive types in a general manner. </dd></dl>
+
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00314">314</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a069cd4c8654dda2e7611794685235afd"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="a069cd4c8654dda2e7611794685235afd" args="(T &amp;t, dummy&lt; 2 &gt;=0)" -->
+<a class="anchor" id="ae4a8d09c896094b29de77b1ea419d399"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="ae4a8d09c896094b29de77b1ea419d399" args="(T &amp;t, dummy&lt; 2 &gt;=0)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::enable_if&lt;std::is_integral&lt;T&gt; &gt;::type eos::portable_iarchive::load </td>
+          <td class="memname">boost::enable_if&lt;boost::is_integral&lt;T&gt; &gt;::type eos::portable_iarchive::load </td>
           <td>(</td>
           <td class="paramtype">T &amp;&#160;</td>
           <td class="paramname"><em>t</em>, </td>
@@ -266,7 +308,7 @@ template&lt;typename T &gt; </div>
 <p>Load integer types. </p>
 <p>First we load the size information ie. the number of bytes that hold the actual data. Then we retrieve the data and transform it to the original value by using load_little_endian. </p>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00202">202</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00333">333</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
@@ -298,13 +340,43 @@ template&lt;typename T &gt; </div>
 <div class="memdoc">
 
 <p>Load floating point types. </p>
-<p>We simply rely on fp_traits to set the bit pattern from the (unsigned) integral type that was stored in the stream.</p>
+<p>We simply rely on fp_traits to set the bit pattern from the (unsigned) integral type that was stored in the stream. Francois Mauger provided standardized behaviour for special values like inf and NaN, that need to be serialized in his application.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>by Johan Rade (author of the floating point utilities library): Be warned that the math::detail::fp_traits&lt;T&gt;::type::get_bits() function is *not* guaranteed to give you all bits of the floating point number. It will give you all bits if and only if there is an integer type that has the same size as the floating point you are copying from. It will not give you all bits for double if there is no uint64_t. It will not give you all bits for long double if sizeof(long double) &gt; 8 or there is no uint64_t.</dd></dl>
 <p>The member fp_traits&lt;T&gt;::type::coverage will tell you whether all bits are copied. This is a typedef for either math::detail::all_bits or math::detail::not_all_bits.</p>
-<p>If the function does not copy all bits, then it will copy the most significant bits. So if you serialize and deserialize the way you describe, and fp_traits&lt;T&gt;::type::coverage is math::detail::not_all_bits, then your floating point numbers will be truncated. This will introduce small rounding off errors.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>treat nan values using fpclassify </dd></dl>
+<p>If the function does not copy all bits, then it will copy the most significant bits. So if you serialize and deserialize the way you describe, and fp_traits&lt;T&gt;::type::coverage is math::detail::not_all_bits, then your floating point numbers will be truncated. This will introduce small rounding off errors. </p>
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00253">253</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00387">387</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a570dd9f5d56b5fb741753d58fee77195"></a><!-- doxytag: member="eos::portable_iarchive::load" ref="a570dd9f5d56b5fb741753d58fee77195" args="(T &amp;t, dummy&lt; 4 &gt;=0)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::disable_if&lt;boost::is_arithmetic&lt;T&gt; &gt;::type eos::portable_iarchive::load </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structeos_1_1portable__iarchive_1_1dummy.html">dummy</a>&lt; 4 &gt;&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00420">420</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +394,23 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00163">163</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00206">206</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" id="a80e8142015e4de3d31409eb708ec841c"></a><!-- doxytag: member="eos::portable_iarchive::boost::archive::basic_binary_iarchive&lt; portable_iarchive &gt;" ref="a80e8142015e4de3d31409eb708ec841c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class boost::archive::basic_binary_iarchive&lt; <a class="el" href="classeos_1_1portable__iarchive.html">portable_iarchive</a> &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00199">199</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +438,7 @@ template&lt;typename T &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:20 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:24 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

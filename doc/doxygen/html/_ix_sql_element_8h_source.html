@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_ix_sql_element_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -192,14 +192,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00100"></a><a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html">00100</a> <span class="keyword">class </span><a class="code" href="_qx_macro_8h.html#aa569abe24f343fdc4ad5e12e156ba8a2">QX_DLL_EXPORT</a> <a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">IxSqlElement</a>
 <a name="l00101"></a>00101 {
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103    <span class="keyword">friend</span> QDataStream &amp; ::operator&lt;&lt; (QDataStream &amp; stream, <span class="keyword">const</span> <a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">qx::dao::detail::IxSqlElement</a> &amp; t);
-<a name="l00104"></a>00104    <span class="keyword">friend</span> QDataStream &amp; ::operator&gt;&gt; (QDataStream &amp; stream, <a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">qx::dao::detail::IxSqlElement</a> &amp; t);
+<a name="l00103"></a>00103    <span class="keyword">friend</span> <a class="code" href="_qx_macro_8h.html#aa569abe24f343fdc4ad5e12e156ba8a2">QX_DLL_EXPORT</a> QDataStream &amp; ::operator&lt;&lt; (QDataStream &amp; stream, <span class="keyword">const</span> <a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">qx::dao::detail::IxSqlElement</a> &amp; t);
+<a name="l00104"></a>00104    <span class="keyword">friend</span> <a class="code" href="_qx_macro_8h.html#aa569abe24f343fdc4ad5e12e156ba8a2">QX_DLL_EXPORT</a> QDataStream &amp; ::operator&gt;&gt; (QDataStream &amp; stream, <a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">qx::dao::detail::IxSqlElement</a> &amp; t);
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106 <span class="preprocessor">#ifndef _QX_NO_JSON</span>
 <a name="l00107"></a><a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#af0edc1765dd2d2d4d4fcc5094acc897b">00107</a> <span class="preprocessor"></span>   <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="structqx_1_1cvt_1_1detail_1_1_qx_convert___to_json.html">qx::cvt::detail::QxConvert_ToJson</a>&lt; qx::dao::detail::<a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html" title="qx::dao::detail::IxSqlElement : common interface for all SQL elements to build SQL query...">IxSqlElement</a> &gt;;
 <a name="l00108"></a><a class="code" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#a0ce856b5b8217dfab1a13df7cb22757f">00108</a>    friend struct qx::cvt::detail::QxConvert_FromJson&lt; qx::dao::detail::IxSqlElement &gt;;
-<a name="l00109"></a>00109    friend QJsonValue qx::cvt::detail::<a class="code" href="namespaceqx_1_1cvt_1_1detail.html#a7741b3207911972ea7ac1ea9e3a6099d">QxConvert_ToJson_Helper</a>(const qx::dao::detail::IxSqlElement &amp; t, const QString &amp; format);
-<a name="l00110"></a>00110    friend <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> qx::cvt::detail::<a class="code" href="namespaceqx_1_1cvt_1_1detail.html#aba3a941ddc8ac3c611c598cb8de94b11">QxConvert_FromJson_Helper</a>(const QJsonValue &amp; j, qx::dao::detail::IxSqlElement &amp; t, const QString &amp; format);
+<a name="l00109"></a>00109    friend <a class="code" href="_qx_macro_8h.html#aa569abe24f343fdc4ad5e12e156ba8a2">QX_DLL_EXPORT</a> QJsonValue qx::cvt::detail::<a class="code" href="namespaceqx_1_1cvt_1_1detail.html#a7741b3207911972ea7ac1ea9e3a6099d">QxConvert_ToJson_Helper</a>(const qx::dao::detail::IxSqlElement &amp; t, const QString &amp; format);
+<a name="l00110"></a>00110    friend <a class="code" href="_qx_macro_8h.html#aa569abe24f343fdc4ad5e12e156ba8a2">QX_DLL_EXPORT</a> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> qx::cvt::detail::<a class="code" href="namespaceqx_1_1cvt_1_1detail.html#aba3a941ddc8ac3c611c598cb8de94b11">QxConvert_FromJson_Helper</a>(const QJsonValue &amp; j, qx::dao::detail::IxSqlElement &amp; t, const QString &amp; format);
 <a name="l00111"></a>00111 <span class="preprocessor">#endif // _QX_NO_JSON</span>
 <a name="l00112"></a>00112 <span class="preprocessor"></span>
 <a name="l00113"></a>00113 <span class="keyword">public</span>:
@@ -298,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:13 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

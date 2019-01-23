@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -47,10 +47,6 @@
 #include <QxTraits/remove_attr.h>
 #include <QxTraits/remove_smart_ptr.h>
 #include <QxTraits/construct_ptr.h>
-
-#include  <unordered_map>
-#include <unordered_set>
-#include <set>
 
 namespace qx {
 namespace trait {

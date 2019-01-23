@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -99,8 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Defines</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">QxSqlDatabase.h File Reference<div class="ingroups"><a class="el" href="group___qx_dao.html">QxDao : QxOrm library database communication used by persistence engine (ORM - Object Relational Mapping)</a></div></div>  </div>
 </div>
@@ -129,41 +128,19 @@ Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceqx.html">qx</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Root namespace for all QxOrm library features. </p>
 <br/></td></tr>
-<tr><td colspan="2"><h2><a name="define-members"></a>
-Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_qx_sql_database_8h.html#aaa6110705c3cd6cf64c510dd939f927c">QX_CONSTRUCT_QX_SQL_DATABASE</a>()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceqx_1_1dao.html">qx::dao</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Database communication used by persistence engine (ORM - Object Relational Mapping) </p>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceqx_1_1dao_1_1detail.html">qx::dao::detail</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><p>Internal helper tools for <a class="el" href="namespaceqx_1_1dao.html" title="Database communication used by persistence engine (ORM - Object Relational Mapping)">qx::dao</a> namespace. </p>
+<br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Define all parameters to connect to database and retrieve a valid connection by thread. </p>
 <dl class="author"><dt><b>Author:</b></dt><dd>Lionel Marty </dd></dl>
 
 <p>Definition in file <a class="el" href="_qx_sql_database_8h_source.html">QxSqlDatabase.h</a>.</p>
-</div><hr/><h2>Define Documentation</h2>
-<a class="anchor" id="aaa6110705c3cd6cf64c510dd939f927c"></a><!-- doxytag: member="QxSqlDatabase.h::QX_CONSTRUCT_QX_SQL_DATABASE" ref="aaa6110705c3cd6cf64c510dd939f927c" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QX_CONSTRUCT_QX_SQL_DATABASE</td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment">m_iPort(-1), m_bTraceSqlQuery(<span class="keyword">true</span>), m_bTraceSqlRecord(<span class="keyword">false</span>), \
-m_bTraceSqlBoundValues(<span class="keyword">false</span>), m_bTraceSqlBoundValuesOnError(<span class="keyword">true</span>), \
-m_ePlaceHolderStyle(ph_style_2_point_name), m_bSessionThrowable(<span class="keyword">false</span>), \
-m_bSessionAutoTransaction(<span class="keyword">true</span>), m_bValidatorThrowable(<span class="keyword">false</span>), \
-m_bAutoReplaceSqlAliasIntoQuery(<span class="keyword">true</span>), m_bVerifyOffsetRelation(<span class="keyword">false</span>), \
-m_bAddAutoIncrementIdToUpdateQuery(<span class="keyword">true</span>), m_bForceParentIdToAllChildren(<span class="keyword">false</span>)
-</pre></div>
-<p>Definition at line <a class="el" href="_qx_sql_database_8h_source.html#l00059">59</a> of file <a class="el" href="_qx_sql_database_8h_source.html">QxSqlDatabase.h</a>.</p>
-
-</div>
-</div>
-</div>
+</div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
@@ -183,7 +160,7 @@ m_bAddAutoIncrementIdToUpdateQuery(<span class="keyword">true</span>), m_bForceP
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:16 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:22 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

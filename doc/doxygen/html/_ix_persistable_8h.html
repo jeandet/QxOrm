@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -113,9 +113,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="_qx_dao_8h_source.html">QxDao/QxDao.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_class_8h_source.html">QxRegister/QxClass.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_collection_8h_source.html">QxCollection/QxCollection.h</a>&gt;</code><br/>
-<code>#include &lt;<a class="el" href="get__primary__key_8h_source.html">QxTraits/get_primary_key.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_invalid_value_x_8h_source.html">QxValidator/QxInvalidValueX.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_validator_fct_8h_source.html">QxValidator/QxValidatorFct.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="get__class__name_8h_source.html">QxTraits/get_class_name.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="_ix_persistable_collection_8h_source.html">QxDao/IxPersistableCollection.h</a>&gt;</code><br/>
 </div>
 <p><a href="_ix_persistable_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -123,10 +124,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html">qx::IxPersistable</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> : common interface (abstract class) for persistents classes using <a class="el" href="_ix_persistable_8h.html#a311d8fc0e6c4fc1c42e43a54f2dc44da">QX_PERSISTABLE_HPP()</a> and <a class="el" href="_ix_persistable_8h.html#a8c17d818d8f1dbf25636a9d0ed2f96bd">QX_PERSISTABLE_CPP()</a> macros  <a href="classqx_1_1_ix_persistable.html#details">More...</a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">qx::IxPersistableCollection&lt;T&gt;::type</a> : return the collection type used by <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> interface, <a class="el" href="classqx_1_1_qx_collection.html" title="qx::QxCollection&lt;Key, Value&gt; : QxOrm container (keep insertion order + quick access by index + quick ...">qx::QxCollection</a>&lt;type_primary_key, std::shared_ptr&lt;my_type&gt;&gt;  <a href="classqx_1_1_ix_persistable_collection.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1trait_1_1is__ix__persistable.html">qx::trait::is_ix_persistable&lt; T &gt;</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structqx_1_1trait_1_1is__ix__persistable.html#aec9cf11cbac687c03b339952dcd4af8ead0fd297bf610eb633e2209390a357d82">qx::trait::is_ix_persistable&lt;T&gt;::value</a> : return true if T implements <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> interface, otherwise return false  <a href="structqx_1_1trait_1_1is__ix__persistable.html#details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structqx_1_1trait_1_1is__ix__persistable.html#a09ed7595f9770ae25f2d300a5b6e5ffbad0fd297bf610eb633e2209390a357d82">qx::trait::is_ix_persistable&lt;T&gt;::value</a> : return true if T implements <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> interface, otherwise return false  <a href="structqx_1_1trait_1_1is__ix__persistable.html#details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceqx.html">qx</a></td></tr>
@@ -137,8 +136,10 @@ Namespaces</h2></td></tr>
 <br/></td></tr>
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#aca231458803231b50ed37dab55b9d393">QX_PERSISTABLE_JSON_HPP</a>(className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#a311d8fc0e6c4fc1c42e43a54f2dc44da">QX_PERSISTABLE_HPP</a>(className)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#a8c3ef6ee33760bdb4e65f2c34bdafbfd">QX_PERSISTABLE_CAST_COLLECTION</a>(className)&#160;&#160;&#160;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; className &gt;::type * list_typed = dynamic_cast&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; className &gt;::type * &gt;(&amp; list);</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#a8c3ef6ee33760bdb4e65f2c34bdafbfd">QX_PERSISTABLE_CAST_COLLECTION</a>(className)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#ac262222c6a248ce84b8467799e363b66">QX_PERSISTABLE_JSON_CPP</a>(className)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ix_persistable_8h.html#a8c17d818d8f1dbf25636a9d0ed2f96bd">QX_PERSISTABLE_CPP</a>(className)</td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -160,13 +161,15 @@ Typedefs</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">className</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; className &gt;::type * list_typed = dynamic_cast&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; className &gt;::type * &gt;(&amp; list);</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00395">395</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span> (! list) { <span class="keywordflow">return</span> QSqlError(); } \
+qx::QxPersistableCollectionHelper&lt; className &gt;::type_coll * list_typed = <span class="keyword">dynamic_cast&lt;</span> <a class="code" href="classqx_1_1_qx_persistable_collection.html" title="qx::QxPersistableCollection&lt;Key, Value, T&gt; : concrete class for collection persistent classes based o...">qx::QxPersistableCollectionHelper&lt; className &gt;::type</a> * <span class="keyword">&gt;</span>(list);
+</pre></div>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00393">393</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +188,7 @@ Typedefs</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00399">399</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00406">406</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
 
 </div>
 </div>
@@ -207,8 +210,8 @@ Typedefs</h2></td></tr>
 virtual <span class="keywordtype">long</span> qxCount(<span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query = <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a>(), QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxCount(<span class="keywordtype">long</span> &amp; lCount, <span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query = <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a>(), QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxFetchById(<span class="keyword">const</span> QVariant &amp; <span class="keywordtype">id</span> = QVariant(), <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
-virtual QSqlError qxFetchAll(<a class="code" href="classqx_1_1_ix_collection.html" title="qx::IxCollection : common interface for all QxOrm containers qx::QxCollection&lt;Key, Value&gt;">qx::IxCollection</a> &amp; list, <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
-virtual QSqlError qxFetchByQuery(<span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, <a class="code" href="classqx_1_1_ix_collection.html" title="qx::IxCollection : common interface for all QxOrm containers qx::QxCollection&lt;Key, Value&gt;">qx::IxCollection</a> &amp; list, <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
+virtual QSqlError qxFetchAll(<a class="code" href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas...">qx::IxPersistableCollection</a> * list = NULL, <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
+virtual QSqlError qxFetchByQuery(<span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, <a class="code" href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas...">qx::IxPersistableCollection</a> * list = NULL, <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxInsert(<span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxUpdate(<span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query = <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a>(), <span class="keyword">const</span> QStringList &amp; columns = QStringList(), <span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxSave(<span class="keyword">const</span> QStringList &amp; relation = QStringList(), QSqlDatabase * pDatabase = NULL); \
@@ -219,13 +222,56 @@ virtual QSqlError qxDestroyById(<span class="keyword">const</span> QVariant &amp
 virtual QSqlError qxDestroyAll(QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxDestroyByQuery(<span class="keyword">const</span> <a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, QSqlDatabase * pDatabase = NULL); \
 virtual QSqlError qxExecuteQuery(<a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, QSqlDatabase * pDatabase = NULL); \
-virtual QSqlError qxExecuteQuery(<a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, <a class="code" href="classqx_1_1_ix_collection.html" title="qx::IxCollection : common interface for all QxOrm containers qx::QxCollection&lt;Key, Value&gt;">qx::IxCollection</a> &amp; list, QSqlDatabase * pDatabase = NULL); \
+virtual QSqlError qxExecuteQuery(<a class="code" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> &amp; query, <a class="code" href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas...">qx::IxPersistableCollection</a> * list = NULL, QSqlDatabase * pDatabase = NULL); \
 virtual <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> qxExist(<span class="keyword">const</span> QVariant &amp; <span class="keywordtype">id</span> = QVariant(), QSqlDatabase * pDatabase = NULL); \
 virtual <a class="code" href="classqx_1_1_qx_invalid_value_x.html" title="qx::QxInvalidValueX : list of invalid values">qx::QxInvalidValueX</a> qxValidate(<span class="keyword">const</span> QStringList &amp; groups = QStringList()); \
-virtual <a class="code" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> qxNewPersistableCollection() <span class="keyword">const</span>; \
-virtual <a class="code" href="classqx_1_1_ix_class.html" title="qx::IxClass : common interface for all classes registered into QxOrm context">qx::IxClass</a> * qxClass() <span class="keyword">const</span>;
+virtual std::shared_ptr&lt;qx::IxPersistableCollection&gt; qxNewPersistableCollection() <span class="keyword">const</span>; \
+virtual <a class="code" href="classqx_1_1_ix_class.html" title="qx::IxClass : common interface for all classes registered into QxOrm context">qx::IxClass</a> * qxClass() <span class="keyword">const</span>; \
+QX_PERSISTABLE_JSON_HPP(className)
 </pre></div>
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00368">368</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00364">364</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac262222c6a248ce84b8467799e363b66"></a><!-- doxytag: member="IxPersistable.h::QX_PERSISTABLE_JSON_CPP" ref="ac262222c6a248ce84b8467799e363b66" args="(className)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QX_PERSISTABLE_JSON_CPP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">className</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment">QString className::toJson(<span class="keyword">const</span> QString &amp; format)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a1e455df2ab9dda94e67eadab13609aef">qx::serialization::json::to_string</a>((* <span class="keyword">this</span>), 1, format); } \
+qx_bool className::fromJson(<span class="keyword">const</span> QString &amp; json, <span class="keyword">const</span> QString &amp; format) { <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a54685d626b4564d1e9da62a6c7811617">qx::serialization::json::from_string</a>((* <span class="keyword">this</span>), json, 1, format); }
+</pre></div>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00399">399</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca231458803231b50ed37dab55b9d393"></a><!-- doxytag: member="IxPersistable.h::QX_PERSISTABLE_JSON_HPP" ref="aca231458803231b50ed37dab55b9d393" args="(className)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QX_PERSISTABLE_JSON_HPP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">className</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keyword">virtual</span> QString toJson(<span class="keyword">const</span> QString &amp; format = QString()) <span class="keyword">const</span>; \
+virtual <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> fromJson(<span class="keyword">const</span> QString &amp; json, <span class="keyword">const</span> QString &amp; format = QString());
+</pre></div>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00357">357</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
 
 </div>
 </div>
@@ -249,7 +295,7 @@ virtual <a class="code" href="classqx_1_1_ix_class.html" title="qx::IxClass : co
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:16 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:22 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_qx_data_member___q_object_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -171,62 +171,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00079"></a>00079    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> fromString(<span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QString &amp; s, <span class="keyword">const</span> QString &amp; sFormat, <span class="keywordtype">int</span> iIndexName = -1);
 <a name="l00080"></a>00080    <span class="keyword">virtual</span> QVariant toVariant(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QString &amp; sFormat, <span class="keywordtype">int</span> iIndexName = -1, <a class="code" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93">qx::cvt::context::ctx_type</a> ctx = <a class="code" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93a1a328a4e7e110b84dbca040ca9b09844">qx::cvt::context::e_no_context</a>) <span class="keyword">const</span>;
 <a name="l00081"></a>00081    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> fromVariant(<span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QVariant &amp; v, <span class="keyword">const</span> QString &amp; sFormat, <span class="keywordtype">int</span> iIndexName = -1, <a class="code" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93">qx::cvt::context::ctx_type</a> ctx = <a class="code" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93a1a328a4e7e110b84dbca040ca9b09844">qx::cvt::context::e_no_context</a>);
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#ifndef _QX_NO_JSON</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span>   <span class="keyword">virtual</span> QJsonValue toJson(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QString &amp; sFormat) <span class="keyword">const</span>;
-<a name="l00085"></a>00085    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> fromJson(<span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QJsonValue &amp; j, <span class="keyword">const</span> QString &amp; sFormat);
-<a name="l00086"></a>00086 <span class="preprocessor">#endif // _QX_NO_JSON</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span>
-<a name="l00088"></a>00088 <span class="keyword">public</span>:
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00091"></a>00091 <span class="preprocessor"></span>
-<a name="l00092"></a>00092 <span class="preprocessor">#if _QX_SERIALIZE_POLYMORPHIC</span>
-<a name="l00093"></a>00093 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::polymorphic_iarchive, boost::archive::polymorphic_oarchive)
-<a name="l00094"></a>00094 <span class="preprocessor">#endif // _QX_SERIALIZE_POLYMORPHIC</span>
-<a name="l00095"></a>00095 <span class="preprocessor"></span>
-<a name="l00096"></a>00096 <span class="preprocessor">#if _QX_SERIALIZE_BINARY</span>
-<a name="l00097"></a>00097 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::binary_iarchive, boost::archive::binary_oarchive)
-<a name="l00098"></a>00098 <span class="preprocessor">#endif // _QX_SERIALIZE_BINARY</span>
-<a name="l00099"></a>00099 <span class="preprocessor"></span>
-<a name="l00100"></a>00100 <span class="preprocessor">#if _QX_SERIALIZE_TEXT</span>
-<a name="l00101"></a>00101 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::text_iarchive, boost::archive::text_oarchive)
-<a name="l00102"></a>00102 <span class="preprocessor">#endif // _QX_SERIALIZE_TEXT</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
-<a name="l00104"></a>00104 <span class="preprocessor">#if _QX_SERIALIZE_XML</span>
-<a name="l00105"></a>00105 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::xml_iarchive, boost::archive::xml_oarchive)
-<a name="l00106"></a>00106 <span class="preprocessor">#endif // _QX_SERIALIZE_XML</span>
-<a name="l00107"></a>00107 <span class="preprocessor"></span>
-<a name="l00108"></a>00108 <span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00109"></a>00109 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(<a class="code" href="classeos_1_1portable__iarchive.html" title="Portable binary input archive using little endian format.">eos::portable_iarchive</a>, <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>)
-<a name="l00110"></a>00110 <span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00111"></a>00111 <span class="preprocessor"></span>
-<a name="l00112"></a>00112 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_BINARY</span>
-<a name="l00113"></a>00113 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::binary_wiarchive, boost::archive::binary_woarchive)
-<a name="l00114"></a>00114 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_BINARY</span>
-<a name="l00115"></a>00115 <span class="preprocessor"></span>
-<a name="l00116"></a>00116 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_TEXT</span>
-<a name="l00117"></a>00117 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::text_wiarchive, boost::archive::text_woarchive)
-<a name="l00118"></a>00118 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_TEXT</span>
-<a name="l00119"></a>00119 <span class="preprocessor"></span>
-<a name="l00120"></a>00120 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_XML</span>
-<a name="l00121"></a>00121 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::xml_wiarchive, boost::archive::xml_woarchive)
-<a name="l00122"></a>00122 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_XML</span>
-<a name="l00123"></a>00123 <span class="preprocessor"></span>
-<a name="l00124"></a>00124 <span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00125"></a>00125 <span class="preprocessor"></span>
-<a name="l00126"></a>00126 <span class="keyword">protected</span>:
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1any.html">qx::any</a> getDataPtr(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner) <span class="keyword">const</span>;
-<a name="l00129"></a>00129    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1any.html">qx::any</a> getDataPtr(<span class="keywordtype">void</span> * pOwner);
-<a name="l00130"></a>00130    <span class="keyword">virtual</span> <span class="keywordtype">void</span> * getDataVoidPtr(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner) <span class="keyword">const</span>;
-<a name="l00131"></a>00131    <span class="keyword">virtual</span> <span class="keywordtype">void</span> * getDataVoidPtr(<span class="keywordtype">void</span> * pOwner);
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133 };
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135 } <span class="comment">// namespace qx</span>
-<a name="l00136"></a>00136 
-<a name="l00137"></a>00137 <span class="preprocessor">#endif // _QX_DATA_MEMBER_QOBJECT_H_</span>
+<a name="l00082"></a>00082    <span class="keyword">virtual</span> QString getType() <span class="keyword">const</span>;
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 <span class="preprocessor">#ifndef _QX_NO_JSON</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>   <span class="keyword">virtual</span> QJsonValue toJson(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QString &amp; sFormat) <span class="keyword">const</span>;
+<a name="l00086"></a>00086    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> fromJson(<span class="keywordtype">void</span> * pOwner, <span class="keyword">const</span> QJsonValue &amp; j, <span class="keyword">const</span> QString &amp; sFormat);
+<a name="l00087"></a>00087 <span class="preprocessor">#endif // _QX_NO_JSON</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089 <span class="keyword">public</span>:
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 <span class="preprocessor">#if _QX_SERIALIZE_POLYMORPHIC</span>
+<a name="l00094"></a>00094 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::polymorphic_iarchive, boost::archive::polymorphic_oarchive)
+<a name="l00095"></a>00095 <span class="preprocessor">#endif // _QX_SERIALIZE_POLYMORPHIC</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 <span class="preprocessor">#if _QX_SERIALIZE_BINARY</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::binary_iarchive, boost::archive::binary_oarchive)
+<a name="l00099"></a>00099 <span class="preprocessor">#endif // _QX_SERIALIZE_BINARY</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span>
+<a name="l00101"></a>00101 <span class="preprocessor">#if _QX_SERIALIZE_TEXT</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::text_iarchive, boost::archive::text_oarchive)
+<a name="l00103"></a>00103 <span class="preprocessor">#endif // _QX_SERIALIZE_TEXT</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00105"></a>00105 <span class="preprocessor">#if _QX_SERIALIZE_XML</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::xml_iarchive, boost::archive::xml_oarchive)
+<a name="l00107"></a>00107 <span class="preprocessor">#endif // _QX_SERIALIZE_XML</span>
+<a name="l00108"></a>00108 <span class="preprocessor"></span>
+<a name="l00109"></a>00109 <span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00110"></a>00110 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(<a class="code" href="classeos_1_1portable__iarchive.html" title="Portable binary input archive using little endian format.">eos::portable_iarchive</a>, <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>)
+<a name="l00111"></a>00111 <span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>
+<a name="l00113"></a>00113 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_BINARY</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::binary_wiarchive, boost::archive::binary_woarchive)
+<a name="l00115"></a>00115 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_BINARY</span>
+<a name="l00116"></a>00116 <span class="preprocessor"></span>
+<a name="l00117"></a>00117 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_TEXT</span>
+<a name="l00118"></a>00118 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::text_wiarchive, boost::archive::text_woarchive)
+<a name="l00119"></a>00119 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_TEXT</span>
+<a name="l00120"></a>00120 <span class="preprocessor"></span>
+<a name="l00121"></a>00121 <span class="preprocessor">#if _QX_SERIALIZE_WIDE_XML</span>
+<a name="l00122"></a>00122 <span class="preprocessor"></span>   <a class="code" href="_qx_data_member___q_object_8h.html#aea1660f5b8067dea17fb4785de56cd3d">QX_DATA_MEMBER_QOBJECT_IMPL_VIRTUAL_ARCHIVE_HPP</a>(boost::archive::xml_wiarchive, boost::archive::xml_woarchive)
+<a name="l00123"></a>00123 <span class="preprocessor">#endif // _QX_SERIALIZE_WIDE_XML</span>
+<a name="l00124"></a>00124 <span class="preprocessor"></span>
+<a name="l00125"></a>00125 <span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00126"></a>00126 <span class="preprocessor"></span>
+<a name="l00127"></a>00127 <span class="keyword">protected</span>:
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1any.html">qx::any</a> getDataPtr(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner) <span class="keyword">const</span>;
+<a name="l00130"></a>00130    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1any.html">qx::any</a> getDataPtr(<span class="keywordtype">void</span> * pOwner);
+<a name="l00131"></a>00131    <span class="keyword">virtual</span> <span class="keywordtype">void</span> * getDataVoidPtr(<span class="keyword">const</span> <span class="keywordtype">void</span> * pOwner) <span class="keyword">const</span>;
+<a name="l00132"></a>00132    <span class="keyword">virtual</span> <span class="keywordtype">void</span> * getDataVoidPtr(<span class="keywordtype">void</span> * pOwner);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 };
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136 } <span class="comment">// namespace qx</span>
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138 <span class="preprocessor">#endif // _QX_DATA_MEMBER_QOBJECT_H_</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -247,7 +248,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:13 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

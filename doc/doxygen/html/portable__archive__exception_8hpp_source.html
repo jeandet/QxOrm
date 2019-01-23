@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -101,61 +101,81 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">portable_archive_exception.hpp</div>  </div>
 </div>
 <div class="contents">
-<a href="portable__archive__exception_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#ifndef _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
-<a name="l00004"></a>00004 <span class="preprocessor"></span><span class="preprocessor">#define _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
-<a name="l00005"></a>00005 <span class="preprocessor"></span>
-<a name="l00006"></a>00006 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;boost/lexical_cast.hpp&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;boost/archive/basic_archive.hpp&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;boost/archive/archive_exception.hpp&gt;</span>
-<a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="namespaceeos.html">00014</a> <span class="keyword">namespace </span>eos {
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016    <span class="comment">// this value is written to the top of the stream</span>
-<a name="l00017"></a><a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">00017</a>    <span class="keyword">const</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span> <a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">magic_byte</a> = <span class="charliteral">&#39;e&#39;</span> | <span class="charliteral">&#39;o&#39;</span> | <span class="charliteral">&#39;s&#39;</span>;
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019    <span class="comment">// version of the linked boost archive library</span>
-<a name="l00020"></a>00020    <span class="keyword">const</span> boost::archive::version_type <a class="code" href="namespaceeos.html#a7d65f2fb4ec23237bebd297f68718086">archive_version</a>(
-<a name="l00021"></a>00021       #<span class="keywordflow">if</span> BOOST_VERSION &lt; 103700
-<a name="l00022"></a>00022          boost::archive::ARCHIVE_VERSION()
-<a name="l00023"></a>00023       #<span class="keywordflow">else</span>
-<a name="l00024"></a>00024          boost::archive::BOOST_ARCHIVE_VERSION()
-<a name="l00025"></a>00025       #endif
-<a name="l00026"></a>00026         );
+<a href="portable__archive__exception_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*****************************************************************************/</span>
+<a name="l00013"></a>00013 <span class="comment">/****************************************************************************/</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#ifndef _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;boost/lexical_cast.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;boost/archive/basic_archive.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;boost/archive/archive_exception.hpp&gt;</span>
 <a name="l00027"></a>00027 
-<a name="l00042"></a><a class="code" href="classeos_1_1portable__archive__exception.html">00042</a>    <span class="keyword">class </span><a class="code" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a> : <span class="keyword">public</span> boost::archive::archive_exception
-<a name="l00043"></a>00043    {
-<a name="l00044"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">00044</a>       std::string <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>;
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046       <span class="keyword">public</span>:
-<a name="l00047"></a>00047 
-<a name="l00049"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a51ceb7380e90294b44fa114f315766e3">00049</a>       <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>(<span class="keywordtype">signed</span> <span class="keywordtype">char</span> invalid_size) : boost::archive::archive_exception(other_exception), <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;requested integer size exceeds type size: &quot;</span>)
-<a name="l00050"></a>00050       {
-<a name="l00051"></a>00051          <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a> += boost::lexical_cast&lt;std::string, <span class="keywordtype">int</span>&gt;(invalid_size);
-<a name="l00052"></a>00052       }
-<a name="l00053"></a>00053 
-<a name="l00055"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e">00055</a>       <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>() : boost::archive::archive_exception(other_exception), <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;cannot read a negative number into an unsigned type&quot;</span>) { ; }
-<a name="l00056"></a>00056 
-<a name="l00058"></a>00058       <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; 
-<a name="l00059"></a><a class="code" href="classeos_1_1portable__archive__exception.html#ae5ed27bc6d2c5f32fd3359322bd6dd7f">00059</a>       <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>(<span class="keyword">const</span> T&amp; abnormal) : boost::archive::archive_exception(other_exception), <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;serialization of non-portable floating point value: &quot;</span>)
-<a name="l00060"></a>00060       {
-<a name="l00061"></a>00061          <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a> += boost::lexical_cast&lt;std::string&gt;(abnormal);
-<a name="l00062"></a>00062       }
-<a name="l00063"></a>00063 
-<a name="l00065"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a0dd731e4d519d60381199e60902d137e">00065</a>       <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classeos_1_1portable__archive__exception.html#a0dd731e4d519d60381199e60902d137e" title="override the base class function with our message">what</a>() <span class="keyword">const</span> throw() { <span class="keywordflow">return</span> <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>.c_str(); }
-<a name="l00066"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a7d096354a3ddbcc771274c72a40d072d">00066</a>       <a class="code" href="classeos_1_1portable__archive__exception.html#a7d096354a3ddbcc771274c72a40d072d">~portable_archive_exception</a>() throw() { ; }
-<a name="l00067"></a>00067    };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 } <span class="comment">// namespace eos</span>
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="preprocessor">#endif // _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00073"></a>00073 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00028"></a><a class="code" href="namespaceeos.html">00028</a> <span class="keyword">namespace </span>eos {
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030         <span class="comment">// this value is written to the top of the stream</span>
+<a name="l00031"></a><a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">00031</a>         <span class="keyword">const</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span> <a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">magic_byte</a> = <span class="charliteral">&#39;e&#39;</span> | <span class="charliteral">&#39;o&#39;</span> | <span class="charliteral">&#39;s&#39;</span>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033         <span class="comment">// flag for fp serialization</span>
+<a name="l00034"></a><a class="code" href="namespaceeos.html#a2091929cfe70df606d1c6fa7915c6c5e">00034</a>         <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <a class="code" href="namespaceeos.html#a2091929cfe70df606d1c6fa7915c6c5e">no_infnan</a> = 64;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036         <span class="comment">// integral type for the archive version</span>
+<a name="l00037"></a>00037 <span class="preprocessor">        #if BOOST_VERSION &lt; 104400</span>
+<a name="l00038"></a><a class="code" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">00038</a> <span class="preprocessor"></span>                <span class="keyword">typedef</span> boost::archive::version_type <a class="code" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a>;
+<a name="l00039"></a>00039 <span class="preprocessor">        #else</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>                <span class="keyword">typedef</span> boost::archive::library_version_type <a class="code" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a>;
+<a name="l00041"></a>00041 <span class="preprocessor">        #endif</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043         <span class="comment">// version of the linked boost archive library</span>
+<a name="l00044"></a>00044         <span class="keyword">const</span> <a class="code" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a> <a class="code" href="namespaceeos.html#ae5158c895df9b165bf5b96ce2fe2838d">archive_version</a>(
+<a name="l00045"></a>00045         #<span class="keywordflow">if</span> BOOST_VERSION &lt; 103700
+<a name="l00046"></a>00046                 boost::archive::ARCHIVE_VERSION()
+<a name="l00047"></a>00047         #<span class="keywordflow">else</span>
+<a name="l00048"></a>00048                 boost::archive::BOOST_ARCHIVE_VERSION()
+<a name="l00049"></a>00049         #endif
+<a name="l00050"></a>00050         );
+<a name="l00051"></a>00051 
+<a name="l00066"></a><a class="code" href="classeos_1_1portable__archive__exception.html">00066</a>         <span class="keyword">class </span><a class="code" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a> : <span class="keyword">public</span> boost::archive::archive_exception
+<a name="l00067"></a>00067         {
+<a name="l00068"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">00068</a>                 std::string <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070         <span class="keyword">public</span>:
+<a name="l00072"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a51ceb7380e90294b44fa114f315766e3">00072</a>                 <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>(<span class="keywordtype">signed</span> <span class="keywordtype">char</span> invalid_size) 
+<a name="l00073"></a>00073                         : boost::archive::archive_exception(other_exception) 
+<a name="l00074"></a>00074                         , <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;requested integer size exceeds type size: &quot;</span>)
+<a name="l00075"></a>00075                 {
+<a name="l00076"></a>00076                         <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a> += boost::lexical_cast&lt;std::string, <span class="keywordtype">int</span>&gt;(invalid_size);
+<a name="l00077"></a>00077                 }
+<a name="l00078"></a>00078 
+<a name="l00080"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e">00080</a>                 <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>()
+<a name="l00081"></a>00081                         : boost::archive::archive_exception(other_exception)
+<a name="l00082"></a>00082                         , <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;cannot read a negative number into an unsigned type&quot;</span>)
+<a name="l00083"></a>00083                 {
+<a name="l00084"></a>00084                 }
+<a name="l00085"></a>00085 
+<a name="l00087"></a>00087                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; 
+<a name="l00088"></a><a class="code" href="classeos_1_1portable__archive__exception.html#ae5ed27bc6d2c5f32fd3359322bd6dd7f">00088</a>                 <a class="code" href="classeos_1_1portable__archive__exception.html#a6dfca7ca944cf27f938fdebc20b6487e" title="negative number in unsigned type">portable_archive_exception</a>(<span class="keyword">const</span> T&amp; abnormal) 
+<a name="l00089"></a>00089                         : boost::archive::archive_exception(other_exception) 
+<a name="l00090"></a>00090                         , <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>(<span class="stringliteral">&quot;serialization of illegal floating point value: &quot;</span>)
+<a name="l00091"></a>00091                 {
+<a name="l00092"></a>00092                         <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a> += boost::lexical_cast&lt;std::string&gt;(abnormal);
+<a name="l00093"></a>00093                 }
+<a name="l00094"></a>00094 
+<a name="l00096"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a0dd731e4d519d60381199e60902d137e">00096</a>                 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classeos_1_1portable__archive__exception.html#a0dd731e4d519d60381199e60902d137e" title="override the base class function with our message">what</a>() <span class="keyword">const</span> throw() { <span class="keywordflow">return</span> <a class="code" href="classeos_1_1portable__archive__exception.html#a1413213defc1e84ce4a017d9af13d768">msg</a>.c_str(); }
+<a name="l00097"></a><a class="code" href="classeos_1_1portable__archive__exception.html#a7d096354a3ddbcc771274c72a40d072d">00097</a>                 <a class="code" href="classeos_1_1portable__archive__exception.html#a7d096354a3ddbcc771274c72a40d072d">~portable_archive_exception</a>() throw() {}
+<a name="l00098"></a>00098         };
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 } <span class="comment">// namespace eos</span>
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="preprocessor">#endif // _QX_PORTABLE_ARCHIVE_EXCEPTION_H_</span>
+<a name="l00103"></a>00103 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -176,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:14 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

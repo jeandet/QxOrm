@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -125,16 +125,25 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a196a4ae7acad23737119a4dbb29d0295">QxSqlQuery</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#ad7c759e44f026a839cd9ed8138810f82">QxSqlQuery</a> (const QString &amp;sQuery)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a4533e5e460c688a38ce84391497ecad7">QxSqlQuery</a> (const char *sQuery)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a10f74c08b43044c6a8452e4b262117dd">QxSqlQuery</a> (const char *query)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a78654527d166eba576cdf4a9b5319a23">QxSqlQuery</a> (const QString &amp;query)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a040275995320231d2544c2bf87d11d78">QxSqlQuery</a> (const QStringList &amp;query)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a020203131b4c467b7f751aa8782ea6da">QxSqlQuery</a> (const QString &amp;type, const QString &amp;query)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a390e20a427baec49ac5a2efb42a9b9e6">QxSqlQuery</a> (const QString &amp;type, const QStringList &amp;query)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#aee336cb917206f0bd5f9b6a10a7ae35c">~QxSqlQuery</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a394138742ec84ffec3f6e7cbff597caf">query</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a62ea30e58801f2a6dc245f43df0f6eff">queryAt</a> (int idx) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a55b36bbff1b591ec56b4d5a1992dd400">queryAt</a> (int idx, const QString &amp;query)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a959f68cb801965e0de1b842729f2dda9">response</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a1b34c13abba496bd884479b06643e5a7">type</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a80723e46fc251dc302346596dbfbc8ca">isEmpty</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a61cdb11f6ba1e5c181b747ffc23cb364">isDistinct</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#aaebf5c267536b1fb00d3183ff60a32bd">clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#ac628b616b45fdfa8c5a8de08a6776993">resolve</a> (QSqlQuery &amp;query) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a2cdbddd19f3ecd25bd691e6c059da638">resolveOutput</a> (QSqlQuery &amp;query, bool bFetchSqlResult)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a4140a4a2958b392b7c1bbb65f84a22c8">postProcess</a> (QString &amp;sql) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a10916f96df49548a02c7f068fa6d6f4d">setResponse</a> (const QVariant &amp;v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#aa15fe09bfb79031319fe41a7ba58003d">setType</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a4087e546f5af11fe5ba7aa7cbe73802e">query</a> (const QString &amp;sQuery)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a5f4e02fca170f4763bbbc3d0d9eed8c7">bind</a> (const QVariant &amp;vValue, QSql::ParamType paramType=QSql::In)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a8c3d4769da6c0d09771b1644e96650c0">bind</a> (const QString &amp;sKey, const QVariant &amp;vValue, QSql::ParamType paramType=QSql::In)</td></tr>
@@ -186,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a6657cefe6829b2f25c16cd553059bc9d">groupBy</a> (const QString &amp;col1, const QString &amp;col2, const QString &amp;col3, const QString &amp;col4, const QString &amp;col5, const QString &amp;col6, const QString &amp;col7)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a9ead5d8f28d0e024602242909212ccf0">groupBy</a> (const QString &amp;col1, const QString &amp;col2, const QString &amp;col3, const QString &amp;col4, const QString &amp;col5, const QString &amp;col6, const QString &amp;col7, const QString &amp;col8)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a3373c0f5f119bd6534f2bcf52eb7b790">groupBy</a> (const QString &amp;col1, const QString &amp;col2, const QString &amp;col3, const QString &amp;col4, const QString &amp;col5, const QString &amp;col6, const QString &amp;col7, const QString &amp;col8, const QString &amp;col9)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a48e6fae92eedb73a43900e5536843782">limit</a> (int rowsCount, int startRow=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#ad4ddab2fd57c84ea9a3e825997ad8953">limit</a> (int rowsCount, int startRow=0, bool withTies=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a9d3be633c0b0c41a0482727cce56af61">like</a> (const QString &amp;val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a5d396f8b0c17f43f8b1979c594250e7d">notLike</a> (const QString &amp;val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_sql_query.html">QxSqlQuery</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a23ed6ac78c669401a7c5adee6c5f9c68">startsWith</a> (const QString &amp;val)</td></tr>
@@ -235,8 +244,8 @@ Protected Types</h2></td></tr>
 QSql::ParamType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a037863524018f10164117585a2182fe8">type_bind_value</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a3dd2c833063db87730f6ebd893ffd017">m_sQuery</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query SQL with place-holder.  <a href="#a3dd2c833063db87730f6ebd893ffd017"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a05104403539f8d62da12e5723c99ec90">m_sQuery</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query SQL with place-holder.  <a href="#a05104403539f8d62da12e5723c99ec90"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_collection.html">QxCollection</a>&lt; QString, <br class="typebreak"/>
 <a class="el" href="classqx_1_1_qx_sql_query.html#a037863524018f10164117585a2182fe8">type_bind_value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a117c73f980c291b94d595afdd7bd61a6">m_lstValue</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind value in this array.  <a href="#a117c73f980c291b94d595afdd7bd61a6"></a><br/></td></tr>
@@ -253,6 +262,10 @@ Protected Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace SELECT by SELECT DISTINCT in SQL query.  <a href="#a8b64d76784c02466c60ddbda5b628590"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structqx_1_1_qx_sql_query_1_1_qx_sql_result.html">QxSqlResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#aaa9441269b225857e893feb47e8a9519">m_pSqlResult</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">All results returning by SQL query or stored procedure (after calling <a class="el" href="group___qx_dao.html#ga3288b4e3c6a3fa7aeac298262d3102dd" title="qx::dao::call_query function can be used to call a custom SQL query or a stored procedure">qx::dao::call_query</a> function)  <a href="#aaa9441269b225857e893feb47e8a9519"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a1c9ec1b28bcc6e3e7438c3be7de6f8f8">m_vResponse</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Can be used to store some responses (from MongoDB database for example in JSON format)  <a href="#a1c9ec1b28bcc6e3e7438c3be7de6f8f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a7e1716934b91698c546df3b2705645ad">m_sType</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Query type (for example : 'aggregate' or 'cursor' for MongoDB database)  <a href="#a7e1716934b91698c546df3b2705645ad"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#ada6f2b1113c70c07b558624d95b55e9b">verifyQuery</a> () const QX_USED</td></tr>
@@ -271,10 +284,10 @@ Friends</h2></td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a481168e539f31039132a6400f92c02c5">boost::serialization::qx_save</a> (Archive &amp;ar, const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const unsigned int file_version)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class Archive &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a36b0324103bf8a07e76dd2971a1b106d">boost::serialization::qx_load</a> (Archive &amp;ar, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const unsigned int file_version)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a85c33589de762c177014a5b5aac71022">operator&lt;&lt;</a> (QDataStream &amp;stream, const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#aa681d8b7229d5e884667d3681c199442">operator&gt;&gt;</a> (QDataStream &amp;stream, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QJsonValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a58e89f66c05a4d9aa4d183e23fa6d574">qx::cvt::detail::QxConvert_ToJson_Helper</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const QString &amp;format)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a07363a415b7048b25a638c0ca758920e">qx::cvt::detail::QxConvert_FromJson_Helper</a> (const QJsonValue &amp;j, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const QString &amp;format)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QX_DLL_EXPORT QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#ae08964be1e16b4739f85e385f484c549">operator&lt;&lt;</a> (QDataStream &amp;stream, const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QX_DLL_EXPORT QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a7cd0cd7c947b1b2fbfabe54afc3a59b8">operator&gt;&gt;</a> (QDataStream &amp;stream, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QX_DLL_EXPORT QJsonValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#afe693f21b6be7240eace6ac34cab8c16">qx::cvt::detail::QxConvert_ToJson_Helper</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const QString &amp;format)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QX_DLL_EXPORT <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_query.html#a531397b424e4d3b91d4c24c161259375">qx::cvt::detail::QxConvert_FromJson_Helper</a> (const QJsonValue &amp;j, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;t, const QString &amp;format)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classqx_1_1_qx_sql_query.html" title="qx::QxSqlQuery : define a user SQL query added to default SQL query builded by QxOrm library...">qx::QxSqlQuery</a> : define a user SQL query added to default SQL query builded by QxOrm library, and used by qx::dao::xxx functions to filter elements fetched from database </p>
@@ -324,7 +337,7 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a9d54503b9ed46071f3ee4
      .and_(<span class="stringliteral">&quot;is_deleted&quot;</span>).isNotNull()
      .orderAsc(<span class="stringliteral">&quot;last_name&quot;</span>, <span class="stringliteral">&quot;first_name&quot;</span>, <span class="stringliteral">&quot;sex&quot;</span>)
      .limit(50, 150);
-</pre></div><p>This code will produce following SQL for <em>MySQL</em>, <em>PostgreSQL</em> and <em>SQLite</em> databases (for <em>Oracle</em> and <em>SQLServer</em>, there is a specific process for <em><a class="el" href="classqx_1_1_qx_sql_query.html#a48e6fae92eedb73a43900e5536843782">limit()</a></em> method) : </p>
+</pre></div><p>This code will produce following SQL for <em>MySQL</em>, <em>PostgreSQL</em> and <em>SQLite</em> databases (for <em>Oracle</em> and <em>SQLServer</em>, there is a specific process for <em><a class="el" href="classqx_1_1_qx_sql_query.html#ad4ddab2fd57c84ea9a3e825997ad8953">limit()</a></em> method) : </p>
 <div class="fragment"><pre class="fragment">WHERE sex = :sex_1_0 
 AND age &gt; :age_3_0 
 OR last_name &lt;&gt; :last_name_5_0 
@@ -389,7 +402,7 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
 <li>add all SQL specifics functions in your derived class. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00237">237</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00244">244</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="a037863524018f10164117585a2182fe8"></a><!-- doxytag: member="qx::QxSqlQuery::type_bind_value" ref="a037863524018f10164117585a2182fe8" args="" -->
 <div class="memitem">
@@ -402,7 +415,7 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00260">260</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00267">267</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -415,36 +428,15 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
           <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00273">273</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="ad7c759e44f026a839cd9ed8138810f82"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="ad7c759e44f026a839cd9ed8138810f82" args="(const QString &amp;sQuery)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
-          <td>(</td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>sQuery</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00274">274</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4533e5e460c688a38ce84391497ecad7"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a4533e5e460c688a38ce84391497ecad7" args="(const char *sQuery)" -->
+<a class="anchor" id="a10f74c08b43044c6a8452e4b262117dd"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a10f74c08b43044c6a8452e4b262117dd" args="(const char *query)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -452,14 +444,100 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
           <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>sQuery</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00275">275</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a78654527d166eba576cdf4a9b5319a23"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a78654527d166eba576cdf4a9b5319a23" args="(const QString &amp;query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a040275995320231d2544c2bf87d11d78"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a040275995320231d2544c2bf87d11d78" args="(const QStringList &amp;query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
+          <td>(</td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a020203131b4c467b7f751aa8782ea6da"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a020203131b4c467b7f751aa8782ea6da" args="(const QString &amp;type, const QString &amp;query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a390e20a427baec49ac5a2efb42a9b9e6"></a><!-- doxytag: member="qx::QxSqlQuery::QxSqlQuery" ref="a390e20a427baec49ac5a2efb42a9b9e6" args="(const QString &amp;type, const QStringList &amp;query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qx::QxSqlQuery::QxSqlQuery </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStringList &amp;&#160;</td>
+          <td class="paramname"><em>query</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -471,13 +549,11 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
           <td class="memname">virtual qx::QxSqlQuery::~QxSqlQuery </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00276">276</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -2159,7 +2235,7 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
 
 </div>
 </div>
-<a class="anchor" id="a48e6fae92eedb73a43900e5536843782"></a><!-- doxytag: member="qx::QxSqlQuery::limit" ref="a48e6fae92eedb73a43900e5536843782" args="(int rowsCount, int startRow=0)" -->
+<a class="anchor" id="ad4ddab2fd57c84ea9a3e825997ad8953"></a><!-- doxytag: member="qx::QxSqlQuery::limit" ref="ad4ddab2fd57c84ea9a3e825997ad8953" args="(int rowsCount, int startRow=0, bool withTies=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2173,7 +2249,13 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>startRow</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>startRow</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withTies</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3574,6 +3656,50 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
 
 </div>
 </div>
+<a class="anchor" id="a62ea30e58801f2a6dc245f43df0f6eff"></a><!-- doxytag: member="qx::QxSqlQuery::queryAt" ref="a62ea30e58801f2a6dc245f43df0f6eff" args="(int idx) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString qx::QxSqlQuery::queryAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a55b36bbff1b591ec56b4d5a1992dd400"></a><!-- doxytag: member="qx::QxSqlQuery::queryAt" ref="a55b36bbff1b591ec56b4d5a1992dd400" args="(int idx, const QString &amp;query)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::QxSqlQuery::queryAt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ac628b616b45fdfa8c5a8de08a6776993"></a><!-- doxytag: member="qx::QxSqlQuery::resolve" ref="ac628b616b45fdfa8c5a8de08a6776993" args="(QSqlQuery &amp;query) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -3618,6 +3744,56 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
 
 </div>
 </div>
+<a class="anchor" id="a959f68cb801965e0de1b842729f2dda9"></a><!-- doxytag: member="qx::QxSqlQuery::response" ref="a959f68cb801965e0de1b842729f2dda9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant qx::QxSqlQuery::response </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a10916f96df49548a02c7f068fa6d6f4d"></a><!-- doxytag: member="qx::QxSqlQuery::setResponse" ref="a10916f96df49548a02c7f068fa6d6f4d" args="(const QVariant &amp;v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::QxSqlQuery::setResponse </td>
+          <td>(</td>
+          <td class="paramtype">const QVariant &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa15fe09bfb79031319fe41a7ba58003d"></a><!-- doxytag: member="qx::QxSqlQuery::setType" ref="aa15fe09bfb79031319fe41a7ba58003d" args="(const QString &amp;s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::QxSqlQuery::setType </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a23ed6ac78c669401a7c5adee6c5f9c68"></a><!-- doxytag: member="qx::QxSqlQuery::startsWith" ref="a23ed6ac78c669401a7c5adee6c5f9c68" args="(const QString &amp;val)" -->
 <div class="memitem">
 <div class="memproto">
@@ -3628,6 +3804,22 @@ query.<a class="code" href="classqx_1_1_qx_sql_query.html#a2e0495a247294ccbbaa5c
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
           <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b34c13abba496bd884479b06643e5a7"></a><!-- doxytag: member="qx::QxSqlQuery::type" ref="a1b34c13abba496bd884479b06643e5a7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString qx::QxSqlQuery::type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div>
@@ -3756,12 +3948,12 @@ template&lt;class Archive &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a85c33589de762c177014a5b5aac71022"></a><!-- doxytag: member="qx::QxSqlQuery::operator&lt;&lt;" ref="a85c33589de762c177014a5b5aac71022" args="(QDataStream &amp;stream, const qx::QxSqlQuery &amp;t)" -->
+<a class="anchor" id="ae08964be1e16b4739f85e385f484c549"></a><!-- doxytag: member="qx::QxSqlQuery::operator&lt;&lt;" ref="ae08964be1e16b4739f85e385f484c549" args="(QDataStream &amp;stream, const qx::QxSqlQuery &amp;t)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QDataStream&amp; operator&lt;&lt; </td>
+          <td class="memname">QX_DLL_EXPORT QDataStream&amp; operator&lt;&lt; </td>
           <td>(</td>
           <td class="paramtype">QDataStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
@@ -3783,12 +3975,12 @@ template&lt;class Archive &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa681d8b7229d5e884667d3681c199442"></a><!-- doxytag: member="qx::QxSqlQuery::operator&gt;&gt;" ref="aa681d8b7229d5e884667d3681c199442" args="(QDataStream &amp;stream, qx::QxSqlQuery &amp;t)" -->
+<a class="anchor" id="a7cd0cd7c947b1b2fbfabe54afc3a59b8"></a><!-- doxytag: member="qx::QxSqlQuery::operator&gt;&gt;" ref="a7cd0cd7c947b1b2fbfabe54afc3a59b8" args="(QDataStream &amp;stream, qx::QxSqlQuery &amp;t)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QDataStream&amp; operator&gt;&gt; </td>
+          <td class="memname">QX_DLL_EXPORT QDataStream&amp; operator&gt;&gt; </td>
           <td>(</td>
           <td class="paramtype">QDataStream &amp;&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
@@ -3821,16 +4013,16 @@ template&lt;class Archive &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00250">250</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00257">257</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a07363a415b7048b25a638c0ca758920e"></a><!-- doxytag: member="qx::QxSqlQuery::qx::cvt::detail::QxConvert_FromJson_Helper" ref="a07363a415b7048b25a638c0ca758920e" args="(const QJsonValue &amp;j, qx::QxSqlQuery &amp;t, const QString &amp;format)" -->
+<a class="anchor" id="a531397b424e4d3b91d4c24c161259375"></a><!-- doxytag: member="qx::QxSqlQuery::qx::cvt::detail::QxConvert_FromJson_Helper" ref="a531397b424e4d3b91d4c24c161259375" args="(const QJsonValue &amp;j, qx::QxSqlQuery &amp;t, const QString &amp;format)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a> qx::cvt::detail::QxConvert_FromJson_Helper </td>
+          <td class="memname">QX_DLL_EXPORT <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a> qx::cvt::detail::QxConvert_FromJson_Helper </td>
           <td>(</td>
           <td class="paramtype">const QJsonValue &amp;&#160;</td>
           <td class="paramname"><em>j</em>, </td>
@@ -3869,16 +4061,16 @@ template&lt;class Archive &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00249">249</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00256">256</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a58e89f66c05a4d9aa4d183e23fa6d574"></a><!-- doxytag: member="qx::QxSqlQuery::qx::cvt::detail::QxConvert_ToJson_Helper" ref="a58e89f66c05a4d9aa4d183e23fa6d574" args="(const qx::QxSqlQuery &amp;t, const QString &amp;format)" -->
+<a class="anchor" id="afe693f21b6be7240eace6ac34cab8c16"></a><!-- doxytag: member="qx::QxSqlQuery::qx::cvt::detail::QxConvert_ToJson_Helper" ref="afe693f21b6be7240eace6ac34cab8c16" args="(const qx::QxSqlQuery &amp;t, const QString &amp;format)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QJsonValue qx::cvt::detail::QxConvert_ToJson_Helper </td>
+          <td class="memname">QX_DLL_EXPORT QJsonValue qx::cvt::detail::QxConvert_ToJson_Helper </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;&#160;</td>
           <td class="paramname"><em>t</em>, </td>
@@ -3914,7 +4106,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Replace SELECT by SELECT DISTINCT in SQL query. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00268">268</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00275">275</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -3931,7 +4123,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Current parenthesis count. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00267">267</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00274">274</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -3948,7 +4140,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Current index of SQL element. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00266">266</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00273">273</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -3965,7 +4157,7 @@ template&lt;class Archive &gt; </div>
 
 <p>List of all SQL elements to build SQL query. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00265">265</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00272">272</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -3982,7 +4174,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Bind value in this array. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00263">263</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00270">270</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -3999,7 +4191,7 @@ template&lt;class Archive &gt; </div>
 
 <p>Temporary SQL element. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00264">264</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00271">271</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -4016,16 +4208,16 @@ template&lt;class Archive &gt; </div>
 
 <p>All results returning by SQL query or stored procedure (after calling <a class="el" href="group___qx_dao.html#ga3288b4e3c6a3fa7aeac298262d3102dd" title="qx::dao::call_query function can be used to call a custom SQL query or a stored procedure">qx::dao::call_query</a> function) </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00269">269</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00276">276</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3dd2c833063db87730f6ebd893ffd017"></a><!-- doxytag: member="qx::QxSqlQuery::m_sQuery" ref="a3dd2c833063db87730f6ebd893ffd017" args="" -->
+<a class="anchor" id="a05104403539f8d62da12e5723c99ec90"></a><!-- doxytag: member="qx::QxSqlQuery::m_sQuery" ref="a05104403539f8d62da12e5723c99ec90" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QString <a class="el" href="classqx_1_1_qx_sql_query.html#a3dd2c833063db87730f6ebd893ffd017">qx::QxSqlQuery::m_sQuery</a><code> [protected]</code></td>
+          <td class="memname">QStringList <a class="el" href="classqx_1_1_qx_sql_query.html#a05104403539f8d62da12e5723c99ec90">qx::QxSqlQuery::m_sQuery</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -4033,7 +4225,41 @@ template&lt;class Archive &gt; </div>
 
 <p>Query SQL with place-holder. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00262">262</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00269">269</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e1716934b91698c546df3b2705645ad"></a><!-- doxytag: member="qx::QxSqlQuery::m_sType" ref="a7e1716934b91698c546df3b2705645ad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classqx_1_1_qx_sql_query.html#a7e1716934b91698c546df3b2705645ad">qx::QxSqlQuery::m_sType</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Query type (for example : 'aggregate' or 'cursor' for MongoDB database) </p>
+
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00278">278</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c9ec1b28bcc6e3e7438c3be7de6f8f8"></a><!-- doxytag: member="qx::QxSqlQuery::m_vResponse" ref="a1c9ec1b28bcc6e3e7438c3be7de6f8f8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariant <a class="el" href="classqx_1_1_qx_sql_query.html#a1c9ec1b28bcc6e3e7438c3be7de6f8f8">qx::QxSqlQuery::m_vResponse</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Can be used to store some responses (from MongoDB database for example in JSON format) </p>
+
+<p>Definition at line <a class="el" href="_qx_sql_query_8h_source.html#l00277">277</a> of file <a class="el" href="_qx_sql_query_8h_source.html">QxSqlQuery.h</a>.</p>
 
 </div>
 </div>
@@ -4061,7 +4287,7 @@ template&lt;class Archive &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:22 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:26 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

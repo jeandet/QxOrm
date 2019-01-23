@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -134,6 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#acf4cba67f9f26275a604dddc4de46d65">fromString</a> (void *pOwner, const QString &amp;s, const QString &amp;sFormat, int iIndexName=-1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#aae0cec4ef090313d5ea73ebd91d325df">toVariant</a> (const void *pOwner, const QString &amp;sFormat, int iIndexName=-1, <a class="el" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93">qx::cvt::context::ctx_type</a> ctx=qx::cvt::context::e_no_context) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#a64496fb031ca818c749f4d144ac0d465">fromVariant</a> (void *pOwner, const QVariant &amp;v, const QString &amp;sFormat, int iIndexName=-1, <a class="el" href="structqx_1_1cvt_1_1context.html#ade79c85929462745a3adcdf310c91a93">qx::cvt::context::ctx_type</a> ctx=qx::cvt::context::e_no_context)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#a92e06e7d6ccc523ca2c2d1f7fb7b544b">getType</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QJsonValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#a81eac74a43b1037c1f96e6c2906c92ff">toJson</a> (const void *pOwner, const QString &amp;sFormat) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_data_member___q_object.html#aa73bbd6e2fefa14f6479d3265feaa4ed">fromJson</a> (void *pOwner, const QJsonValue &amp;j, const QString &amp;sFormat)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -397,6 +398,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a92e06e7d6ccc523ca2c2d1f7fb7b544b"></a><!-- doxytag: member="qx::QxDataMember_QObject::getType" ref="a92e06e7d6ccc523ca2c2d1f7fb7b544b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString qx::QxDataMember_QObject::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classqx_1_1_ix_data_member.html#ac018a18587be0c225b38371a6ffcea3e">qx::IxDataMember</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac99b4025b23e7f005564daf8892182e8"></a><!-- doxytag: member="qx::QxDataMember_QObject::isEqual" ref="ac99b4025b23e7f005564daf8892182e8" args="(const void *pOwner1, const void *pOwner2) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -588,7 +607,7 @@ Protected Attributes</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:23 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:27 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

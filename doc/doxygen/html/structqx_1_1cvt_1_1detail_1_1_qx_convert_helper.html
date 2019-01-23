@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -118,15 +118,20 @@ Public Types</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::conditional<br class="typebreak"/>
+&lt; <a class="el" href="structqx_1_1trait_1_1is__ix__persistable.html">qx::trait::is_ix_persistable</a><br class="typebreak"/>
+&lt; T &gt;::value, <br class="typebreak"/>
+<a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___persistable.html">qx::cvt::detail::helper::QxConvertHelper_Persistable</a>, <br class="typebreak"/>
+<a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___generic.html">qx::cvt::detail::helper::QxConvertHelper_Generic</a> &gt;<br class="typebreak"/>
+::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ab141fffd3584c9d29c4c5444fd59085c">type_str_cvt_helper_0</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::conditional<br class="typebreak"/>
 &lt; std::is_pointer&lt; T &gt;::value, <br class="typebreak"/>
 <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <br class="typebreak"/>
-<a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___generic.html">qx::cvt::detail::helper::QxConvertHelper_Generic</a> &gt;<br class="typebreak"/>
-::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a463c3e68e6a55b5802dd65880debfa7d">type_str_cvt_helper_1</a></td></tr>
+<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ab141fffd3584c9d29c4c5444fd59085c">type_str_cvt_helper_0</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#aedba41887971fd23141d8359176b0a8b">type_str_cvt_helper_1</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::conditional<br class="typebreak"/>
 &lt; <a class="el" href="structqx_1_1trait_1_1is__smart__ptr.html">qx::trait::is_smart_ptr</a>&lt; T &gt;<br class="typebreak"/>
 ::value, <br class="typebreak"/>
 <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <br class="typebreak"/>
-<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a463c3e68e6a55b5802dd65880debfa7d">type_str_cvt_helper_1</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a32c93cd6e2fbc5d741fd96e6a6e87fa7">type_str_cvt_helper_2</a></td></tr>
+<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#aedba41887971fd23141d8359176b0a8b">type_str_cvt_helper_1</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a32c93cd6e2fbc5d741fd96e6a6e87fa7">type_str_cvt_helper_2</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef std::conditional<br class="typebreak"/>
 &lt; <a class="el" href="structqx_1_1trait_1_1is__container.html">qx::trait::is_container</a>&lt; T &gt;<br class="typebreak"/>
 ::value, <br class="typebreak"/>
@@ -147,7 +152,7 @@ Private Types</h2></td></tr>
 struct qx::cvt::detail::QxConvertHelper&lt; T &gt;</h3>
 
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00449">449</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00545">545</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 </div><hr/><h2>Member Typedef Documentation</h2>
 <a class="anchor" id="ac64c5bda4a7d3eb9c474ed361ba3cb6a"></a><!-- doxytag: member="qx::cvt::detail::QxConvertHelper::type" ref="ac64c5bda4a7d3eb9c474ed361ba3cb6a" args="" -->
 <div class="memitem">
@@ -162,24 +167,41 @@ template&lt;typename T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00462">462</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00559">559</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a463c3e68e6a55b5802dd65880debfa7d"></a><!-- doxytag: member="qx::cvt::detail::QxConvertHelper::type_str_cvt_helper_1" ref="a463c3e68e6a55b5802dd65880debfa7d" args="" -->
+<a class="anchor" id="ab141fffd3584c9d29c4c5444fd59085c"></a><!-- doxytag: member="qx::cvt::detail::QxConvertHelper::type_str_cvt_helper_0" ref="ab141fffd3584c9d29c4c5444fd59085c" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::conditional&lt; std::is_pointer&lt;T&gt;::value, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___generic.html">qx::cvt::detail::helper::QxConvertHelper_Generic</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a> <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html">qx::cvt::detail::QxConvertHelper</a>&lt; T &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a463c3e68e6a55b5802dd65880debfa7d">type_str_cvt_helper_1</a><code> [private]</code></td>
+          <td class="memname">typedef std::conditional&lt; <a class="el" href="structqx_1_1trait_1_1is__ix__persistable.html">qx::trait::is_ix_persistable</a>&lt;T&gt;::value, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___persistable.html">qx::cvt::detail::helper::QxConvertHelper_Persistable</a>, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___generic.html">qx::cvt::detail::helper::QxConvertHelper_Generic</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a> <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html">qx::cvt::detail::QxConvertHelper</a>&lt; T &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ab141fffd3584c9d29c4c5444fd59085c">type_str_cvt_helper_0</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00454">454</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00550">550</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aedba41887971fd23141d8359176b0a8b"></a><!-- doxytag: member="qx::cvt::detail::QxConvertHelper::type_str_cvt_helper_1" ref="aedba41887971fd23141d8359176b0a8b" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::conditional&lt; std::is_pointer&lt;T&gt;::value, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ab141fffd3584c9d29c4c5444fd59085c">type_str_cvt_helper_0</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a> <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html">qx::cvt::detail::QxConvertHelper</a>&lt; T &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#aedba41887971fd23141d8359176b0a8b">type_str_cvt_helper_1</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00551">551</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -190,13 +212,13 @@ template&lt;typename T&gt; </div>
 template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::conditional&lt; <a class="el" href="structqx_1_1trait_1_1is__smart__ptr.html">qx::trait::is_smart_ptr</a>&lt;T&gt;::value, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a463c3e68e6a55b5802dd65880debfa7d">type_str_cvt_helper_1</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a> <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html">qx::cvt::detail::QxConvertHelper</a>&lt; T &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a32c93cd6e2fbc5d741fd96e6a6e87fa7">type_str_cvt_helper_2</a><code> [private]</code></td>
+          <td class="memname">typedef std::conditional&lt; <a class="el" href="structqx_1_1trait_1_1is__smart__ptr.html">qx::trait::is_smart_ptr</a>&lt;T&gt;::value, <a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a>, <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#aedba41887971fd23141d8359176b0a8b">type_str_cvt_helper_1</a> &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#ac64c5bda4a7d3eb9c474ed361ba3cb6a">type</a> <a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html">qx::cvt::detail::QxConvertHelper</a>&lt; T &gt;::<a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper.html#a32c93cd6e2fbc5d741fd96e6a6e87fa7">type_str_cvt_helper_2</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00455">455</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00552">552</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +235,7 @@ template&lt;typename T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00456">456</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00553">553</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -230,7 +252,7 @@ template&lt;typename T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00457">457</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00554">554</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -247,7 +269,7 @@ template&lt;typename T&gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00458">458</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00555">555</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -277,7 +299,7 @@ template&lt;typename T&gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:27 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:29 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

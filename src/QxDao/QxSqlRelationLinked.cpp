@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -78,6 +78,10 @@ long QxSqlRelationLinked::getRootColumnsOffset() const { return m_pImpl->m_lRoot
 
 void QxSqlRelationLinked::setRootColumnsOffset(long l) { m_pImpl->m_lRootColumnsOffset = l; }
 
+QxSqlRelationLinked::type_lst_relation_linked QxSqlRelationLinked::getRelationLinkedX() const { return m_pImpl->m_relationLinkedX; }
+
+QxSqlRelationLinked::type_lst_relation QxSqlRelationLinked::getRelationX() const { return m_pImpl->m_relationX; }
+
 qx_bool QxSqlRelationLinked::buildHierarchy(IxSqlRelationX * pRelationX, const QStringList & sRelationX)
 {
    if (! pRelationX) { qAssert(false); return qx_bool(false); }
@@ -139,6 +143,7 @@ qx_bool QxSqlRelationLinked::insertRelationToHierarchy(const QStringList & sRela
       int iPos1 = sKey.indexOf("{"); int iPos2 = sKey.indexOf("}");
       if (iPos1 >= iPos2) { return qx_bool(false, QString("invalid relation : character '}' before than character '{' (") + sKey + ")"); }
       if (iPos1 > 0) { bModeRemoveColumns = (sKey.at(iPos1 - 1) == QChar('-')); } // syntax to remove columns instead of adding columns : -{ column1, column2, etc... }
+      if (iPos1 > 1) { bModeRemoveColumns = (bModeRemoveColumns || ((sKey.at(iPos1 - 2) == QChar('-')) && (sKey.at(iPos1 - 1) == QChar(' ')))); } // syntax to remove columns instead of adding columns : - { column1, column2, etc... }
       sKeyTemp = sKey.left(iPos1); sKeyTemp = sKeyTemp.trimmed();
       if (sKeyTemp.endsWith("-")) { sKeyTemp = sKeyTemp.left(sKeyTemp.count() - 1).trimmed(); }
       QString sColumns = sKey.mid((iPos1 + 1), (iPos2 - iPos1 - 1));

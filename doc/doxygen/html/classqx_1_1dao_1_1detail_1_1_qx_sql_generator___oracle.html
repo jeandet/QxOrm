@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -101,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">qx::dao::detail::QxSqlGenerator_Oracle Class Reference<div class="ingroups"><a class="el" href="group___qx_dao.html">QxDao : QxOrm library database communication used by persistence engine (ORM - Object Relational Mapping)</a></div></div>  </div>
@@ -128,9 +129,16 @@ Inheritance diagram for qx::dao::detail::QxSqlGenerator_Oracle:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a6a87199ba4a1d54b3196dbd7babc35f2">QxSqlGenerator_Oracle</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#ab100ff5b6ea2142aa8047b1faa21c0e1">~QxSqlGenerator_Oracle</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#acf93dd28401d78907b68c871794a6555">getTableAliasSep</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a4813ad83a7809d44a493a68c0e5a64fa">getLimit</a> (const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a1506cccc88247ee4ed6d9fb10c05f6a3">resolveLimit</a> (QSqlQuery &amp;query, const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#ac6aba9644abb321c593b029838db1242">postProcess</a> (QString &amp;sql, const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a372bae3a62812897b412a24af879940f">getOldLimitSyntax</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#adf0135fadc55b8c8574ef0fa6cf43b0a">setOldLimitSyntax</a> (bool b)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#aacddf689bcf77f1f3a7abb02a2a38ce3">m_bOldLimitSyntax</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Use old limit syntax (for Oracle version &lt; 12.1), more details here : <a href="https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering.">https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering.</a>  <a href="#aacddf689bcf77f1f3a7abb02a2a38ce3"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a81899548ad5dd13050629f66add26c2d">initSqlTypeByClassName</a> () const </td></tr>
@@ -189,6 +197,40 @@ Private Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a474ccb93e363156fb9b3e805528a7392">qx::dao::detail::QxSqlGenerator_Standard</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a372bae3a62812897b412a24af879940f"></a><!-- doxytag: member="qx::dao::detail::QxSqlGenerator_Oracle::getOldLimitSyntax" ref="a372bae3a62812897b412a24af879940f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qx::dao::detail::QxSqlGenerator_Oracle::getOldLimitSyntax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf93dd28401d78907b68c871794a6555"></a><!-- doxytag: member="qx::dao::detail::QxSqlGenerator_Oracle::getTableAliasSep" ref="acf93dd28401d78907b68c871794a6555" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString qx::dao::detail::QxSqlGenerator_Oracle::getTableAliasSep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#ab110830473234d17f1c4606b42fe08ec">qx::dao::detail::QxSqlGenerator_Standard</a>.</p>
 
 </div>
 </div>
@@ -266,6 +308,41 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adf0135fadc55b8c8574ef0fa6cf43b0a"></a><!-- doxytag: member="qx::dao::detail::QxSqlGenerator_Oracle::setOldLimitSyntax" ref="adf0135fadc55b8c8574ef0fa6cf43b0a" args="(bool b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::dao::detail::QxSqlGenerator_Oracle::setOldLimitSyntax </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="aacddf689bcf77f1f3a7abb02a2a38ce3"></a><!-- doxytag: member="qx::dao::detail::QxSqlGenerator_Oracle::m_bOldLimitSyntax" ref="aacddf689bcf77f1f3a7abb02a2a38ce3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#aacddf689bcf77f1f3a7abb02a2a38ce3">qx::dao::detail::QxSqlGenerator_Oracle::m_bOldLimitSyntax</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Use old limit syntax (for Oracle version &lt; 12.1), more details here : <a href="https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering.">https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering.</a> </p>
+
+<p>Definition at line <a class="el" href="_qx_sql_generator___oracle_8h_source.html#l00061">61</a> of file <a class="el" href="_qx_sql_generator___oracle_8h_source.html">QxSqlGenerator_Oracle.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Dvlp/_Perso/QxOrm/include/QxDao/QxSqlGenerator/<a class="el" href="_qx_sql_generator___oracle_8h_source.html">QxSqlGenerator_Oracle.h</a></li>
 </ul>
@@ -292,7 +369,7 @@ Private Member Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:30 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:30 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

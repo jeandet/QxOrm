@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -43,6 +43,10 @@
  * \brief Define a user SQL query added to default SQL query builded by QxOrm library, and used by qx::dao::xxx functions to filter elements fetched from database
  */
 
+#ifdef Q_COMPILER_INITIALIZER_LISTS
+#include <initializer_list>
+#endif // Q_COMPILER_INITIALIZER_LISTS
+
 #ifdef _QX_ENABLE_BOOST_SERIALIZATION
 #include <boost/serialization/serialization.hpp>
 #include <boost/serialization/split_free.hpp>
@@ -53,6 +57,9 @@
 
 #ifndef _QX_NO_JSON
 #include <QtCore/qjsonvalue.h>
+#include <QtCore/qjsonobject.h>
+#include <QtCore/qjsonarray.h>
+#include <QtCore/qjsondocument.h>
 #endif // _QX_NO_JSON
 
 #include <QtSql/qsqlquery.h>
@@ -68,10 +75,6 @@
 #include <QxRegister/QxVersion.h>
 
 #include <QxConvert/QxConvert.h>
-
-#include <QHash>
-#include <QVector>
-#include <QString>
 
 namespace qx {
 class QxSqlQuery;
@@ -170,14 +173,14 @@ query.where("sex").isEqualTo(author::female)
  *
  * This code will produce following SQL for <i>MySQL</i>, <i>PostgreSQL</i> and <i>SQLite</i> databases (for <i>Oracle</i> and <i>SQLServer</i>, there is a specific process for <i>limit()</i> method) :
  * \code
-WHERE sex = :sex_1_0
-AND age > :age_3_0
-OR last_name <> :last_name_5_0
-OR first_name LIKE :first_name_7_0
-AND ( id <= :id_10_0 AND birth_date BETWEEN :birth_date_12_0_1 AND :birth_date_12_0_2 )
-OR id IN (:id_15_0_0, :id_15_0_1, :id_15_0_2, :id_15_0_3, :id_15_0_4)
-AND is_deleted IS NOT NULL
-ORDER BY last_name ASC, first_name ASC, sex ASC
+WHERE sex = :sex_1_0 
+AND age > :age_3_0 
+OR last_name <> :last_name_5_0 
+OR first_name LIKE :first_name_7_0 
+AND ( id <= :id_10_0 AND birth_date BETWEEN :birth_date_12_0_1 AND :birth_date_12_0_2 ) 
+OR id IN (:id_15_0_0, :id_15_0_1, :id_15_0_2, :id_15_0_3, :id_15_0_4) 
+AND is_deleted IS NOT NULL 
+ORDER BY last_name ASC, first_name ASC, sex ASC 
 LIMIT :limit_rows_count_19_0 OFFSET :offset_start_row_19_0
  * \endcode
  *
@@ -246,14 +249,14 @@ class QX_DLL_EXPORT QxSqlQuery
    template <class Archive> friend inline void boost::serialization::qx_load(Archive & ar, qx::QxSqlQuery & t, const unsigned int file_version);
 #endif // _QX_ENABLE_BOOST_SERIALIZATION
 
-   friend QDataStream & ::operator<< (QDataStream & stream, const qx::QxSqlQuery & t);
-   friend QDataStream & ::operator>> (QDataStream & stream, qx::QxSqlQuery & t);
+   friend QX_DLL_EXPORT QDataStream & ::operator<< (QDataStream & stream, const qx::QxSqlQuery & t);
+   friend QX_DLL_EXPORT QDataStream & ::operator>> (QDataStream & stream, qx::QxSqlQuery & t);
 
 #ifndef _QX_NO_JSON
    friend struct qx::cvt::detail::QxConvert_ToJson< qx::QxSqlQuery >;
    friend struct qx::cvt::detail::QxConvert_FromJson< qx::QxSqlQuery >;
-   friend QJsonValue qx::cvt::detail::QxConvert_ToJson_Helper(const qx::QxSqlQuery & t, const QString & format);
-   friend qx_bool qx::cvt::detail::QxConvert_FromJson_Helper(const QJsonValue & j, qx::QxSqlQuery & t, const QString & format);
+   friend QX_DLL_EXPORT QJsonValue qx::cvt::detail::QxConvert_ToJson_Helper(const qx::QxSqlQuery & t, const QString & format);
+   friend QX_DLL_EXPORT qx_bool qx::cvt::detail::QxConvert_FromJson_Helper(const QJsonValue & j, qx::QxSqlQuery & t, const QString & format);
 #endif // _QX_NO_JSON
 
 protected:
@@ -263,7 +266,7 @@ protected:
 
    typedef std::tuple<QVariant, QSql::ParamType> type_bind_value;
 
-   QString                                   m_sQuery;               //!< Query SQL with place-holder
+   QStringList                               m_sQuery;               //!< Query SQL with place-holder
    QxCollection<QString, type_bind_value>    m_lstValue;             //!< Bind value in this array
    qx::dao::detail::IxSqlElement_ptr         m_pSqlElementTemp;      //!< Temporary SQL element
    QList<qx::dao::detail::IxSqlElement_ptr>  m_lstSqlElement;        //!< List of all SQL elements to build SQL query
@@ -271,21 +274,41 @@ protected:
    int                                       m_iParenthesisCount;    //!< Current parenthesis count
    bool                                      m_bDistinct;            //!< Replace SELECT by SELECT DISTINCT in SQL query
    std::shared_ptr<QxSqlResult>              m_pSqlResult;           //!< All results returning by SQL query or stored procedure (after calling qx::dao::call_query function)
+   QVariant                                  m_vResponse;            //!< Can be used to store some responses (from MongoDB database for example in JSON format)
+   QString                                   m_sType;                //!< Query type (for example : 'aggregate' or 'cursor' for MongoDB database)
 
 public:
 
-   QxSqlQuery() : m_iSqlElementIndex(0), m_iParenthesisCount(0), m_bDistinct(false) { ; }
-   QxSqlQuery(const QString & sQuery) : m_sQuery(sQuery), m_iSqlElementIndex(0), m_iParenthesisCount(0), m_bDistinct(false) { ; }
-   QxSqlQuery(const char * sQuery) : m_sQuery(sQuery), m_iSqlElementIndex(0), m_iParenthesisCount(0), m_bDistinct(false) { ; }
-   virtual ~QxSqlQuery() { ; }
+   QxSqlQuery();
+   QxSqlQuery(const char * query);
+   QxSqlQuery(const QString & query);
+   QxSqlQuery(const QStringList & query);
+   QxSqlQuery(const QString & type, const QString & query);
+   QxSqlQuery(const QString & type, const QStringList & query);
+   virtual ~QxSqlQuery();
+
+#ifndef _QX_NO_JSON
+#ifdef Q_COMPILER_INITIALIZER_LISTS
+   QxSqlQuery(std::initializer_list<QPair<QString, QJsonValue> > json);
+   QxSqlQuery(std::initializer_list<QPair<QString, QJsonValue> > json, std::initializer_list<QPair<QString, QJsonValue> > opts);
+   QxSqlQuery(const QString & type, std::initializer_list<QPair<QString, QJsonValue> > json);
+   QxSqlQuery(const QString & type, std::initializer_list<QPair<QString, QJsonValue> > json, std::initializer_list<QPair<QString, QJsonValue> > opts);
+#endif // Q_COMPILER_INITIALIZER_LISTS
+#endif // _QX_NO_JSON
 
    QString query();
+   QString queryAt(int idx) const;
+   void queryAt(int idx, const QString & query);
+   QVariant response() const;
+   QString type() const;
    bool isEmpty() const;
    bool isDistinct() const;
    void clear();
    void resolve(QSqlQuery & query) const;
    void resolveOutput(QSqlQuery & query, bool bFetchSqlResult);
    void postProcess(QString & sql) const;
+   void setResponse(const QVariant & v);
+   void setType(const QString & s);
 
    QxSqlQuery & query(const QString & sQuery);
    QxSqlQuery & bind(const QVariant & vValue, QSql::ParamType paramType = QSql::In);
@@ -358,7 +381,7 @@ public:
    virtual QxSqlQuery & groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8);
    virtual QxSqlQuery & groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8, const QString & col9);
 
-   virtual QxSqlQuery & limit(int rowsCount, int startRow = 0);
+   virtual QxSqlQuery & limit(int rowsCount, int startRow = 0, bool withTies = false);
 
    virtual QxSqlQuery & like(const QString & val);
    virtual QxSqlQuery & notLike(const QString & val);
@@ -520,7 +543,7 @@ virtual className & groupBy(const QString & col1, const QString & col2, const QS
 virtual className & groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8); \
 virtual className & groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8, const QString & col9); \
 \
-virtual className & limit(int rowsCount, int startRow = 0); \
+virtual className & limit(int rowsCount, int startRow = 0, bool withTies = false); \
 \
 virtual className & like(const QString & val); \
 virtual className & notLike(const QString & val); \
@@ -616,7 +639,7 @@ className & className::groupBy(const QString & col1, const QString & col2, const
 className & className::groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8) { return static_cast<className &>(qx::QxSqlQuery::groupBy(col1, col2, col3, col4, col5, col6, col7, col8)); } \
 className & className::groupBy(const QString & col1, const QString & col2, const QString & col3, const QString & col4, const QString & col5, const QString & col6, const QString & col7, const QString & col8, const QString & col9) { return static_cast<className &>(qx::QxSqlQuery::groupBy(col1, col2, col3, col4, col5, col6, col7, col8, col9)); } \
 \
-className & className::limit(int rowsCount, int startRow) { return static_cast<className &>(qx::QxSqlQuery::limit(rowsCount, startRow)); } \
+className & className::limit(int rowsCount, int startRow, bool withTies) { return static_cast<className &>(qx::QxSqlQuery::limit(rowsCount, startRow, withTies)); } \
 \
 className & className::like(const QString & val) { return static_cast<className &>(qx::QxSqlQuery::like(val)); } \
 className & className::notLike(const QString & val) { return static_cast<className &>(qx::QxSqlQuery::notLike(val)); } \

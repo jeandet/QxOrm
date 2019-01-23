@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_qx_serialize_q_json_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -156,16 +156,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00064"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html">00064</a> <span class="keyword">namespace </span>json {
 <a name="l00065"></a>00065 
 <a name="l00066"></a>00066 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00067"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a4e12ce19fbe2bbf3f57b78044aa72d52">00067</a> <span class="keyword">inline</span> QByteArray <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a4e12ce19fbe2bbf3f57b78044aa72d52">to_byte_array</a>(<span class="keyword">const</span> T &amp; obj, <span class="keywordtype">void</span> * owner = NULL, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
+<a name="l00067"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f8101db19f880e21896cab013c00544">00067</a> <span class="keyword">inline</span> QByteArray <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f8101db19f880e21896cab013c00544">to_byte_array</a>(<span class="keyword">const</span> T &amp; obj, <span class="keywordtype">void</span> * owner = NULL, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00068"></a>00068 {
 <a name="l00069"></a>00069    Q_UNUSED(flags); Q_UNUSED(owner);
-<a name="l00070"></a>00070    QJsonValue val = <a class="code" href="namespaceqx_1_1cvt.html#ae748514f1cd9c353acd494b66165393b">qx::cvt::to_json</a>(obj);
+<a name="l00070"></a>00070    QJsonValue val = <a class="code" href="namespaceqx_1_1cvt.html#ae748514f1cd9c353acd494b66165393b">qx::cvt::to_json</a>(obj, format);
 <a name="l00071"></a>00071    QJsonDocument doc = (val.isArray() ? QJsonDocument(val.toArray()) : QJsonDocument(val.toObject()));
 <a name="l00072"></a>00072    <span class="keywordflow">return</span> doc.toJson();
 <a name="l00073"></a>00073 }
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00076"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a3a70d5111463dbe17ac8a9f0e8cefa71">00076</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a3a70d5111463dbe17ac8a9f0e8cefa71">from_byte_array</a>(T &amp; obj, <span class="keyword">const</span> QByteArray &amp; data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
+<a name="l00076"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7dd0732d32d88a719c7d2ace4c30d8c4">00076</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7dd0732d32d88a719c7d2ace4c30d8c4">from_byte_array</a>(T &amp; obj, <span class="keyword">const</span> QByteArray &amp; data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00077"></a>00077 {
 <a name="l00078"></a>00078    Q_UNUSED(flags);
 <a name="l00079"></a>00079    QJsonParseError err;
@@ -173,21 +173,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00081"></a>00081    <span class="keywordflow">if</span> (err.error != QJsonParseError::NoError)
 <a name="l00082"></a>00082    { <span class="keywordflow">return</span> <a class="code" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>(<span class="keyword">false</span>, static_cast&lt;long&gt;(err.error), err.errorString()); }
 <a name="l00083"></a>00083    QJsonValue val = (doc.isArray() ? QJsonValue(doc.array()) : QJsonValue(doc.object()));
-<a name="l00084"></a>00084    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1cvt.html#a7a5d0ff7b637fa9daecff2101d9c7a4f">qx::cvt::from_json</a>(val, obj);
+<a name="l00084"></a>00084    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1cvt.html#a7a5d0ff7b637fa9daecff2101d9c7a4f">qx::cvt::from_json</a>(val, obj, format);
 <a name="l00085"></a>00085 }
 <a name="l00086"></a>00086 
 <a name="l00087"></a>00087 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00088"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a1dc562f6a6cb9f441e24aa1a8e6d8a16">00088</a> <span class="keyword">inline</span> QString <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a1dc562f6a6cb9f441e24aa1a8e6d8a16">to_string</a>(<span class="keyword">const</span> T &amp; obj, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
-<a name="l00089"></a>00089 { <span class="keywordflow">return</span> QString::fromUtf8(<a class="code" href="namespaceqx_1_1serialization_1_1json.html#a4e12ce19fbe2bbf3f57b78044aa72d52">qx::serialization::json::to_byte_array</a>(obj, NULL, flags)); }
+<a name="l00088"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a1e455df2ab9dda94e67eadab13609aef">00088</a> <span class="keyword">inline</span> QString <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a1e455df2ab9dda94e67eadab13609aef">to_string</a>(<span class="keyword">const</span> T &amp; obj, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
+<a name="l00089"></a>00089 { <span class="keywordflow">return</span> QString::fromUtf8(<a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f8101db19f880e21896cab013c00544">qx::serialization::json::to_byte_array</a>(obj, NULL, flags, format)); }
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00092"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f6759fcc33673f25ef5b6f4dc7fcc76">00092</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f6759fcc33673f25ef5b6f4dc7fcc76">from_string</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
-<a name="l00093"></a>00093 { <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a3a70d5111463dbe17ac8a9f0e8cefa71">qx::serialization::json::from_byte_array</a>(obj, sString.toUtf8(), flags); }
+<a name="l00092"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a54685d626b4564d1e9da62a6c7811617">00092</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a54685d626b4564d1e9da62a6c7811617">from_string</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sString, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
+<a name="l00093"></a>00093 { <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7dd0732d32d88a719c7d2ace4c30d8c4">qx::serialization::json::from_byte_array</a>(obj, sString.toUtf8(), flags, format); }
 <a name="l00094"></a>00094 
 <a name="l00095"></a>00095 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00096"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a63bba3a855e95b30a77cb483be7d010a">00096</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a63bba3a855e95b30a77cb483be7d010a">to_file</a>(<span class="keyword">const</span> T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
+<a name="l00096"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a32d957a7717aff759ba10568cf904cb0">00096</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a32d957a7717aff759ba10568cf904cb0">to_file</a>(<span class="keyword">const</span> T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00097"></a>00097 {
-<a name="l00098"></a>00098    QByteArray data = <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a4e12ce19fbe2bbf3f57b78044aa72d52">qx::serialization::json::to_byte_array</a>(obj, NULL, flags);
+<a name="l00098"></a>00098    QByteArray data = <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f8101db19f880e21896cab013c00544">qx::serialization::json::to_byte_array</a>(obj, NULL, flags, format);
 <a name="l00099"></a>00099    QFile file(sFileName);
 <a name="l00100"></a>00100    <span class="keywordflow">if</span> (! file.open(QIODevice::WriteOnly | QIODevice::Truncate))
 <a name="l00101"></a>00101    { <span class="keywordflow">return</span> <a class="code" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;cannot open file : &quot;</span> + sFileName); }
@@ -196,19 +196,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00104"></a>00104 }
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00107"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#acc9d99195bc7670866075c194cc24ff9">00107</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#acc9d99195bc7670866075c194cc24ff9">from_file</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
+<a name="l00107"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a6ee8ef6eedbb329a88dcc8fe637dbd6a">00107</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a6ee8ef6eedbb329a88dcc8fe637dbd6a">from_file</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00108"></a>00108 {
 <a name="l00109"></a>00109    QFile file(sFileName);
 <a name="l00110"></a>00110    <span class="keywordflow">if</span> (! file.open(QIODevice::ReadOnly))
 <a name="l00111"></a>00111    { <span class="keywordflow">return</span> <a class="code" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;cannot open file : &quot;</span> + sFileName); }
 <a name="l00112"></a>00112    QByteArray data = file.readAll(); file.close();
-<a name="l00113"></a>00113    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a3a70d5111463dbe17ac8a9f0e8cefa71">qx::serialization::json::from_byte_array</a>(obj, data, flags);
+<a name="l00113"></a>00113    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7dd0732d32d88a719c7d2ace4c30d8c4">qx::serialization::json::from_byte_array</a>(obj, data, flags, format);
 <a name="l00114"></a>00114 }
 <a name="l00115"></a>00115 
 <a name="l00116"></a>00116 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00117"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#ad0955d3a3c8c106cf62de01b7223169d">00117</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#ad0955d3a3c8c106cf62de01b7223169d">to_file_compressed</a>(<span class="keyword">const</span> T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keywordtype">int</span> iCompressionLevel = -1)
+<a name="l00117"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7794fd232dca70e5272f8fbb80caf9c0">00117</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7794fd232dca70e5272f8fbb80caf9c0">to_file_compressed</a>(<span class="keyword">const</span> T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keywordtype">int</span> iCompressionLevel = -1, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00118"></a>00118 {
-<a name="l00119"></a>00119    QByteArray data = <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a4e12ce19fbe2bbf3f57b78044aa72d52">qx::serialization::json::to_byte_array</a>(obj, NULL, flags);
+<a name="l00119"></a>00119    QByteArray data = <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a0f8101db19f880e21896cab013c00544">qx::serialization::json::to_byte_array</a>(obj, NULL, flags, format);
 <a name="l00120"></a>00120    QByteArray compressed = qCompress(data, iCompressionLevel);
 <a name="l00121"></a>00121    QFile file(sFileName);
 <a name="l00122"></a>00122    <span class="keywordflow">if</span> (! file.open(QIODevice::WriteOnly | QIODevice::Truncate))
@@ -218,14 +218,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00126"></a>00126 }
 <a name="l00127"></a>00127 
 <a name="l00128"></a>00128 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
-<a name="l00129"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7c566a3c3c4fa94b06dcbf905e66f45c">00129</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7c566a3c3c4fa94b06dcbf905e66f45c">from_file_compressed</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>)
+<a name="l00129"></a><a class="code" href="namespaceqx_1_1serialization_1_1json.html#a9ac3524141eabf60b25f628b2a906828">00129</a> <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_bool.html" title="qx_bool : boolean type with code and description message when an error occured">qx_bool</a> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a9ac3524141eabf60b25f628b2a906828">from_file_compressed</a>(T &amp; obj, <span class="keyword">const</span> QString &amp; sFileName, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> flags = 1 <span class="comment">/* boost::archive::no_header */</span>, <span class="keyword">const</span> QString &amp; format = QString())
 <a name="l00130"></a>00130 {
 <a name="l00131"></a>00131    QFile file(sFileName);
 <a name="l00132"></a>00132    <span class="keywordflow">if</span> (! file.open(QIODevice::ReadOnly))
 <a name="l00133"></a>00133    { <span class="keywordflow">return</span> <a class="code" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;cannot open file : &quot;</span> + sFileName); }
 <a name="l00134"></a>00134    QByteArray data = file.readAll(); file.close();
 <a name="l00135"></a>00135    QByteArray uncompressed = qUncompress(data);
-<a name="l00136"></a>00136    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a3a70d5111463dbe17ac8a9f0e8cefa71">qx::serialization::json::from_byte_array</a>(obj, uncompressed, flags);
+<a name="l00136"></a>00136    <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1serialization_1_1json.html#a7dd0732d32d88a719c7d2ace4c30d8c4">qx::serialization::json::from_byte_array</a>(obj, uncompressed, flags, format);
 <a name="l00137"></a>00137 }
 <a name="l00138"></a>00138 
 <a name="l00139"></a>00139 } <span class="comment">// namespace json</span>
@@ -254,7 +254,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:15 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:22 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

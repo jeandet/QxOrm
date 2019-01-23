@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -132,12 +132,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#ae9b9b56b123b9cccdcceab8769de1de8">getSqlQueryToUpdate</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#af01bab27ed138ac8464ee46e29031908">getSqlQueryToCreateTable</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_soft_delete.html#a6a794b3eea9d7a11edab6b1f06ea153a">mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a6d37d5b614a1e1a2e19eb4b4357aefed">getMode</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a8476043d8660bf1c7bfe9ce32761f9ba">getSqlFetchInJoin</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a60ac45e661187ea2e4aef088322cbb76">setTableName</a> (const QString &amp;sTable)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a91e15be206be59bde4a58888ab27d083">setColumnName</a> (const QString &amp;sColumn)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a8a2fd4b776e9bcbd475e7d38b04b2faa">setSqlQueryToFetch</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a6a94b8ab9eaeb6e59d678462062b3061">setSqlQueryToUpdate</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#aac330136e9f3b673f7ce852e65d3f91d">setSqlQueryToCreateTable</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#ad378d7962f669c70c010dc72763a5151">setMode</a> (<a class="el" href="classqx_1_1_qx_soft_delete.html#a6a794b3eea9d7a11edab6b1f06ea153a">mode</a> eMode)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#aab4250054250a57c794097b201b33268">setSqlFetchInJoin</a> (bool b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a217c44a367c086bc8875f696cc6a563a">isEmpty</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a793d37737e8e7a76aef407e5e39d2195">buildSqlTablePointName</a> (const QString &amp;sTable=QString()) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#acfe4afc28ace99a33a774447a73e81c7">buildSqlQueryToFetch</a> (const QString &amp;sTable=QString()) const </td></tr>
@@ -157,6 +159,8 @@ Private Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrided user SQL query to create table, if empty QxOrm library builds a default SQL query.  <a href="#afb3d2d5a9137471709c49f69830defc8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_soft_delete.html#a6a794b3eea9d7a11edab6b1f06ea153a">mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a5b0af5f38bbe3e26adb6d3dc7b6eb81c">m_eMode</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Soft delete mode : 'mode_flag' with a boolean column, 'mode_date_time' with a date-time column containing deletion date-time.  <a href="#a5b0af5f38bbe3e26adb6d3dc7b6eb81c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_soft_delete.html#a33f9970d4beb1d3f6a4b03976ce773b2">m_bFetchInJoin</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add SQL condition to fetch in the JOIN part (default value), for backward compatibility with previous versions of QxOrm library set this value to false (means fetch in the WHERE part)  <a href="#a33f9970d4beb1d3f6a4b03976ce773b2"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classqx_1_1_qx_soft_delete.html" title="qx::QxSoftDelete : soft delete (or logical delete) behavior to update a row into database (flag it as...">qx::QxSoftDelete</a> : soft delete (or logical delete) behavior to update a row into database (flag it as deleted) instead of delete it from database </p>
@@ -388,6 +392,22 @@ daoError = qx::dao::destroy_all&lt;Bar&gt;();               <a class="code" href
 
 </div>
 </div>
+<a class="anchor" id="a8476043d8660bf1c7bfe9ce32761f9ba"></a><!-- doxytag: member="qx::QxSoftDelete::getSqlFetchInJoin" ref="a8476043d8660bf1c7bfe9ce32761f9ba" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qx::QxSoftDelete::getSqlFetchInJoin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af01bab27ed138ac8464ee46e29031908"></a><!-- doxytag: member="qx::QxSoftDelete::getSqlQueryToCreateTable" ref="af01bab27ed138ac8464ee46e29031908" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -502,6 +522,23 @@ daoError = qx::dao::destroy_all&lt;Bar&gt;();               <a class="code" href
 
 </div>
 </div>
+<a class="anchor" id="aab4250054250a57c794097b201b33268"></a><!-- doxytag: member="qx::QxSoftDelete::setSqlFetchInJoin" ref="aab4250054250a57c794097b201b33268" args="(bool b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::QxSoftDelete::setSqlFetchInJoin </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aac330136e9f3b673f7ce852e65d3f91d"></a><!-- doxytag: member="qx::QxSoftDelete::setSqlQueryToCreateTable" ref="aac330136e9f3b673f7ce852e65d3f91d" args="(const QString &amp;s)" -->
 <div class="memitem">
 <div class="memproto">
@@ -571,6 +608,23 @@ daoError = qx::dao::destroy_all&lt;Bar&gt;();               <a class="code" href
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a33f9970d4beb1d3f6a4b03976ce773b2"></a><!-- doxytag: member="qx::QxSoftDelete::m_bFetchInJoin" ref="a33f9970d4beb1d3f6a4b03976ce773b2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classqx_1_1_qx_soft_delete.html#a33f9970d4beb1d3f6a4b03976ce773b2">qx::QxSoftDelete::m_bFetchInJoin</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add SQL condition to fetch in the JOIN part (default value), for backward compatibility with previous versions of QxOrm library set this value to false (means fetch in the WHERE part) </p>
+
+<p>Definition at line <a class="el" href="_qx_soft_delete_8h_source.html#l00111">111</a> of file <a class="el" href="_qx_soft_delete_8h_source.html">QxSoftDelete.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5b0af5f38bbe3e26adb6d3dc7b6eb81c"></a><!-- doxytag: member="qx::QxSoftDelete::m_eMode" ref="a5b0af5f38bbe3e26adb6d3dc7b6eb81c" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -697,7 +751,7 @@ daoError = qx::dao::destroy_all&lt;Bar&gt;();               <a class="code" href
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:22 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:26 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

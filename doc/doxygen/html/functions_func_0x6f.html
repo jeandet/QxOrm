@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -186,6 +186,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_many.html#a8282cc9108343aca2638396e976a17fb">qx::QxSqlRelation_OneToMany&lt; DataType, Owner &gt;</a>
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_one.html#ac24b7962f0cbea97a5970535084ac3ce">qx::QxSqlRelation_OneToOne&lt; DataType, Owner &gt;</a>
 </li>
+<li>onBeforeSqlPrepare()
+: <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#afa9c5e06ef42877f0ee33fed9e0efe8b">qx::dao::detail::IxSqlGenerator</a>
+, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a062f2691bcb530df3eeccda6d8058259">qx::dao::detail::QxSqlGenerator_Standard</a>
+</li>
 <li>onBeforeUpdate()
 : <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#af2869cf18ff973d6ead3376d1f4c76bb">qx::dao::detail::IxSqlGenerator</a>
 , <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a6847f14e3153bcb39ecc20369db41c40">qx::dao::detail::QxSqlGenerator_Standard</a>
@@ -203,10 +207,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1_qx_sql_query.html#abbb2978e5e7845f1ec858dae4fc2203b">qx::QxSqlQuery</a>
 </li>
 <li>operator bool()
-: <a class="el" href="classqx_1_1dao_1_1ptr.html#a311333a4a3b8887a4b5151408f1c745a">qx::dao::ptr&lt; T &gt;</a>
+: <a class="el" href="classqx_1_1_qx_bool.html#aae3d3949635ced9a54c18080f436d9af">qx::QxBool</a>
+, <a class="el" href="classqx_1_1dao_1_1ptr.html#a311333a4a3b8887a4b5151408f1c745a">qx::dao::ptr&lt; T &gt;</a>
 , <a class="el" href="classqx_1_1memory_1_1bool__array_1_1___element.html#ae136e7af047d26de201baabde644d84a">qx::memory::bool_array::_Element</a>
 , <a class="el" href="classqx_1_1_qx_invalid_value_x.html#aa0e97b6d891fe8c833b5a6cf9771ddc6">qx::QxInvalidValueX</a>
-, <a class="el" href="classqx_1_1_qx_bool.html#aae3d3949635ced9a54c18080f436d9af">qx::QxBool</a>
 </li>
 <li>operator!()
 : <a class="el" href="classqx_1_1_qx_bool.html#aa79e870d1dd5cec749e726007107ccf5">qx::QxBool</a>
@@ -239,35 +243,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1memory_1_1____debug__new__recorder.html#ac634b63cd5f5df741d50c54265d2c503">qx::memory::__debug_new_recorder</a>
 </li>
 <li>operator=()
-: <a class="el" href="structqx_1_1any_1_1holder.html#ae24043dde85225b2f2720acf892456bf">qx::any::holder&lt; ValueType &gt;</a>
-, <a class="el" href="classqx_1_1dao_1_1ptr.html#ae3da92cc62c8f8bbf2aeba401b5f5fed">qx::dao::ptr&lt; T &gt;</a>
+: <a class="el" href="classqx_1_1_ix_boost_serialize_register_helper.html#ab440d091e2dfb83600375d268e7ec854">qx::IxBoostSerializeRegisterHelper</a>
+, <a class="el" href="classqx_1_1dao_1_1ptr.html#a7a308169ed717178d9d0e1ffa21e0812">qx::dao::ptr&lt; T &gt;</a>
 , <a class="el" href="classqx_1_1_qx_session.html#ad8adf0c4f1d1e7d6900e25c5a5e033bf">qx::QxSession</a>
-, <a class="el" href="classqx_1_1_ix_factory.html#a675128c8b68cdba97a059d1d2d4be997">qx::IxFactory</a>
 , <a class="el" href="classqx_1_1memory_1_1bool__array_1_1___element.html#a1e66574eb41fb91ad976a05f6a89227e">qx::memory::bool_array::_Element</a>
 , <a class="el" href="classqx_1_1memory_1_1____debug__new__recorder.html#a70ca0c0e22c79afcbbc598c45ce0d2ae">qx::memory::__debug_new_recorder</a>
 , <a class="el" href="classqx_1_1memory_1_1fast__mutex.html#a7dab7eb60549ec2caa8fd9fef5683609">qx::memory::fast_mutex</a>
 , <a class="el" href="classqx_1_1memory_1_1fast__mutex__autolock.html#aa5f216ab8e74ad4ba2378d8581f5c6c5">qx::memory::fast_mutex_autolock</a>
 , <a class="el" href="classqx_1_1memory_1_1object__level__lock_1_1lock.html#ada98cc4edc14b01214a9ca37924c7550">qx::memory::object_level_lock&lt; _Host &gt;::lock</a>
-, <a class="el" href="classqx_1_1_ix_boost_serialize_register_helper.html#ab440d091e2dfb83600375d268e7ec854">qx::IxBoostSerializeRegisterHelper</a>
+, <a class="el" href="classqx_1_1memory_1_1static__mem__pool__set.html#acc1dd8ddeb22beb1677f02d5d7002444">qx::memory::static_mem_pool_set</a>
 , <a class="el" href="classqx_1_1memory_1_1static__mem__pool.html#a0a989f4b3dcfd02eee4a53a96e6934b9">qx::memory::static_mem_pool&lt; _Sz, _Gid &gt;</a>
 , <a class="el" href="classqx_1_1_ix_singleton.html#a2d93562b12e658b22d46d70632048b90">qx::IxSingleton</a>
-, <a class="el" href="classqx_1_1memory_1_1static__mem__pool__set.html#acc1dd8ddeb22beb1677f02d5d7002444">qx::memory::static_mem_pool_set</a>
-, <a class="el" href="classqx_1_1dao_1_1ptr.html#a96aeb680b9107afd712c4e9f56ab59eb">qx::dao::ptr&lt; T &gt;</a>
+, <a class="el" href="classqx_1_1_ix_factory.html#a675128c8b68cdba97a059d1d2d4be997">qx::IxFactory</a>
+, <a class="el" href="classqx_1_1dao_1_1ptr.html#a01b752b850a30045bd9e281d258fad86">qx::dao::ptr&lt; T &gt;</a>
+, <a class="el" href="classqx_1_1_qx_bool.html#ac6937d6a02b5a7449a534410d3d00888">qx::QxBool</a>
 , <a class="el" href="classqx_1_1_qx_collection.html#ab295cf7958a205a19b4bcbb6c72de822">qx::QxCollection&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1_qx_collection_iterator.html#acf669198d167ae4e6025d153827a63c0">qx::QxCollectionIterator&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1any.html#a43e6e91bacb619d9dece179aa0c36fb7">qx::any</a>
+, <a class="el" href="structqx_1_1any_1_1holder.html#ae24043dde85225b2f2720acf892456bf">qx::any::holder&lt; ValueType &gt;</a>
 , <a class="el" href="classqx_1_1_qx_bool.html#aff65628d95866e3913fac37d3930c5f6">qx::QxBool</a>
 , <a class="el" href="classqx_1_1dao_1_1ptr.html#a7ae7e3b539f69cc00c1e482154c5122c">qx::dao::ptr&lt; T &gt;</a>
 </li>
 <li>operator==()
-: <a class="el" href="classqx_1_1_qx_collection.html#a2529e650813e0d172c3f5cc11c0b36a2">qx::QxCollection&lt; Key, Value &gt;</a>
+: <a class="el" href="classqx_1_1_qx_bool.html#a0786df148c1259ffb6219d6938cf6eff">qx::QxBool</a>
+, <a class="el" href="classqx_1_1_qx_collection.html#a2529e650813e0d172c3f5cc11c0b36a2">qx::QxCollection&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1_qx_bool.html#af3189f969d9c059a2d548ccf181253da">qx::QxBool</a>
 </li>
 <li>operator[]()
 : <a class="el" href="classqx_1_1memory_1_1bool__array.html#aa98ae517547d1011fdd5560d718fcda7">qx::memory::bool_array</a>
 </li>
 <li>operator||()
-: <a class="el" href="classqx_1_1_qx_bool.html#aa67fca493ed3f953560e21c11c7bb377">qx::QxBool</a>
+: <a class="el" href="classqx_1_1_qx_bool.html#a2a702c61a63a591551551742f1e988da">qx::QxBool</a>
 </li>
 <li>or_()
 : <a class="el" href="classqx_1_1_qx_sql_query.html#a3a337d1de449b8d0a48b97704ac5a11c">qx::QxSqlQuery</a>
@@ -276,10 +282,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1_qx_sql_query.html#ab9308d02993698a2e91d34cc23436bb7">qx::QxSqlQuery</a>
 </li>
 <li>orderAsc()
-: <a class="el" href="classqx_1_1_qx_sql_query.html#acd7de05e8a2069fed7ec4ab83643970d">qx::QxSqlQuery</a>
+: <a class="el" href="classqx_1_1_qx_sql_query.html#abcaf020e8823191fbe22c752dffcee80">qx::QxSqlQuery</a>
 </li>
 <li>orderDesc()
-: <a class="el" href="classqx_1_1_qx_sql_query.html#abd6731b5ba1dfe44f464b7a08d6cd0f4">qx::QxSqlQuery</a>
+: <a class="el" href="classqx_1_1_qx_sql_query.html#ab9799ca9d394c12adbe76a32030634b4">qx::QxSqlQuery</a>
 </li>
 <li>output_object()
 : <a class="el" href="structqx_1_1memory_1_1output__object.html#af07b8672abb04108a69f6a821d9f21b1">qx::memory::output_object&lt; _OutputStrm, _StringType &gt;</a>
@@ -307,7 +313,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:20 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:24 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

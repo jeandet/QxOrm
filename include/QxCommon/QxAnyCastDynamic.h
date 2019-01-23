@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -48,8 +48,6 @@
 #include <QxCommon/QxAny.h>
 
 #include <QxDao/QxDaoPointer.h>
-
-#include <memory>
 
 namespace qx {
 

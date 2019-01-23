@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -118,56 +118,76 @@ Classes</h2></td></tr>
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-boost::archive::binary_iarchive_impl<br class="typebreak"/>
-&lt; <a class="el" href="classeos_1_1portable__iarchive.html">portable_iarchive</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a30d84adedcc8dddf6b23d7921cb45b9c">portable_iarchive_base</a></td></tr>
+boost::archive::version_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-boost::archive::binary_oarchive_impl<br class="typebreak"/>
-&lt; <a class="el" href="classeos_1_1portable__oarchive.html">portable_oarchive</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">portable_oarchive_base</a></td></tr>
+boost::archive::basic_binary_iprimitive<br class="typebreak"/>
+&lt; <a class="el" href="classeos_1_1portable__iarchive.html">portable_iarchive</a>, <br class="typebreak"/>
+std::istream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#af4566a3bcc163fe25b68279af6fbb62f">portable_iprimitive</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+boost::archive::basic_binary_oprimitive<br class="typebreak"/>
+&lt; <a class="el" href="classeos_1_1portable__oarchive.html">portable_oarchive</a>, <br class="typebreak"/>
+std::ostream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const boost::archive::version_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a7d65f2fb4ec23237bebd297f68718086">archive_version</a> (boost::archive::ARCHIVE_VERSION())</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#ae5158c895df9b165bf5b96ce2fe2838d">archive_version</a> (boost::archive::ARCHIVE_VERSION())</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const signed char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">magic_byte</a> = 'e' | 'o' | 's'</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeos.html#a2091929cfe70df606d1c6fa7915c6c5e">no_infnan</a> = 64</td></tr>
 </table>
 <hr/><h2>Typedef Documentation</h2>
-<a class="anchor" id="a30d84adedcc8dddf6b23d7921cb45b9c"></a><!-- doxytag: member="eos::portable_iarchive_base" ref="a30d84adedcc8dddf6b23d7921cb45b9c" args="" -->
+<a class="anchor" id="a4c942b4a2bfac54e71c431f9ad00cc91"></a><!-- doxytag: member="eos::archive_version_type" ref="a4c942b4a2bfac54e71c431f9ad00cc91" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::archive::binary_iarchive_impl&lt; <a class="el" href="classeos_1_1portable__iarchive.html">portable_iarchive</a> &gt; <a class="el" href="namespaceeos.html#a30d84adedcc8dddf6b23d7921cb45b9c">eos::portable_iarchive_base</a></td>
+          <td class="memname">typedef boost::archive::version_type <a class="el" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">eos::archive_version_type</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00124">124</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__archive__exception_8hpp_source.html#l00038">38</a> of file <a class="el" href="portable__archive__exception_8hpp_source.html">portable_archive_exception.hpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a385f293ecaef106c5404eaece02279bd"></a><!-- doxytag: member="eos::portable_oarchive_base" ref="a385f293ecaef106c5404eaece02279bd" args="" -->
+<a class="anchor" id="af4566a3bcc163fe25b68279af6fbb62f"></a><!-- doxytag: member="eos::portable_iprimitive" ref="af4566a3bcc163fe25b68279af6fbb62f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::archive::binary_oarchive_impl&lt; <a class="el" href="classeos_1_1portable__oarchive.html">portable_oarchive</a> &gt; <a class="el" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">eos::portable_oarchive_base</a></td>
+          <td class="memname">typedef boost::archive::basic_binary_iprimitive&lt; <a class="el" href="classeos_1_1portable__iarchive.html">portable_iarchive</a> , std::istream &gt; <a class="el" href="namespaceeos.html#af4566a3bcc163fe25b68279af6fbb62f">eos::portable_iprimitive</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="portable__oarchive_8hpp_source.html#l00116">116</a> of file <a class="el" href="portable__oarchive_8hpp_source.html">portable_oarchive.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__iarchive_8hpp_source.html#l00161">161</a> of file <a class="el" href="portable__iarchive_8hpp_source.html">portable_iarchive.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5832a454fccef34d965f0a20bd79b0f1"></a><!-- doxytag: member="eos::portable_oprimitive" ref="a5832a454fccef34d965f0a20bd79b0f1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef boost::archive::basic_binary_oprimitive&lt; <a class="el" href="classeos_1_1portable__oarchive.html">portable_oarchive</a> , std::ostream &gt; <a class="el" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">eos::portable_oprimitive</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="portable__oarchive_8hpp_source.html#l00164">164</a> of file <a class="el" href="portable__oarchive_8hpp_source.html">portable_oarchive.hpp</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a7d65f2fb4ec23237bebd297f68718086"></a><!-- doxytag: member="eos::archive_version" ref="a7d65f2fb4ec23237bebd297f68718086" args="(boost::archive::ARCHIVE_VERSION())" -->
+<a class="anchor" id="ae5158c895df9b165bf5b96ce2fe2838d"></a><!-- doxytag: member="eos::archive_version" ref="ae5158c895df9b165bf5b96ce2fe2838d" args="(boost::archive::ARCHIVE_VERSION())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const boost::archive::version_type eos::archive_version </td>
+          <td class="memname">const <a class="el" href="namespaceeos.html#a4c942b4a2bfac54e71c431f9ad00cc91">archive_version_type</a> eos::archive_version </td>
           <td>(</td>
           <td class="paramtype">boost::archive::&#160;</td>
           <td class="paramname"><em>ARCHIVE_VERSION</em>()</td><td>)</td>
@@ -191,7 +211,22 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="portable__archive__exception_8hpp_source.html#l00017">17</a> of file <a class="el" href="portable__archive__exception_8hpp_source.html">portable_archive_exception.hpp</a>.</p>
+<p>Definition at line <a class="el" href="portable__archive__exception_8hpp_source.html#l00031">31</a> of file <a class="el" href="portable__archive__exception_8hpp_source.html">portable_archive_exception.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2091929cfe70df606d1c6fa7915c6c5e"></a><!-- doxytag: member="eos::no_infnan" ref="a2091929cfe70df606d1c6fa7915c6c5e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned <a class="el" href="namespaceeos.html#a2091929cfe70df606d1c6fa7915c6c5e">eos::no_infnan</a> = 64</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="portable__archive__exception_8hpp_source.html#l00034">34</a> of file <a class="el" href="portable__archive__exception_8hpp_source.html">portable_archive_exception.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,7 +250,7 @@ Variables</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:20 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:24 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

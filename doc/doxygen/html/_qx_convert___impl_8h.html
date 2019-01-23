@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -112,6 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="_qx_time_neutral_8h_source.html">QxDao/QxTimeNeutral.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_date_time_neutral_8h_source.html">QxDao/QxDateTimeNeutral.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_sql_query_8h_source.html">QxDao/QxSqlQuery.h</a>&gt;</code><br/>
+<code>#include &lt;<a class="el" href="_ix_persistable_8h_source.html">QxDao/IxPersistable.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_collection_8h_source.html">QxCollection/QxCollection.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_class_8h_source.html">QxRegister/QxClass.h</a>&gt;</code><br/>
 <code>#include &lt;<a class="el" href="_qx_archive_8h_source.html">QxSerialize/QxArchive.h</a>&gt;</code><br/>
@@ -143,6 +144,7 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___generic.html">qx::cvt::detail::helper::QxConvertHelper_Generic</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___ptr.html">qx::cvt::detail::helper::QxConvertHelper_Ptr</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___registered.html">qx::cvt::detail::helper::QxConvertHelper_Registered</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___persistable.html">qx::cvt::detail::helper::QxConvertHelper_Persistable</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___container.html">qx::cvt::detail::helper::QxConvertHelper_Container</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1helper_1_1_qx_convert_helper___enum.html">qx::cvt::detail::helper::QxConvertHelper_Enum</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_string.html">qx::cvt::detail::QxConvertHelper_ToString&lt; T, H &gt;</a></td></tr>
@@ -161,6 +163,12 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_variant_3_01_t_00_01qx_1_1cvt_1_1detail_17af68d783df288cd9368caed317cbc2c.html">qx::cvt::detail::QxConvertHelper_FromVariant&lt; T, qx::cvt::detail::helper::QxConvertHelper_Generic &gt;::cvtQVariant&lt; true, dummy &gt;</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_json_3_01_t_00_01qx_1_1cvt_1_1detail_1_1helaee3b68bec56417f532ec03b8648641f.html">qx::cvt::detail::QxConvertHelper_ToJson&lt; T, qx::cvt::detail::helper::QxConvertHelper_Generic &gt;</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_json_3_01_t_00_01qx_1_1cvt_1_1detail_1_1h2aa61e79b95c63ff40633008a8cd7d8d.html">qx::cvt::detail::QxConvertHelper_FromJson&lt; T, qx::cvt::detail::helper::QxConvertHelper_Generic &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_string_3_01_t_00_01qx_1_1cvt_1_1detail_1_1h357a9a83c13faaa37a10417fbaffb7eb.html">qx::cvt::detail::QxConvertHelper_ToString&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_string_3_01_t_00_01qx_1_1cvt_1_1detail_1_78f5bbb407084a7b11ab0fed5e8969ef.html">qx::cvt::detail::QxConvertHelper_FromString&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_variant_3_01_t_00_01qx_1_1cvt_1_1detail_1_119d1d27cae4fd3f86ef747c14df60fb9.html">qx::cvt::detail::QxConvertHelper_ToVariant&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_variant_3_01_t_00_01qx_1_1cvt_1_1detail_1714906b78e5642193236d4f743ba4ab2.html">qx::cvt::detail::QxConvertHelper_FromVariant&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_json_3_01_t_00_01qx_1_1cvt_1_1detail_1_1helc0695c5162c0ed42a43245dc0a024af9.html">qx::cvt::detail::QxConvertHelper_ToJson&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_json_3_01_t_00_01qx_1_1cvt_1_1detail_1_1he922e300217e672b8ba8f644da400585.html">qx::cvt::detail::QxConvertHelper_FromJson&lt; T, qx::cvt::detail::helper::QxConvertHelper_Persistable &gt;</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_string_3_01_t_00_01qx_1_1cvt_1_1detail_1_1ha01909dc181a921e423c8b945395422b.html">qx::cvt::detail::QxConvertHelper_ToString&lt; T, qx::cvt::detail::helper::QxConvertHelper_Ptr &gt;</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___from_string_3_01_t_00_01qx_1_1cvt_1_1detail_1_6ff83b8ce6ec9c7b7c880b0fa2054391.html">qx::cvt::detail::QxConvertHelper_FromString&lt; T, qx::cvt::detail::helper::QxConvertHelper_Ptr &gt;</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqx_1_1cvt_1_1detail_1_1_qx_convert_helper___to_variant_3_01_t_00_01qx_1_1cvt_1_1detail_1_1203fe2f24b3c578b398bb4031ac76a89.html">qx::cvt::detail::QxConvertHelper_ToVariant&lt; T, qx::cvt::detail::helper::QxConvertHelper_Ptr &gt;</a></td></tr>
@@ -227,7 +235,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00073">73</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00074">74</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +268,7 @@ static <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_
 { Q_UNUSED(format); Q_UNUSED(index); Q_UNUSED(ctx); QString s = v.toString(); <span class="keywordflow">return</span> <a class="code" href="namespaceqx_1_1cvt.html#ab4e6842789bd5c746dd1ec0db4d6a7cf">QX_CVT_DEFAULT_ARCHIVE::from_string</a>(t, s); } }; \
 } } }
 </pre></div>
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00085">85</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00086">86</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -275,7 +283,7 @@ static <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00067">67</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00068">68</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -290,7 +298,7 @@ static <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00069">69</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00070">70</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -305,7 +313,7 @@ static <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00068">68</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_convert___impl_8h_source.html#l00069">69</a> of file <a class="el" href="_qx_convert___impl_8h_source.html">QxConvert_Impl.h</a>.</p>
 
 </div>
 </div>
@@ -329,7 +337,7 @@ static <span class="keyword">inline</span> <a class="code" href="classqx_1_1_qx_
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:16 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:22 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

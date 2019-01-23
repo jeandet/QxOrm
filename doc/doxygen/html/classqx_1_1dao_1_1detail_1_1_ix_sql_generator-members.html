@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -105,8 +105,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 This is the complete list of members for <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#ac9ddb277c96d88e955d55c44e85deb66">checkSqlInsert</a>(IxDao_Helper *pDaoHelper, QString &amp;sql) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#aad1f9ea33a2a4dc744fcd2f7d59031ed">formatSqlQuery</a>(IxDao_Helper *pDaoHelper, QString &amp;sql) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a993ba780d35a45a6f2d85aac260705b4">getAutoIncrement</a>() const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a8f168c55aed14b0af3661e2ce94d8d67">getLimit</a>(const QxSqlLimit *pLimit) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a8ca368e111dd8c11242ab4a4f1bf7a9e">getTableAliasSep</a>() const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a4f480476f9a5ab6812e2db0ef4f203f8">getWildCard</a>() const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a5c32cbe1a30a6851ebbf5373bcff9d85">init</a>()=0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a175c44583ef03528ee0cd2f71c1e0998">IxSqlGenerator</a>()</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td></td></tr>
@@ -115,6 +117,7 @@ This is the complete list of members for <a class="el" href="classqx_1_1dao_1_1d
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#aee5f2f92587f3e17e0a4344864b55e62">onAfterUpdate</a>(IxDao_Helper *pDaoHelper, void *pOwner) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a17861f3e880aa30b1c4175bc0c9a9882">onBeforeDelete</a>(IxDao_Helper *pDaoHelper, void *pOwner) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a7f9c600dada7301936d7af73b78d105b">onBeforeInsert</a>(IxDao_Helper *pDaoHelper, void *pOwner) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#afa9c5e06ef42877f0ee33fed9e0efe8b">onBeforeSqlPrepare</a>(IxDao_Helper *pDaoHelper, QString &amp;sql) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#af2869cf18ff973d6ead3376d1f4c76bb">onBeforeUpdate</a>(IxDao_Helper *pDaoHelper, void *pOwner) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#abb112b299208e7fb5bd7950be75c17ef">postProcess</a>(QString &amp;sql, const QxSqlLimit *pLimit) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a4f8d532ef969cba01d9f62f418b495a2">resolveLimit</a>(QSqlQuery &amp;query, const QxSqlLimit *pLimit) const =0</td><td><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">qx::dao::detail::IxSqlGenerator</a></td><td><code> [pure virtual]</code></td></tr>
@@ -138,7 +141,7 @@ This is the complete list of members for <a class="el" href="classqx_1_1dao_1_1d
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:30 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:30 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

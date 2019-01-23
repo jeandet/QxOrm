@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -166,6 +166,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_ix_sql_relation.html">IxSqlRelation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a6300fd163bce788f01ab70284d48230a">getSqlRelation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#abcfa16c3cc3ae21faa0a686c18c84f57">hasSqlRelation</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#ac6a5ccee708a1c6435fa82dd241ac3cf">getAccessDataPointer</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#ac018a18587be0c225b38371a6ffcea3e">getType</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a18355c7d7056e5229c7326fb016abd74">getTypeParent</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a99ca775dea9c0fa57aadab8473c065c2">setName</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#aeea75d412233f76b9c61a9cf7329a47d">setNameParent</a> (const QString &amp;s)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#ae02a5f50d8b11a5647733f87f97f1c19">setDescription</a> (const QString &amp;s)</td></tr>
@@ -230,6 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#af452d68c0363b185dbf94d34fee98e2c">getSqlFromTable</a> (const QString &amp;sTable)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a982381d66b66d4ca635ecd4fb808f0ca">getSqlTableName</a> (const QString &amp;sTable)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a666ee79a9eb147f1f9ebbe85af1312ce">getSqlColumnName</a> (const QString &amp;sColumn)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_data_member.html#a946fd6b2948d97a2b75bfa67d267e9cd">getDataPtr</a> (const void *pOwner) const =0</td></tr>
@@ -1036,6 +1040,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a666ee79a9eb147f1f9ebbe85af1312ce"></a><!-- doxytag: member="qx::IxDataMember::getSqlColumnName" ref="a666ee79a9eb147f1f9ebbe85af1312ce" args="(const QString &amp;sColumn)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString qx::IxDataMember::getSqlColumnName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>sColumn</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af452d68c0363b185dbf94d34fee98e2c"></a><!-- doxytag: member="qx::IxDataMember::getSqlFromTable" ref="af452d68c0363b185dbf94d34fee98e2c" args="(const QString &amp;sTable)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1213,6 +1234,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a982381d66b66d4ca635ecd4fb808f0ca"></a><!-- doxytag: member="qx::IxDataMember::getSqlTableName" ref="a982381d66b66d4ca635ecd4fb808f0ca" args="(const QString &amp;sTable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString qx::IxDataMember::getSqlTableName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>sTable</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a13a2f95fccce467ff3657873e7cb0cc9"></a><!-- doxytag: member="qx::IxDataMember::getSqlTablePointNameAsAlias" ref="a13a2f95fccce467ff3657873e7cb0cc9" args="(const QString &amp;sTable, const QString &amp;sSep=QString(&quot;, &quot;), const QString &amp;sSuffixAlias=QString(), bool bCheckFKPartOfPK=false) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -1286,6 +1324,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac018a18587be0c225b38371a6ffcea3e"></a><!-- doxytag: member="qx::IxDataMember::getType" ref="ac018a18587be0c225b38371a6ffcea3e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString qx::IxDataMember::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classqx_1_1_qx_data_member.html#a9fb5e67cc1e107a9662bc2e1decdd4a8">qx::QxDataMember&lt; DataType, Owner &gt;</a>, and <a class="el" href="classqx_1_1_qx_data_member___q_object.html#a92e06e7d6ccc523ca2c2d1f7fb7b544b">qx::QxDataMember_QObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18355c7d7056e5229c7326fb016abd74"></a><!-- doxytag: member="qx::IxDataMember::getTypeParent" ref="a18355c7d7056e5229c7326fb016abd74" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString qx::IxDataMember::getTypeParent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2d40f6738b986d361baad859eb349069"></a><!-- doxytag: member="qx::IxDataMember::getValue" ref="a2d40f6738b986d361baad859eb349069" args="(void *pOwner, bool *bOk=NULL)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1313,7 +1385,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00213">213</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00217">217</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1404,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00196">196</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00200">200</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1423,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00197">197</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00201">201</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -1382,7 +1454,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00202">202</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00206">206</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -1401,7 +1473,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00198">198</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00202">202</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -1420,7 +1492,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00199">199</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00203">203</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2302,7 @@ template&lt;typename T &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00221">221</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_data_member_8h_source.html#l00225">225</a> of file <a class="el" href="_ix_data_member_8h_source.html">IxDataMember.h</a>.</p>
 
 </div>
 </div>
@@ -2413,7 +2485,7 @@ template&lt;typename T &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:23 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:27 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

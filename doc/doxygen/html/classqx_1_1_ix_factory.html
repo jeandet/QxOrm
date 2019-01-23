@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -128,7 +128,7 @@ Inheritance diagram for qx::IxFactory:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#ae1e832ac14b435430a1ce6e03b3ebfdc">IxFactory</a> (const QString &amp;sKey)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#a55f5047987d9af01eb483a7163c82e21">~IxFactory</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#aff124019b41acde194a1a3ac66f1241a">createObject</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#a1bf403f455edff812d608137ce318c36">createObject</a> (bool bRawPointer=false) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#a633004a534c460ecf85b315ea64f3856">createObjectNudePtr</a> () const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_factory.html#a4a023f34be6ae40089b0d6084226f4f1">typeInfo</a> () const =0</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -198,21 +198,22 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aff124019b41acde194a1a3ac66f1241a"></a><!-- doxytag: member="qx::IxFactory::createObject" ref="aff124019b41acde194a1a3ac66f1241a" args="() const =0" -->
+<a class="anchor" id="a1bf403f455edff812d608137ce318c36"></a><!-- doxytag: member="qx::IxFactory::createObject" ref="a1bf403f455edff812d608137ce318c36" args="(bool bRawPointer=false) const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual <a class="el" href="classqx_1_1any.html">qx::any</a> qx::IxFactory::createObject </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRawPointer</em> = <code>false</code></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classqx_1_1_qx_factory.html#aac1bedf0ab47689e78500eae88813c39">qx::QxFactory&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classqx_1_1_qx_factory.html#a9ff66b54c277a703d6dee0874da1743c">qx::QxFactory&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -313,7 +314,7 @@ Private Member Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:23 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:27 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

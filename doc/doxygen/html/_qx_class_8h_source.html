@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_qx_class_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00086"></a><a class="code" href="classqx_1_1_qx_class.html#a3da3c1a3bd90e42ed43b27d06c8a76ef">00086</a>    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classqx_1_1trait_1_1no__base__class__defined.html">qx::trait::get_base_class&lt;T&gt;::type</a> <a class="code" href="classqx_1_1_qx_class.html#a3da3c1a3bd90e42ed43b27d06c8a76ef">type_base_class</a>;
 <a name="l00087"></a><a class="code" href="classqx_1_1_qx_class.html#abc65ebe07ac984b376a2299b9f530d64">00087</a>    <span class="keyword">typedef</span> <a class="code" href="classqx_1_1_ix_function.html#aed29933cf5514690acfffd51f9ff0144">IxFunction::type_any_params</a> <a class="code" href="classqx_1_1_qx_class.html#abc65ebe07ac984b376a2299b9f530d64">type_any_params</a>;
 <a name="l00088"></a>00088 
-<a name="l00089"></a><a class="code" href="classqx_1_1_qx_class.html#a51fda564505ab08b469c9e8b3843c719aa8eb5f75bf4b7f72da4ece9900ff9483">00089</a>    <span class="keyword">enum</span> { <a class="code" href="classqx_1_1_qx_class.html#a51fda564505ab08b469c9e8b3843c719aa8eb5f75bf4b7f72da4ece9900ff9483">is_valid_base_class</a> = ((! std::is_same&lt;type_base_class, T&gt;::value) &amp;&amp; (std::is_base_of&lt;type_base_class, T&gt;::value || std::is_same&lt;type_base_class, qx::trait::no_base_class_defined&gt;::value)) };
+<a name="l00089"></a><a class="code" href="classqx_1_1_qx_class.html#a4a5172c563480feac4b6f4e0fa8d942daa8eb5f75bf4b7f72da4ece9900ff9483">00089</a>    <span class="keyword">enum</span> { <a class="code" href="classqx_1_1_qx_class.html#a4a5172c563480feac4b6f4e0fa8d942daa8eb5f75bf4b7f72da4ece9900ff9483">is_valid_base_class</a> = ((! std::is_same&lt;type_base_class, T&gt;::value) &amp;&amp; (std::is_base_of&lt;type_base_class, T&gt;::value || std::is_same&lt;type_base_class, qx::trait::no_base_class_defined&gt;::value)) };
 <a name="l00090"></a>00090 
 <a name="l00091"></a>00091 <span class="keyword">protected</span>:
 <a name="l00092"></a>00092 
@@ -266,7 +266,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00178"></a>00178 
 <a name="l00179"></a><a class="code" href="classqx_1_1_qx_class.html#a65654a837a902a0fa38006480f630678">00179</a>    <span class="keywordtype">void</span> <a class="code" href="classqx_1_1_qx_class.html#a65654a837a902a0fa38006480f630678">beforeRegisterClass</a>()
 <a name="l00180"></a>00180    {
-<a name="l00181"></a>00181       static_assert(<a class="code" href="classqx_1_1_qx_class.html#a51fda564505ab08b469c9e8b3843c719aa8eb5f75bf4b7f72da4ece9900ff9483">is_valid_base_class</a>, <span class="stringliteral">&quot;is_valid_base_class&quot;</span>);
+<a name="l00181"></a>00181       static_assert(<a class="code" href="classqx_1_1_qx_class.html#a4a5172c563480feac4b6f4e0fa8d942daa8eb5f75bf4b7f72da4ece9900ff9483">is_valid_base_class</a>, <span class="stringliteral">&quot;is_valid_base_class&quot;</span>);
 <a name="l00182"></a>00182       QMutexLocker locker(&amp; m_oMutexClass);
 <a name="l00183"></a>00183       <a class="code" href="classqx_1_1_qx_singleton.html#ac42d9f2442411f1ea7ea0505d224a89c">QxClass&lt;type_base_class&gt;::getSingleton</a>();
 <a name="l00184"></a>00184       <span class="keywordtype">bool</span> bNeedReg = (! this-&gt;<a class="code" href="classqx_1_1_ix_class.html#ab8138e086719f4f551a6e32602076669">isRegistered</a>());
@@ -379,7 +379,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:14 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

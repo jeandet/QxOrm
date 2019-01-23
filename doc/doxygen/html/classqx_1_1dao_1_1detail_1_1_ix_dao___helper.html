@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -141,7 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html">IxSqlGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a9d4105978bde91e5dd565fef3727de5c">getSqlGenerator</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#acfc58dff9a03f9dfefd650dc2b7232a3">addInvalidValues</a> (const <a class="el" href="classqx_1_1_qx_invalid_value_x.html">qx::QxInvalidValueX</a> &amp;lst)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#ada30956cad3e7c8c0386308595587ebf">getAddAutoIncrementIdToUpdateQuery</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#abce99d7b6efe1a6eaee9b3726bd018a5">itemsAsJson</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#aba0fb9080d3e16d8e45b58641ee25ed1">isReadOnly</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a45a9d9f1b3f959cae1ecff729ac1130f">isMongoDB</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a59835be750178ac326546c353222cf89">errFailed</a> (bool bPrepare=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a4c15f03a19edac2c5290a786bff93155">errEmpty</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#ad51a47e42cadbfe811fe67433a77f161">errNoData</a> ()</td></tr>
@@ -152,10 +154,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#ab4b05af2217421729bd905a882562aca">nextRecord</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#af41402e17462e10861ab4b6350ac39ad">quiet</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a75af86b6cb8be55a1ee0a003465ad236">exec</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a2dd71ddefb0fdde7ffea5ca6ba78d7f5">prepare</a> (QString &amp;sql)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#ad71fb08e19df31a637f50d51aaf675ed">updateError</a> (const QSqlError &amp;error)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#aae4d4d439a7c476ef04e9fba6f13fb3d">updateSqlRelationX</a> (const QStringList &amp;relation)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a139c8ae0193d15164665b5fa08e3a005">dumpRecord</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a38e6a3508a45d3143c2b66e73386d3bb">addQuery</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, bool bResolve)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a791a6cf58dd8233c15d93f0e759ceef7">setTimeDatabase</a> (int ms)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a139c8ae0193d15164665b5fa08e3a005">dumpRecord</a> () const </td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html#a33e5aefc79afb1545b8b82666b93856c">isValidPrimaryKey</a> (const U &amp;u)</td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;class U &gt; </td></tr>
@@ -671,6 +675,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a45a9d9f1b3f959cae1ecff729ac1130f"></a><!-- doxytag: member="qx::dao::detail::IxDao_Helper::isMongoDB" ref="a45a9d9f1b3f959cae1ecff729ac1130f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qx::dao::detail::IxDao_Helper::isMongoDB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aba0fb9080d3e16d8e45b58641ee25ed1"></a><!-- doxytag: member="qx::dao::detail::IxDao_Helper::isReadOnly" ref="aba0fb9080d3e16d8e45b58641ee25ed1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -720,7 +740,23 @@ template&lt;class U &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00143">143</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00147">147</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abce99d7b6efe1a6eaee9b3726bd018a5"></a><!-- doxytag: member="qx::dao::detail::IxDao_Helper::itemsAsJson" ref="abce99d7b6efe1a6eaee9b3726bd018a5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList&amp; qx::dao::detail::IxDao_Helper::itemsAsJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -749,6 +785,23 @@ template&lt;class U &gt; </div>
           <td class="memname">bool qx::dao::detail::IxDao_Helper::nextRecord </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2dd71ddefb0fdde7ffea5ca6ba78d7f5"></a><!-- doxytag: member="qx::dao::detail::IxDao_Helper::prepare" ref="a2dd71ddefb0fdde7ffea5ca6ba78d7f5" args="(QString &amp;sql)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool qx::dao::detail::IxDao_Helper::prepare </td>
+          <td>(</td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>sql</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -846,6 +899,23 @@ template&lt;class U &gt; </div>
           <td>(</td>
           <td class="paramtype">const QStringList &amp;&#160;</td>
           <td class="paramname"><em>lst</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a791a6cf58dd8233c15d93f0e759ceef7"></a><!-- doxytag: member="qx::dao::detail::IxDao_Helper::setTimeDatabase" ref="a791a6cf58dd8233c15d93f0e759ceef7" args="(int ms)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void qx::dao::detail::IxDao_Helper::setTimeDatabase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -953,7 +1023,7 @@ template&lt;class U &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00147">147</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00151">151</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
 
 </div>
 </div>
@@ -991,7 +1061,7 @@ template&lt;class U &gt; </div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00154">154</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_dao___helper_8h_source.html#l00158">158</a> of file <a class="el" href="_ix_dao___helper_8h_source.html">IxDao_Helper.h</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1109,7 @@ template&lt;class U &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:30 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:30 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a>  </div>
@@ -115,6 +116,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><a href="classqx_1_1_qx_sql_relation_linked-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classqx_1_1_qx_sql_relation_linked.html">QxSqlRelationLinked</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a74f6c5102c64b5ddc9586ed5ecf1e671">type_ptr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef std::tuple<br class="typebreak"/>
+&lt; <a class="el" href="structqx_1_1dao_1_1sql__join.html#a9d0c04a67abd8ff7c55a45ae4cc00ff3">qx::dao::sql_join::join_type</a>, <br class="typebreak"/>
+<a class="el" href="classqx_1_1_ix_sql_relation.html">IxSqlRelation</a> *, QPair&lt; QSet<br class="typebreak"/>
+&lt; QString &gt;, long &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad3c9b2882bcec71afe2d40525e38a51d">type_relation</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classqx_1_1_qx_collection.html">qx::QxCollection</a><br class="typebreak"/>
+&lt; QString, <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad3c9b2882bcec71afe2d40525e38a51d">type_relation</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ab1c83d08f42af4644c9fcc4d2429f484">type_lst_relation</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef QHash&lt; QString, <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a74f6c5102c64b5ddc9586ed5ecf1e671">type_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ae556f28e5dd33387efd49552593654fd">type_lst_relation_linked</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a3e9788291578abf1986de1a5ddc3fffd">QxSqlRelationLinked</a> ()</td></tr>
@@ -133,6 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#abf27a5228d7f7af0283b47e76c3e61ea">getAllRelationCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a264ac2c358c765401edc47d6d589bbd6">getRelationCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a6ece15ff4d0a91fcb538034e536d6203">existRelation</a> (const QString &amp;sKey) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ae556f28e5dd33387efd49552593654fd">type_lst_relation_linked</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad9d3e8bda15d277098eade391a986a95">getRelationLinkedX</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ab1c83d08f42af4644c9fcc4d2429f484">type_lst_relation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a97b33ef35677c93dcded73e5486fdcec">getRelationX</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a2cf8f548b1fabe6cab108b1a2c1afe21">checkRootColumns</a> (const QString &amp;s) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#af8f9c9c541b801442c2e71ed72f2f1c4">getRootColumnsCount</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad77f998b9704733198ae3a276b845fb7">getRootColumnsOffset</a> () const </td></tr>
@@ -171,7 +185,68 @@ Private Attributes</h2></td></tr>
             (etc...)
 </pre></div> 
 <p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00082">82</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
-</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+</div><hr/><h2>Member Typedef Documentation</h2>
+<a class="anchor" id="ab1c83d08f42af4644c9fcc4d2429f484"></a><!-- doxytag: member="qx::QxSqlRelationLinked::type_lst_relation" ref="ab1c83d08f42af4644c9fcc4d2429f484" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classqx_1_1_qx_collection.html">qx::QxCollection</a>&lt;QString, <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad3c9b2882bcec71afe2d40525e38a51d">type_relation</a>&gt; <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ab1c83d08f42af4644c9fcc4d2429f484">qx::QxSqlRelationLinked::type_lst_relation</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00089">89</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae556f28e5dd33387efd49552593654fd"></a><!-- doxytag: member="qx::QxSqlRelationLinked::type_lst_relation_linked" ref="ae556f28e5dd33387efd49552593654fd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef QHash&lt;QString, <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a74f6c5102c64b5ddc9586ed5ecf1e671">type_ptr</a>&gt; <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ae556f28e5dd33387efd49552593654fd">qx::QxSqlRelationLinked::type_lst_relation_linked</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00090">90</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74f6c5102c64b5ddc9586ed5ecf1e671"></a><!-- doxytag: member="qx::QxSqlRelationLinked::type_ptr" ref="a74f6c5102c64b5ddc9586ed5ecf1e671" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="classqx_1_1_qx_sql_relation_linked.html">QxSqlRelationLinked</a>&gt; <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#a74f6c5102c64b5ddc9586ed5ecf1e671">qx::QxSqlRelationLinked::type_ptr</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00087">87</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3c9b2882bcec71afe2d40525e38a51d"></a><!-- doxytag: member="qx::QxSqlRelationLinked::type_relation" ref="ad3c9b2882bcec71afe2d40525e38a51d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::tuple&lt;<a class="el" href="structqx_1_1dao_1_1sql__join.html#a9d0c04a67abd8ff7c55a45ae4cc00ff3">qx::dao::sql_join::join_type</a>, <a class="el" href="classqx_1_1_ix_sql_relation.html">IxSqlRelation</a> *, QPair&lt;QSet&lt;QString&gt;, long&gt; &gt; <a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ad3c9b2882bcec71afe2d40525e38a51d">qx::QxSqlRelationLinked::type_relation</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00088">88</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3e9788291578abf1986de1a5ddc3fffd"></a><!-- doxytag: member="qx::QxSqlRelationLinked::QxSqlRelationLinked" ref="a3e9788291578abf1986de1a5ddc3fffd" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -321,6 +396,38 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">long qx::QxSqlRelationLinked::getRelationCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad9d3e8bda15d277098eade391a986a95"></a><!-- doxytag: member="qx::QxSqlRelationLinked::getRelationLinkedX" ref="ad9d3e8bda15d277098eade391a986a95" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ae556f28e5dd33387efd49552593654fd">type_lst_relation_linked</a> qx::QxSqlRelationLinked::getRelationLinkedX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a97b33ef35677c93dcded73e5486fdcec"></a><!-- doxytag: member="qx::QxSqlRelationLinked::getRelationX" ref="a97b33ef35677c93dcded73e5486fdcec" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classqx_1_1_qx_sql_relation_linked.html#ab1c83d08f42af4644c9fcc4d2429f484">type_lst_relation</a> qx::QxSqlRelationLinked::getRelationX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -607,7 +714,7 @@ Private Attributes</h2></td></tr>
 
 <p>Private implementation idiom. </p>
 
-<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00087">87</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_relation_linked_8h_source.html#l00094">94</a> of file <a class="el" href="_qx_sql_relation_linked_8h_source.html">QxSqlRelationLinked.h</a>.</p>
 
 </div>
 </div>
@@ -635,7 +742,7 @@ Private Attributes</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:23 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:27 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

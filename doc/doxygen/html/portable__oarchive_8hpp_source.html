@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -102,225 +102,328 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <a href="portable__oarchive_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*****************************************************************************/</span>
-<a name="l00060"></a>00060 <span class="comment">/*****************************************************************************/</span>
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00064"></a>00064 <span class="preprocessor"></span><span class="preprocessor">#ifndef _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="preprocessor">#define _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
-<a name="l00067"></a>00067 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00069"></a>00069 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span>
-<a name="l00071"></a>00071 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(push)</span>
-<a name="l00073"></a>00073 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable:4996)</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable:4661)</span>
-<a name="l00075"></a>00075 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span>
-<a name="l00077"></a>00077 <span class="preprocessor">#include &lt;ostream&gt;</span>
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="comment">// basic headers</span>
-<a name="l00080"></a>00080 <span class="preprocessor">#include &lt;boost/utility/enable_if.hpp&gt;</span>
-<a name="l00081"></a>00081 <span class="preprocessor">#include &lt;boost/archive/binary_oarchive.hpp&gt;</span>
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="comment">// endian and fpclassify</span>
-<a name="l00084"></a>00084 <span class="preprocessor">#if BOOST_VERSION &lt; 103600</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/integer/endian.hpp&gt;</span>
-<a name="l00086"></a>00086 <span class="preprocessor">#include &lt;boost/math/fpclassify.hpp&gt;</span>
-<a name="l00087"></a>00087 <span class="preprocessor">#else</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/spirit/home/support/detail/integer/endian.hpp&gt;</span>
-<a name="l00089"></a>00089 <span class="preprocessor">#include &lt;boost/spirit/home/support/detail/math/fpclassify.hpp&gt;</span>
-<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
-<a name="l00091"></a>00091 <span class="preprocessor"></span>
-<a name="l00092"></a>00092 <span class="comment">// namespace alias</span>
-<a name="l00093"></a>00093 <span class="preprocessor">#if BOOST_VERSION &lt; 103800</span>
-<a name="l00094"></a>00094 <span class="preprocessor"></span><span class="keyword">namespace </span>fp = boost::math;
-<a name="l00095"></a>00095 <span class="preprocessor">#else</span>
-<a name="l00096"></a>00096 <span class="preprocessor"></span><span class="keyword">namespace </span>fp = boost::spirit::math;
-<a name="l00097"></a>00097 <span class="preprocessor">#endif</span>
-<a name="l00098"></a>00098 <span class="preprocessor"></span>
-<a name="l00099"></a>00099 <span class="comment">// generic type traits for numeric types</span>
-<a name="l00100"></a>00100 <span class="preprocessor">#include &lt;boost/type_traits/is_integral.hpp&gt;</span>
-<a name="l00101"></a>00101 <span class="preprocessor">#include &lt;boost/type_traits/is_signed.hpp&gt;</span>
-<a name="l00102"></a>00102 <span class="preprocessor">#include &lt;boost/type_traits/is_arithmetic.hpp&gt;</span>
-<a name="l00103"></a>00103 <span class="preprocessor">#include &lt;boost/type_traits/is_floating_point.hpp&gt;</span>
+<a name="l00086"></a>00086 <span class="comment">/*****************************************************************************/</span>
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span><span class="preprocessor">#if _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span><span class="preprocessor">#ifndef _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span><span class="preprocessor">#define _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00094"></a>00094 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
+<a name="l00096"></a>00096 <span class="preprocessor"></span>
+<a name="l00097"></a>00097 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(push)</span>
+<a name="l00099"></a>00099 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable:4996)</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(disable:4661)</span>
+<a name="l00101"></a>00101 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00103"></a>00103 <span class="preprocessor">#include &lt;ostream&gt;</span>
 <a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="preprocessor">#include &quot;<a class="code" href="portable__archive__exception_8hpp.html">portable_archive_exception.hpp</a>&quot;</span>
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="comment">// hint from Johan Rade: on VMS there is still support for</span>
-<a name="l00108"></a>00108 <span class="comment">// the VAX floating point format and this macro detects it</span>
-<a name="l00109"></a>00109 <span class="preprocessor">#if defined(__vms) &amp;&amp; defined(__DECCXX) &amp;&amp; !__IEEE_FLOAT</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span><span class="preprocessor">#error &quot;VAX floating point format is not supported!&quot;</span>
-<a name="l00111"></a>00111 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00112"></a>00112 <span class="preprocessor"></span>
-<a name="l00113"></a>00113 <span class="keyword">namespace </span>eos {
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115    <span class="comment">// forward declaration</span>
-<a name="l00116"></a><a class="code" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">00116</a>    <span class="keyword">class </span><a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a>;
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118    <span class="comment">// convenience archive base class typedef</span>
-<a name="l00119"></a>00119    <span class="keyword">typedef</span> boost::archive::binary_oarchive_impl&lt;
-<a name="l00120"></a>00120       <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a>
-<a name="l00121"></a>00121 <span class="preprocessor">      #if BOOST_VERSION &gt;= 103400</span>
-<a name="l00122"></a>00122 <span class="preprocessor"></span>         , std::ostream::char_type 
-<a name="l00123"></a>00123          , std::ostream::traits_type
-<a name="l00124"></a>00124 <span class="preprocessor">      #endif</span>
-<a name="l00125"></a>00125 <span class="preprocessor"></span>   &gt; <a class="code" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">portable_oarchive_base</a>;
-<a name="l00126"></a>00126 
-<a name="l00142"></a><a class="code" href="classeos_1_1portable__oarchive.html">00142</a>    <span class="keyword">class </span><a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a> : <span class="keyword">public</span> <a class="code" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">portable_oarchive_base</a>
-<a name="l00143"></a>00143 <span class="preprocessor">      #if BOOST_VERSION &gt;= 103500</span>
-<a name="l00144"></a>00144 <span class="preprocessor"></span>         <span class="comment">// mix-in helper class for serializing shared_ptr</span>
-<a name="l00145"></a>00145          , <span class="keyword">public</span> boost::archive::detail::shared_ptr_helper
-<a name="l00146"></a>00146 <span class="preprocessor">      #endif</span>
-<a name="l00147"></a>00147 <span class="preprocessor"></span>   {
-<a name="l00148"></a>00148       <span class="comment">// workaround for gcc: use a dummy struct</span>
-<a name="l00149"></a>00149       <span class="comment">// as additional argument type for overloading</span>
-<a name="l00150"></a><a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html#ad4beae69b1b9a3cd3ec76932788322ae">00150</a>       <span class="keyword">template</span>&lt;<span class="keywordtype">int</span>&gt; <span class="keyword">struct </span><a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy</a> { <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html#ad4beae69b1b9a3cd3ec76932788322ae">dummy</a>(<span class="keywordtype">int</span>) {}};
-<a name="l00151"></a>00151 
-<a name="l00152"></a>00152       <span class="comment">// stores a signed char directly to stream</span>
-<a name="l00153"></a><a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">00153</a>       <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<span class="keyword">const</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span>&amp; c) 
-<a name="l00154"></a>00154       { 
-<a name="l00155"></a>00155          <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">portable_oarchive_base::save</a>(c); 
-<a name="l00156"></a>00156       }
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158    <span class="keyword">public</span>:
-<a name="l00159"></a>00159 
-<a name="l00161"></a>00161       <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;
-<a name="l00162"></a>00162       <span class="keyword">typename</span> boost::disable_if&lt;boost::is_arithmetic&lt;T&gt; &gt;::type 
-<a name="l00163"></a><a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738">00163</a>       <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">save</a>(<span class="keyword">const</span> T &amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;1&gt;</a> = 0)
-<a name="l00164"></a>00164       {
-<a name="l00165"></a>00165          <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">portable_oarchive_base::save</a>(t);
-<a name="l00166"></a>00166       }
-<a name="l00167"></a>00167 
-<a name="l00169"></a><a class="code" href="classeos_1_1portable__oarchive.html#aff9742091dfbe8cea0d1f3aaab6f0fcf">00169</a>       <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">save</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; b) 
-<a name="l00170"></a>00170       {
-<a name="l00171"></a>00171          <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(b);
-<a name="l00172"></a>00172          <span class="keywordflow">if</span> (b) <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<span class="charliteral">&#39;T&#39;</span>);
-<a name="l00173"></a>00173       }
-<a name="l00174"></a>00174 
-<a name="l00182"></a>00182       <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<a name="l00183"></a>00183       <span class="keyword">typename</span> boost::enable_if&lt;std::is_integral&lt;T&gt; &gt;::type
-<a name="l00184"></a><a class="code" href="classeos_1_1portable__oarchive.html#acd134f16a3ba6e26d6e7b78979aa577a">00184</a>       <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">save</a>(<span class="keyword">const</span> T &amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;2&gt;</a> = 0)
-<a name="l00185"></a>00185       {
-<a name="l00186"></a>00186          <span class="keywordflow">if</span> (T temp = t)
-<a name="l00187"></a>00187          {
-<a name="l00188"></a>00188             <span class="comment">// examine the number of bytes</span>
-<a name="l00189"></a>00189             <span class="comment">// needed to represent the number</span>
-<a name="l00190"></a>00190             <span class="keywordtype">signed</span> <span class="keywordtype">char</span> size = 0;
-<a name="l00191"></a>00191             <span class="keywordflow">do</span> { temp &gt;&gt;= CHAR_BIT; ++size; } 
-<a name="l00192"></a>00192             <span class="keywordflow">while</span> (temp != 0 &amp;&amp; temp != (T) -1);
+<a name="l00105"></a>00105 <span class="comment">// basic headers</span>
+<a name="l00106"></a>00106 <span class="preprocessor">#include &lt;boost/version.hpp&gt;</span>
+<a name="l00107"></a>00107 <span class="preprocessor">#include &lt;boost/utility/enable_if.hpp&gt;</span>
+<a name="l00108"></a>00108 <span class="preprocessor">#include &lt;boost/archive/basic_binary_oprimitive.hpp&gt;</span>
+<a name="l00109"></a>00109 <span class="preprocessor">#include &lt;boost/archive/basic_binary_oarchive.hpp&gt;</span>
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="preprocessor">#if BOOST_VERSION &gt;= 103500 &amp;&amp; BOOST_VERSION &lt; 105600</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/archive/shared_ptr_helper.hpp&gt;</span>
+<a name="l00113"></a>00113 <span class="preprocessor">#endif</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span>
+<a name="l00115"></a>00115 <span class="comment">// endian and fpclassify</span>
+<a name="l00116"></a>00116 <span class="preprocessor">#if BOOST_VERSION &lt; 103600</span>
+<a name="l00117"></a>00117 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/integer/endian.hpp&gt;</span>
+<a name="l00118"></a>00118 <span class="preprocessor">#include &lt;boost/math/fpclassify.hpp&gt;</span>
+<a name="l00119"></a>00119 <span class="preprocessor">#elif BOOST_VERSION &lt; 104800</span>
+<a name="l00120"></a>00120 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/spirit/home/support/detail/integer/endian.hpp&gt;</span>
+<a name="l00121"></a>00121 <span class="preprocessor">#include &lt;boost/spirit/home/support/detail/math/fpclassify.hpp&gt;</span>
+<a name="l00122"></a>00122 <span class="preprocessor">#else</span>
+<a name="l00123"></a>00123 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/spirit/home/support/detail/endian/endian.hpp&gt;</span>
+<a name="l00124"></a>00124 <span class="preprocessor">#include &lt;boost/spirit/home/support/detail/math/fpclassify.hpp&gt;</span>
+<a name="l00125"></a>00125 <span class="preprocessor">#endif</span>
+<a name="l00126"></a>00126 <span class="preprocessor"></span>
+<a name="l00127"></a>00127 <span class="comment">// namespace alias fp_classify</span>
+<a name="l00128"></a>00128 <span class="preprocessor">#if BOOST_VERSION &lt; 103800</span>
+<a name="l00129"></a>00129 <span class="preprocessor"></span><span class="keyword">namespace </span>fp = boost::math;
+<a name="l00130"></a>00130 <span class="preprocessor">#else</span>
+<a name="l00131"></a>00131 <span class="preprocessor"></span><span class="keyword">namespace </span>fp = boost::spirit::math;
+<a name="l00132"></a>00132 <span class="preprocessor">#endif</span>
+<a name="l00133"></a>00133 <span class="preprocessor"></span>
+<a name="l00134"></a>00134 <span class="comment">// namespace alias endian</span>
+<a name="l00135"></a>00135 <span class="preprocessor">#if BOOST_VERSION &lt; 104800</span>
+<a name="l00136"></a>00136 <span class="preprocessor"></span><span class="keyword">namespace </span>endian = boost::detail;
+<a name="l00137"></a>00137 <span class="preprocessor">#else</span>
+<a name="l00138"></a>00138 <span class="preprocessor"></span><span class="keyword">namespace </span>endian = boost::spirit::detail;
+<a name="l00139"></a>00139 <span class="preprocessor">#endif</span>
+<a name="l00140"></a>00140 <span class="preprocessor"></span>
+<a name="l00141"></a>00141 <span class="preprocessor">#if BOOST_VERSION &gt;= 104500 &amp;&amp; !defined BOOST_NO_STD_WSTRING</span>
+<a name="l00142"></a>00142 <span class="preprocessor"></span><span class="comment">// used for wstring to utf8 conversion</span>
+<a name="l00143"></a>00143 <span class="preprocessor">#include &lt;boost/program_options/config.hpp&gt;</span>
+<a name="l00144"></a>00144 <span class="preprocessor">#include &lt;boost/program_options/detail/convert.hpp&gt;</span>
+<a name="l00145"></a>00145 <span class="preprocessor">#endif</span>
+<a name="l00146"></a>00146 <span class="preprocessor"></span>
+<a name="l00147"></a>00147 <span class="comment">// generic type traits for numeric types</span>
+<a name="l00148"></a>00148 <span class="preprocessor">#include &lt;boost/type_traits/is_integral.hpp&gt;</span>
+<a name="l00149"></a>00149 <span class="preprocessor">#include &lt;boost/type_traits/is_signed.hpp&gt;</span>
+<a name="l00150"></a>00150 <span class="preprocessor">#include &lt;boost/type_traits/is_arithmetic.hpp&gt;</span>
+<a name="l00151"></a>00151 <span class="preprocessor">#include &lt;boost/type_traits/is_floating_point.hpp&gt;</span>
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 <span class="preprocessor">#include &quot;<a class="code" href="portable__archive__exception_8hpp.html" title="Provides error handling and constants.">portable_archive_exception.hpp</a>&quot;</span>
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="comment">// hint from Johan Rade: on VMS there is still support for</span>
+<a name="l00156"></a>00156 <span class="comment">// the VAX floating point format and this macro detects it</span>
+<a name="l00157"></a>00157 <span class="preprocessor">#if defined(__vms) &amp;&amp; defined(__DECCXX) &amp;&amp; !__IEEE_FLOAT</span>
+<a name="l00158"></a>00158 <span class="preprocessor"></span><span class="preprocessor">#error &quot;VAX floating point format is not supported!&quot;</span>
+<a name="l00159"></a>00159 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00160"></a>00160 <span class="preprocessor"></span>
+<a name="l00161"></a>00161 <span class="keyword">namespace </span>eos {
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163         <span class="comment">// forward declaration</span>
+<a name="l00164"></a><a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">00164</a>         <span class="keyword">class </span><a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a>;
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         <span class="keyword">typedef</span> boost::archive::basic_binary_oprimitive&lt;
+<a name="l00167"></a>00167                 <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a>
+<a name="l00168"></a>00168 <span class="preprocessor">        #if BOOST_VERSION &lt; 103400</span>
+<a name="l00169"></a>00169 <span class="preprocessor"></span>                , std::ostream
+<a name="l00170"></a>00170 <span class="preprocessor">        #else</span>
+<a name="l00171"></a>00171 <span class="preprocessor"></span>                , std::ostream::char_type 
+<a name="l00172"></a>00172                 , std::ostream::traits_type
+<a name="l00173"></a>00173 <span class="preprocessor">        #endif</span>
+<a name="l00174"></a>00174 <span class="preprocessor"></span>        &gt; <a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a>;
+<a name="l00175"></a>00175 
+<a name="l00188"></a><a class="code" href="classeos_1_1portable__oarchive.html">00188</a>         <span class="keyword">class </span><a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a> : <span class="keyword">public</span> <a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a>
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190                 <span class="comment">// the example derives from common_oarchive but that lacks the</span>
+<a name="l00191"></a>00191                 <span class="comment">// save_override functions so we chose to stay one level higher</span>
+<a name="l00192"></a>00192                 , <span class="keyword">public</span> boost::archive::basic_binary_oarchive&lt;portable_oarchive&gt;
 <a name="l00193"></a>00193 
-<a name="l00194"></a>00194             <span class="comment">// encode the sign bit into the size</span>
-<a name="l00195"></a>00195             <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(t &gt; 0 ? size : -size);
-<a name="l00196"></a>00196             BOOST_ASSERT(t &gt; 0 || boost::is_signed&lt;T&gt;::value);
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198             <span class="comment">// we choose to use little endian because this way we just</span>
-<a name="l00199"></a>00199             <span class="comment">// save the first size bytes to the stream and skip the rest</span>
-<a name="l00200"></a>00200             boost::detail::store_little_endian&lt;T, sizeof(T)&gt;(&amp;temp, t);
-<a name="l00201"></a>00201             save_binary(&amp;temp, size);
-<a name="l00202"></a>00202          }
-<a name="l00203"></a>00203          <span class="comment">// zero optimization</span>
-<a name="l00204"></a>00204          <span class="keywordflow">else</span> <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(0);
-<a name="l00205"></a>00205       }
-<a name="l00206"></a>00206 
-<a name="l00234"></a>00234       <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
-<a name="l00235"></a>00235       <span class="keyword">typename</span> boost::enable_if&lt;boost::is_floating_point&lt;T&gt; &gt;::type
-<a name="l00236"></a><a class="code" href="classeos_1_1portable__oarchive.html#a15ed045c75c9ddb143f55873aaadc899">00236</a>       <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">save</a>(<span class="keyword">const</span> T &amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;3&gt;</a> = 0)
-<a name="l00237"></a>00237       {
-<a name="l00238"></a>00238          <span class="keyword">typedef</span> <span class="keyword">typename</span> fp::detail::fp_traits&lt;T&gt;::type traits;
-<a name="l00239"></a>00239 
-<a name="l00240"></a>00240          <span class="comment">// it is not supported to serialize infinity or not-a-number</span>
-<a name="l00241"></a>00241          <span class="keywordflow">if</span> (!fp::isfinite(t)) <span class="keywordflow">throw</span> <a class="code" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a>(t);
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243          <span class="comment">// if you end here there are three possibilities:</span>
-<a name="l00244"></a>00244          <span class="comment">// 1. you&#39;re serializing a long double which is not portable</span>
-<a name="l00245"></a>00245          <span class="comment">// 2. you&#39;re serializing a double but have no 64 bit integer</span>
-<a name="l00246"></a>00246          <span class="comment">// 3. your machine is using an unknown floating point format</span>
-<a name="l00247"></a>00247          <span class="comment">// after reading the note above you still might decide to </span>
-<a name="l00248"></a>00248          <span class="comment">// deactivate this static assert and try if it works out.</span>
-<a name="l00249"></a>00249          <span class="keyword">typename</span> traits::bits bits;
-<a name="l00250"></a>00250          static_assert(<span class="keyword">sizeof</span>(bits) == <span class="keyword">sizeof</span>(T), <span class="stringliteral">&quot;sizeof(bits) == sizeof(T)&quot;</span>);
-<a name="l00251"></a>00251          static_assert(std::numeric_limits&lt;T&gt;::is_iec559, <span class="stringliteral">&quot;std::numeric_limits&lt;T&gt;::is_iec559&quot;</span>);
+<a name="l00194"></a>00194 <span class="preprocessor">        #if BOOST_VERSION &gt;= 103500 &amp;&amp; BOOST_VERSION &lt; 105600</span>
+<a name="l00195"></a>00195 <span class="preprocessor"></span>                <span class="comment">// mix-in helper class for serializing shared_ptr</span>
+<a name="l00196"></a>00196                 , <span class="keyword">public</span> boost::archive::detail::shared_ptr_helper
+<a name="l00197"></a>00197 <span class="preprocessor">        #endif</span>
+<a name="l00198"></a>00198 <span class="preprocessor"></span>        {
+<a name="l00199"></a>00199                 <span class="comment">// workaround for gcc: use a dummy struct</span>
+<a name="l00200"></a>00200                 <span class="comment">// as additional argument type for overloading</span>
+<a name="l00201"></a><a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html#ad4beae69b1b9a3cd3ec76932788322ae">00201</a>                 <span class="keyword">template</span>&lt;<span class="keywordtype">int</span>&gt; <span class="keyword">struct </span><a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy</a> { <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html#ad4beae69b1b9a3cd3ec76932788322ae">dummy</a>(<span class="keywordtype">int</span>) {}};
+<a name="l00202"></a>00202 
+<a name="l00203"></a>00203                 <span class="comment">// stores a signed char directly to stream</span>
+<a name="l00204"></a><a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">00204</a>                 <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<span class="keyword">const</span> <span class="keywordtype">signed</span> <span class="keywordtype">char</span>&amp; c) 
+<a name="l00205"></a>00205                 { 
+<a name="l00206"></a>00206                         <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">portable_oprimitive::save</a>(c); 
+<a name="l00207"></a>00207                 }
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209                 <span class="comment">// archive initialization</span>
+<a name="l00210"></a><a class="code" href="classeos_1_1portable__oarchive.html#a5000c65e611204ec85efe670999bddea">00210</a>                 <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#a5000c65e611204ec85efe670999bddea">init</a>(<span class="keywordtype">unsigned</span> flags)
+<a name="l00211"></a>00211                 {
+<a name="l00212"></a>00212                         <span class="comment">// it is vital to have version information if the archive is</span>
+<a name="l00213"></a>00213                         <span class="comment">// to be parsed with a newer version of boost::serialization</span>
+<a name="l00214"></a>00214                         <span class="comment">// therefor we create a header, no header means boost 1.33</span>
+<a name="l00215"></a>00215                         <span class="keywordflow">if</span> (flags &amp; boost::archive::no_header)
+<a name="l00216"></a>00216                                 BOOST_ASSERT(<a class="code" href="namespaceeos.html#ae5158c895df9b165bf5b96ce2fe2838d">archive_version</a> == 3);
+<a name="l00217"></a>00217                         <span class="keywordflow">else</span>
+<a name="l00218"></a>00218                         {
+<a name="l00219"></a>00219                                 <span class="comment">// write our minimalistic header (magic byte plus version)</span>
+<a name="l00220"></a>00220                                 <span class="comment">// the boost archives write a string instead - by calling</span>
+<a name="l00221"></a>00221                                 <span class="comment">// boost::archive::basic_binary_oarchive&lt;derived_t&gt;::init()</span>
+<a name="l00222"></a>00222                                 <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">magic_byte</a>);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224                                 <span class="comment">// write current version</span>
+<a name="l00225"></a>00225 <span class="comment">//                              save&lt;unsigned&gt;(archive_version);</span>
+<a name="l00226"></a>00226                                 <a class="code" href="_qx_bool_8h.html#a30c34787be322c206bad264ed27f21cd">operator&lt;&lt;</a>(<a class="code" href="namespaceeos.html#ae5158c895df9b165bf5b96ce2fe2838d">archive_version</a>);
+<a name="l00227"></a>00227                         }
+<a name="l00228"></a>00228                 }
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230         <span class="keyword">public</span>:
+<a name="l00242"></a><a class="code" href="classeos_1_1portable__oarchive.html#a548abbe3f9adcdb95262aa517d40b983">00242</a>                 <a class="code" href="classeos_1_1portable__oarchive.html#a548abbe3f9adcdb95262aa517d40b983" title="Constructor on a stream using ios::binary mode!">portable_oarchive</a>(std::ostream&amp; os, <span class="keywordtype">unsigned</span> flags = 0)
+<a name="l00243"></a>00243                 <span class="preprocessor">#if BOOST_VERSION &lt; 103400</span>
+<a name="l00244"></a>00244 <span class="preprocessor"></span>                        : <a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a>(os, flags &amp; boost::archive::no_codecvt)
+<a name="l00245"></a>00245                 <span class="preprocessor">#else</span>
+<a name="l00246"></a>00246 <span class="preprocessor"></span>                        : <a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a>(*os.rdbuf(), flags &amp; boost::archive::no_codecvt)
+<a name="l00247"></a>00247                 #endif
+<a name="l00248"></a>00248                         , boost::archive::basic_binary_oarchive&lt;portable_oarchive&gt;(flags)
+<a name="l00249"></a>00249                 {
+<a name="l00250"></a>00250                         <a class="code" href="classeos_1_1portable__oarchive.html#a5000c65e611204ec85efe670999bddea">init</a>(flags);
+<a name="l00251"></a>00251                 }
 <a name="l00252"></a>00252 
-<a name="l00253"></a>00253          traits::get_bits(t, bits);
-<a name="l00254"></a>00254          <a class="code" href="classeos_1_1portable__oarchive.html#a25d4c741775b5b654b056a67389e8738" title="Default fall through for non-arithmetic types (ie. strings)">save</a>(bits);
-<a name="l00255"></a>00255       }
-<a name="l00256"></a>00256 
-<a name="l00258"></a><a class="code" href="classeos_1_1portable__oarchive.html#a548abbe3f9adcdb95262aa517d40b983">00258</a>       <a class="code" href="classeos_1_1portable__oarchive.html#a548abbe3f9adcdb95262aa517d40b983" title="always construct on a stream using ios::binary mode!">portable_oarchive</a>(std::ostream&amp; os, <span class="keywordtype">unsigned</span> flags = 0)
-<a name="l00259"></a>00259          <span class="comment">// the base class constructor calls basic_binary_oarchive::init</span>
-<a name="l00260"></a>00260          <span class="comment">// but also basic_binary_oprimitive::init which stores type sizes</span>
-<a name="l00261"></a>00261          <span class="comment">// for comparison when loading them on a different platform</span>
-<a name="l00262"></a>00262          : <a class="code" href="namespaceeos.html#a385f293ecaef106c5404eaece02279bd">portable_oarchive_base</a>(os, flags | boost::archive::no_header) 
-<a name="l00263"></a>00263       {
-<a name="l00264"></a>00264          <span class="comment">// it is vital to have version information if the archive is</span>
-<a name="l00265"></a>00265          <span class="comment">// to be parsed with a newer version of boost::serialization</span>
-<a name="l00266"></a>00266          <span class="comment">// therefor we create a header, no header means boost 1.33</span>
-<a name="l00267"></a>00267          <span class="keywordflow">if</span> (flags &amp; boost::archive::no_header)
-<a name="l00268"></a>00268             BOOST_ASSERT(<a class="code" href="namespaceeos.html#a7d65f2fb4ec23237bebd297f68718086">archive_version</a> == 3);
-<a name="l00269"></a>00269          <span class="keywordflow">else</span>
-<a name="l00270"></a>00270          {
-<a name="l00271"></a>00271             <span class="comment">// write our minimalistic header (magic byte plus version)</span>
-<a name="l00272"></a>00272             <span class="comment">// the boost archives write a string instead - by calling</span>
-<a name="l00273"></a>00273             <span class="comment">// boost::archive::basic_binary_oarchive&lt;derived_t&gt;::init()</span>
-<a name="l00274"></a>00274             <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<a class="code" href="namespaceeos.html#a2b914ee3cd010de929b74c407657bc71">magic_byte</a>);
-<a name="l00275"></a>00275 
-<a name="l00276"></a>00276             <span class="comment">// write current version</span>
-<a name="l00277"></a>00277             <a class="code" href="_qx_bool_8h.html#a30c34787be322c206bad264ed27f21cd">operator&lt;&lt;</a>(<a class="code" href="namespaceeos.html#a7d65f2fb4ec23237bebd297f68718086">archive_version</a>);
-<a name="l00278"></a>00278          }
-<a name="l00279"></a>00279       }
-<a name="l00280"></a>00280    };
-<a name="l00281"></a>00281 
-<a name="l00282"></a>00282 } <span class="comment">// namespace eos</span>
-<a name="l00283"></a>00283 
-<a name="l00284"></a>00284 <span class="comment">// required by export</span>
-<a name="l00285"></a>00285 <span class="preprocessor">#if BOOST_VERSION &lt; 103500</span>
-<a name="l00286"></a><a class="code" href="portable__oarchive_8hpp.html#ab06f703b6c20b1de219dc089359c0c9e">00286</a> <span class="preprocessor"></span><span class="preprocessor">#define BOOST_ARCHIVE_CUSTOM_OARCHIVE_TYPES eos::portable_oarchive</span>
-<a name="l00287"></a>00287 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00288"></a>00288 <span class="preprocessor"></span>BOOST_SERIALIZATION_REGISTER_ARCHIVE(<a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>)
-<a name="l00289"></a>00289 <span class="preprocessor">#endif</span>
-<a name="l00290"></a>00290 <span class="preprocessor"></span>
-<a name="l00291"></a>00291 <span class="keyword">namespace </span>boost { <span class="keyword">namespace </span>archive {
-<a name="l00292"></a>00292 
-<a name="l00293"></a>00293    <span class="comment">// explicitly instantiate for this type of binary stream</span>
-<a name="l00294"></a>00294    <span class="keyword">template</span> <span class="keyword">class </span>basic_binary_oarchive&lt;eos::portable_oarchive&gt;;
-<a name="l00295"></a>00295 
-<a name="l00296"></a>00296    <span class="keyword">template</span> <span class="keyword">class </span>basic_binary_oprimitive&lt;
-<a name="l00297"></a>00297       <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>
-<a name="l00298"></a>00298 <span class="preprocessor">      #if BOOST_VERSION &lt; 103400</span>
-<a name="l00299"></a>00299 <span class="preprocessor"></span>         , std::ostream
-<a name="l00300"></a>00300 <span class="preprocessor">      #else</span>
-<a name="l00301"></a>00301 <span class="preprocessor"></span>         , std::ostream::char_type
-<a name="l00302"></a>00302          , std::ostream::traits_type
-<a name="l00303"></a>00303 <span class="preprocessor">      #endif</span>
-<a name="l00304"></a>00304 <span class="preprocessor"></span>   &gt;;
-<a name="l00305"></a>00305 
-<a name="l00306"></a>00306    <span class="keyword">template</span> <span class="keyword">class </span>binary_oarchive_impl&lt;
-<a name="l00307"></a>00307       <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>
-<a name="l00308"></a>00308 <span class="preprocessor">      #if BOOST_VERSION &gt;= 103400</span>
-<a name="l00309"></a>00309 <span class="preprocessor"></span>         , std::ostream::char_type
-<a name="l00310"></a>00310          , std::ostream::traits_type
-<a name="l00311"></a>00311 <span class="preprocessor">      #endif</span>
-<a name="l00312"></a>00312 <span class="preprocessor"></span>   &gt;;
-<a name="l00313"></a>00313 
-<a name="l00314"></a>00314 <span class="preprocessor">#if (! _QX_USE_EXPORT_DLL_BOOST_SERIALIZATION_SINGLETON)</span>
-<a name="l00315"></a>00315 <span class="preprocessor"></span><span class="preprocessor">#if (BOOST_VERSION &gt; 103800)</span>
-<a name="l00316"></a>00316 <span class="preprocessor"></span>   <span class="keyword">template</span> <span class="keyword">class </span>detail::archive_serializer_map&lt;eos::portable_oarchive&gt;;
-<a name="l00317"></a>00317 <span class="preprocessor">#else</span>
-<a name="l00318"></a>00318 <span class="preprocessor"></span>   <span class="keyword">template</span> <span class="keyword">class </span>detail::archive_pointer_oserializer&lt;eos::portable_oarchive&gt;;
-<a name="l00319"></a>00319 <span class="preprocessor">#endif // (BOOST_VERSION &gt; 103800)</span>
-<a name="l00320"></a>00320 <span class="preprocessor"></span><span class="preprocessor">#endif // (! _QX_USE_EXPORT_DLL_BOOST_SERIALIZATION_SINGLETON)</span>
-<a name="l00321"></a>00321 <span class="preprocessor"></span>
-<a name="l00322"></a>00322 } } <span class="comment">// namespace boost::archive</span>
+<a name="l00253"></a>00253 <span class="preprocessor">        #if BOOST_VERSION &gt;= 103400</span>
+<a name="l00254"></a>00254 <span class="preprocessor"></span>                <a class="code" href="classeos_1_1portable__oarchive.html#a548abbe3f9adcdb95262aa517d40b983" title="Constructor on a stream using ios::binary mode!">portable_oarchive</a>(std::streambuf&amp; sb, <span class="keywordtype">unsigned</span> flags = 0)
+<a name="l00255"></a>00255                         : <a class="code" href="namespaceeos.html#a5832a454fccef34d965f0a20bd79b0f1">portable_oprimitive</a>(sb, flags &amp; boost::archive::no_codecvt)
+<a name="l00256"></a>00256                         , boost::archive::basic_binary_oarchive&lt;<a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">portable_oarchive</a>&gt;(flags)
+<a name="l00257"></a>00257                 {
+<a name="l00258"></a>00258                         <a class="code" href="classeos_1_1portable__oarchive.html#a5000c65e611204ec85efe670999bddea">init</a>(flags);
+<a name="l00259"></a>00259                 }
+<a name="l00260"></a>00260 <span class="preprocessor">        #endif</span>
+<a name="l00261"></a>00261 <span class="preprocessor"></span>
+<a name="l00263"></a><a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727">00263</a>                 <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> std::string&amp; s)
+<a name="l00264"></a>00264                 {
+<a name="l00265"></a>00265                         <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">portable_oprimitive::save</a>(s);
+<a name="l00266"></a>00266                 }
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268 <span class="preprocessor">        #ifndef BOOST_NO_STD_WSTRING</span>
+<a name="l00269"></a>00269 <span class="preprocessor"></span>
+<a name="l00281"></a><a class="code" href="classeos_1_1portable__oarchive.html#acfeec158b56fb88c86c8b2784b600eb6">00281</a>                 <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> std::wstring&amp; s)
+<a name="l00282"></a>00282                 {
+<a name="l00283"></a>00283                         <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(boost::to_utf8(s));
+<a name="l00284"></a>00284                 }
+<a name="l00285"></a>00285 <span class="preprocessor">        #endif</span>
+<a name="l00286"></a>00286 <span class="preprocessor"></span>
+<a name="l00299"></a><a class="code" href="classeos_1_1portable__oarchive.html#aff9742091dfbe8cea0d1f3aaab6f0fcf">00299</a>                 <span class="keywordtype">void</span> <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; b)
+<a name="l00300"></a>00300                 {
+<a name="l00301"></a>00301                         <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(b);
+<a name="l00302"></a>00302                         <span class="keywordflow">if</span> (b) <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(<span class="charliteral">&#39;T&#39;</span>);
+<a name="l00303"></a>00303                 }
+<a name="l00304"></a>00304 
+<a name="l00312"></a>00312                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00313"></a>00313                 <span class="keyword">typename</span> boost::enable_if&lt;boost::is_integral&lt;T&gt; &gt;::type
+<a name="l00314"></a><a class="code" href="classeos_1_1portable__oarchive.html#a6f6f1f41ba76cc8bd8ba2e5d25fd503e">00314</a>                 <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> T &amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;2&gt;</a> = 0)
+<a name="l00315"></a>00315                 {
+<a name="l00316"></a>00316                         <span class="keywordflow">if</span> (T temp = t)
+<a name="l00317"></a>00317                         {
+<a name="l00318"></a>00318                                 <span class="comment">// examine the number of bytes</span>
+<a name="l00319"></a>00319                                 <span class="comment">// needed to represent the number</span>
+<a name="l00320"></a>00320                                 <span class="keywordtype">signed</span> <span class="keywordtype">char</span> size = 0;
+<a name="l00321"></a>00321                                 <span class="keywordflow">do</span> { temp &gt;&gt;= CHAR_BIT; ++size; } 
+<a name="l00322"></a>00322                                 <span class="keywordflow">while</span> (temp != 0 &amp;&amp; temp != (T) -1);
 <a name="l00323"></a>00323 
-<a name="l00324"></a>00324 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00325"></a>00325 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(pop)</span>
-<a name="l00326"></a>00326 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
-<a name="l00327"></a>00327 <span class="preprocessor"></span>
-<a name="l00328"></a>00328 <span class="preprocessor">#endif // _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
-<a name="l00329"></a>00329 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
-<a name="l00330"></a>00330 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00324"></a>00324                                 <span class="comment">// encode the sign bit into the size</span>
+<a name="l00325"></a>00325                                 <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(t &gt; 0 ? size : -size);
+<a name="l00326"></a>00326                                 BOOST_ASSERT(t &gt; 0 || boost::is_signed&lt;T&gt;::value);
+<a name="l00327"></a>00327 
+<a name="l00328"></a>00328                                 <span class="comment">// we choose to use little endian because this way we just</span>
+<a name="l00329"></a>00329                                 <span class="comment">// save the first size bytes to the stream and skip the rest</span>
+<a name="l00330"></a>00330                                 endian::store_little_endian&lt;T, sizeof(T)&gt;(&amp;temp, t);
+<a name="l00331"></a>00331 
+<a name="l00332"></a>00332                                 save_binary(&amp;temp, size);
+<a name="l00333"></a>00333                         }
+<a name="l00334"></a>00334                         <span class="comment">// zero optimization</span>
+<a name="l00335"></a>00335                         <span class="keywordflow">else</span> <a class="code" href="classeos_1_1portable__oarchive.html#abaa4e80bbd50a1f31ed64efbec7ca215">save_signed_char</a>(0);
+<a name="l00336"></a>00336                 }
+<a name="l00337"></a>00337 
+<a name="l00365"></a>00365                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00366"></a>00366                 <span class="keyword">typename</span> boost::enable_if&lt;boost::is_floating_point&lt;T&gt; &gt;::type
+<a name="l00367"></a><a class="code" href="classeos_1_1portable__oarchive.html#a15ed045c75c9ddb143f55873aaadc899">00367</a>                 <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> T &amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;3&gt;</a> = 0)
+<a name="l00368"></a>00368                 {
+<a name="l00369"></a>00369                         <span class="keyword">typedef</span> <span class="keyword">typename</span> fp::detail::fp_traits&lt;T&gt;::type traits;
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371                         <span class="comment">// if the no_infnan flag is set we must throw here</span>
+<a name="l00372"></a>00372                         <span class="keywordflow">if</span> (get_flags() &amp; <a class="code" href="namespaceeos.html#a2091929cfe70df606d1c6fa7915c6c5e">no_infnan</a> &amp;&amp; !fp::isfinite(t))
+<a name="l00373"></a>00373                                 <span class="keywordflow">throw</span> <a class="code" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a>(t);
+<a name="l00374"></a>00374 
+<a name="l00375"></a>00375                         <span class="comment">// if you end here there are three possibilities:</span>
+<a name="l00376"></a>00376                         <span class="comment">// 1. you&#39;re serializing a long double which is not portable</span>
+<a name="l00377"></a>00377                         <span class="comment">// 2. you&#39;re serializing a double but have no 64 bit integer</span>
+<a name="l00378"></a>00378                         <span class="comment">// 3. your machine is using an unknown floating point format</span>
+<a name="l00379"></a>00379                         <span class="comment">// after reading the note above you still might decide to </span>
+<a name="l00380"></a>00380                         <span class="comment">// deactivate this static assert and try if it works out.</span>
+<a name="l00381"></a>00381                         <span class="keyword">typename</span> traits::bits bits;
+<a name="l00382"></a>00382                         BOOST_STATIC_ASSERT(<span class="keyword">sizeof</span>(bits) == <span class="keyword">sizeof</span>(T));
+<a name="l00383"></a>00383                         BOOST_STATIC_ASSERT(std::numeric_limits&lt;T&gt;::is_iec559);
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385                         <span class="comment">// examine value closely</span>
+<a name="l00386"></a>00386                         <span class="keywordflow">switch</span> (fp::fpclassify(t))
+<a name="l00387"></a>00387                         {
+<a name="l00388"></a>00388                         <span class="comment">//case FP_ZERO: bits = 0; break; </span>
+<a name="l00389"></a>00389                         <span class="keywordflow">case</span> FP_NAN: bits = traits::exponent | traits::mantissa; <span class="keywordflow">break</span>;
+<a name="l00390"></a>00390                         <span class="keywordflow">case</span> FP_INFINITE: bits = traits::exponent | (t&lt;0) * traits::sign; <span class="keywordflow">break</span>;
+<a name="l00391"></a>00391                         <span class="keywordflow">case</span> FP_SUBNORMAL: assert(std::numeric_limits&lt;T&gt;::has_denorm); <span class="comment">// pass</span>
+<a name="l00392"></a>00392                         <span class="keywordflow">case</span> FP_ZERO: <span class="comment">// note that floats can be ±0.0</span>
+<a name="l00393"></a>00393                         <span class="keywordflow">case</span> FP_NORMAL: traits::get_bits(t, bits); <span class="keywordflow">break</span>;
+<a name="l00394"></a>00394                         <span class="keywordflow">default</span>: <span class="keywordflow">throw</span> <a class="code" href="classeos_1_1portable__archive__exception.html" title="Exception being thrown when serialization cannot proceed.">portable_archive_exception</a>(t);
+<a name="l00395"></a>00395                         }
+<a name="l00396"></a>00396 
+<a name="l00397"></a>00397                         <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(bits);
+<a name="l00398"></a>00398                 }
+<a name="l00399"></a>00399 
+<a name="l00400"></a>00400                 <span class="comment">// in boost 1.44 version_type was splitted into library_version_type and</span>
+<a name="l00401"></a>00401                 <span class="comment">// item_version_type, plus a whole bunch of additional strong typedefs.</span>
+<a name="l00402"></a>00402                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;
+<a name="l00403"></a>00403                 <span class="keyword">typename</span> boost::disable_if&lt;boost::is_arithmetic&lt;T&gt; &gt;::type
+<a name="l00404"></a><a class="code" href="classeos_1_1portable__oarchive.html#a8dcd2289f84382bb14603529bf49b92a">00404</a>                 <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>(<span class="keyword">const</span> T&amp; t, <a class="code" href="structeos_1_1portable__oarchive_1_1dummy.html">dummy&lt;4&gt;</a> = 0)
+<a name="l00405"></a>00405                 {
+<a name="l00406"></a>00406                         <span class="comment">// we provide a generic save routine for all types that feature</span>
+<a name="l00407"></a>00407                         <span class="comment">// conversion operators into an unsigned integer value like those</span>
+<a name="l00408"></a>00408                         <span class="comment">// created through BOOST_STRONG_TYPEDEF(X, some unsigned int) like</span>
+<a name="l00409"></a>00409                         <span class="comment">// library_version_type, collection_size_type, item_version_type,</span>
+<a name="l00410"></a>00410                         <span class="comment">// class_id_type, object_id_type, version_type and tracking_type</span>
+<a name="l00411"></a>00411                         <a class="code" href="classeos_1_1portable__oarchive.html#a2fabecb73f39b3a958b828f314bf0727" title="Save narrow strings.">save</a>((<span class="keyword">typename</span> boost::uint_t&lt;<span class="keyword">sizeof</span>(T)*CHAR_BIT&gt;::least)(t));
+<a name="l00412"></a>00412                 }
+<a name="l00413"></a>00413         };
+<a name="l00414"></a>00414 
+<a name="l00415"></a>00415 } <span class="comment">// namespace eos</span>
+<a name="l00416"></a>00416 
+<a name="l00417"></a>00417 <span class="comment">// required by export</span>
+<a name="l00418"></a>00418 <span class="preprocessor">#if BOOST_VERSION &lt; 103500</span>
+<a name="l00419"></a><a class="code" href="portable__oarchive_8hpp.html#ab06f703b6c20b1de219dc089359c0c9e">00419</a> <span class="preprocessor"></span><span class="preprocessor">#define BOOST_ARCHIVE_CUSTOM_OARCHIVE_TYPES eos::portable_oarchive</span>
+<a name="l00420"></a>00420 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00421"></a>00421 <span class="preprocessor"></span>BOOST_SERIALIZATION_REGISTER_ARCHIVE(<a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>)
+<a name="l00422"></a>00422 <span class="preprocessor">#endif</span>
+<a name="l00423"></a>00423 <span class="preprocessor"></span>
+<a name="l00424"></a>00424 <span class="comment">// if you include this header multiple times and your compiler is picky</span>
+<a name="l00425"></a>00425 <span class="comment">// about multiple template instantiations (eg. gcc is) then you need to</span>
+<a name="l00426"></a>00426 <span class="comment">// define NO_EXPLICIT_TEMPLATE_INSTANTIATION before every include but one</span>
+<a name="l00427"></a>00427 <span class="comment">// or you move the instantiation section into an implementation file</span>
+<a name="l00428"></a>00428 <span class="preprocessor">#ifndef NO_EXPLICIT_TEMPLATE_INSTANTIATION</span>
+<a name="l00429"></a>00429 <span class="preprocessor"></span>
+<a name="l00430"></a>00430 <span class="preprocessor">#ifndef _QX_BOOST_ARCHIVE_SERIALIZER_IMPL_DEFINED_</span>
+<a name="l00431"></a><a class="code" href="portable__oarchive_8hpp.html#aba0ef8fb4a65a618434724b38d32ea40">00431</a> <span class="preprocessor"></span><span class="preprocessor">#define _QX_BOOST_ARCHIVE_SERIALIZER_IMPL_DEFINED_</span>
+<a name="l00432"></a>00432 <span class="preprocessor"></span>
+<a name="l00433"></a>00433 <span class="preprocessor">#include &lt;boost/archive/impl/basic_binary_iarchive.ipp&gt;</span>
+<a name="l00434"></a>00434 <span class="preprocessor">#include &lt;boost/archive/impl/basic_binary_oarchive.ipp&gt;</span>
+<a name="l00435"></a>00435 <span class="preprocessor">#include &lt;boost/archive/impl/basic_binary_iprimitive.ipp&gt;</span>
+<a name="l00436"></a>00436 <span class="preprocessor">#include &lt;boost/archive/impl/basic_binary_oprimitive.ipp&gt;</span>
+<a name="l00437"></a>00437 
+<a name="l00438"></a>00438 <span class="preprocessor">#if _QX_SERIALIZE_TEXT</span>
+<a name="l00439"></a>00439 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/archive/impl/basic_text_oprimitive.ipp&gt;</span>
+<a name="l00440"></a>00440 <span class="preprocessor">#include &lt;boost/archive/impl/basic_text_iprimitive.ipp&gt;</span>
+<a name="l00441"></a>00441 <span class="preprocessor">#include &lt;boost/archive/impl/basic_text_oarchive.ipp&gt;</span>
+<a name="l00442"></a>00442 <span class="preprocessor">#include &lt;boost/archive/impl/basic_text_iarchive.ipp&gt;</span>
+<a name="l00443"></a>00443 <span class="preprocessor">#endif // _QX_SERIALIZE_TEXT</span>
+<a name="l00444"></a>00444 <span class="preprocessor"></span>
+<a name="l00445"></a>00445 <span class="preprocessor">#if (BOOST_VERSION &lt; 104000)</span>
+<a name="l00446"></a>00446 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/archive/impl/archive_pointer_iserializer.ipp&gt;</span>
+<a name="l00447"></a>00447 <span class="preprocessor">#include &lt;boost/archive/impl/archive_pointer_oserializer.ipp&gt;</span>
+<a name="l00448"></a>00448 <span class="preprocessor">#elif !defined BOOST_ARCHIVE_SERIALIZER_INCLUDED</span>
+<a name="l00449"></a>00449 <span class="preprocessor"></span><span class="preprocessor">#include &lt;boost/archive/impl/archive_serializer_map.ipp&gt;</span>
+<a name="l00450"></a>00450 <span class="preprocessor">#define BOOST_ARCHIVE_SERIALIZER_INCLUDED</span>
+<a name="l00451"></a>00451 <span class="preprocessor"></span><span class="preprocessor">#endif // (BOOST_VERSION &lt; 104000)</span>
+<a name="l00452"></a>00452 <span class="preprocessor"></span>
+<a name="l00453"></a>00453 <span class="preprocessor">#endif // _QX_BOOST_ARCHIVE_SERIALIZER_IMPL_DEFINED_</span>
+<a name="l00454"></a>00454 <span class="preprocessor"></span>
+<a name="l00455"></a>00455 <span class="keyword">namespace </span>boost { <span class="keyword">namespace </span>archive {
+<a name="l00456"></a>00456 
+<a name="l00457"></a>00457         <span class="comment">// explicitly instantiate for this type of binary stream</span>
+<a name="l00458"></a>00458         <span class="keyword">template</span> <span class="keyword">class </span>basic_binary_oarchive&lt;eos::portable_oarchive&gt;;
+<a name="l00459"></a>00459 
+<a name="l00460"></a>00460         <span class="keyword">template</span> <span class="keyword">class </span>basic_binary_oprimitive&lt;
+<a name="l00461"></a>00461                 <a class="code" href="classeos_1_1portable__oarchive.html" title="Portable binary output archive using little endian format.">eos::portable_oarchive</a>
+<a name="l00462"></a>00462 <span class="preprocessor">        #if BOOST_VERSION &lt; 103400</span>
+<a name="l00463"></a>00463 <span class="preprocessor"></span>                , std::ostream
+<a name="l00464"></a>00464 <span class="preprocessor">        #else</span>
+<a name="l00465"></a>00465 <span class="preprocessor"></span>                , std::ostream::char_type
+<a name="l00466"></a>00466                 , std::ostream::traits_type
+<a name="l00467"></a>00467 <span class="preprocessor">        #endif</span>
+<a name="l00468"></a>00468 <span class="preprocessor"></span>        &gt;;
+<a name="l00469"></a>00469 
+<a name="l00470"></a>00470 <span class="preprocessor">#if (! _QX_USE_EXPORT_DLL_BOOST_SERIALIZATION_SINGLETON)</span>
+<a name="l00471"></a>00471 <span class="preprocessor"></span><span class="preprocessor">#if (BOOST_VERSION &lt; 104000)</span>
+<a name="l00472"></a>00472 <span class="preprocessor"></span>        <span class="keyword">template</span> <span class="keyword">class </span>detail::archive_pointer_oserializer&lt;eos::portable_oarchive&gt;;
+<a name="l00473"></a>00473 <span class="preprocessor">#else // (BOOST_VERSION &lt; 104000)</span>
+<a name="l00474"></a>00474 <span class="preprocessor"></span>        <span class="keyword">template</span> <span class="keyword">class </span>detail::archive_serializer_map&lt;eos::portable_oarchive&gt;;
+<a name="l00475"></a>00475 <span class="preprocessor">#endif // (BOOST_VERSION &lt; 104000)</span>
+<a name="l00476"></a>00476 <span class="preprocessor"></span><span class="preprocessor">#endif // (! _QX_USE_EXPORT_DLL_BOOST_SERIALIZATION_SINGLETON)</span>
+<a name="l00477"></a>00477 <span class="preprocessor"></span>
+<a name="l00478"></a>00478 } } <span class="comment">// namespace boost::archive</span>
+<a name="l00479"></a>00479 
+<a name="l00480"></a>00480 <span class="preprocessor">#endif // NO_EXPLICIT_TEMPLATE_INSTANTIATION</span>
+<a name="l00481"></a>00481 <span class="preprocessor"></span>
+<a name="l00482"></a>00482 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00483"></a>00483 <span class="preprocessor"></span><span class="preprocessor">#pragma warning(pop)</span>
+<a name="l00484"></a>00484 <span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER</span>
+<a name="l00485"></a>00485 <span class="preprocessor"></span>
+<a name="l00486"></a>00486 <span class="preprocessor">#endif // _QX_PORTABLE_BINARY_OARCHIVE_H_</span>
+<a name="l00487"></a>00487 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_SERIALIZE_PORTABLE_BINARY</span>
+<a name="l00488"></a>00488 <span class="preprocessor"></span><span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -341,7 +444,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:14 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -48,7 +48,6 @@
 #endif // _QX_NO_RTTI
 
 #include <QxTraits/remove_attr.h>
-#include <QxCommon/QxMacro.h>
 
 #define QX_REGISTER_CLASS_NAME_SEP_INF "<"
 #define QX_REGISTER_CLASS_NAME_SEP_SUP ">"
@@ -125,7 +124,6 @@ struct get_class_name
 #endif // _QX_NO_RTTI
 
       qDebug("[QxOrm] Unable to define correct class name : '%s' => use macro 'QX_REGISTER_CLASS_NAME()' or 'QX_REGISTER_CLASS_NAME_TEMPLATE_X()'", result.c_str());
-      qAssert(false);
       return result.c_str();
    }
 

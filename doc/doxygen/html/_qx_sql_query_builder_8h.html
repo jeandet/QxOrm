@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -179,7 +179,8 @@ Defines</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment">QString key = QxClass&lt;type_sql&gt;::getSingleton()-&gt;getKey() + oper; \
+<b>Value:</b><div class="fragment"><pre class="fragment">QMutexLocker locker(&amp; IxSqlQueryBuilder::getMutex()); \
+QString key = QxClass&lt;type_sql&gt;::getSingleton()-&gt;getKey() + oper; \
 QString sql = IxSqlQueryBuilder::listSqlQuery().value(key); \
 if (! sql.isEmpty()) { this-&gt;setSqlQuery(sql); <span class="keywordflow">return</span> (* <span class="keyword">this</span>); }
 </pre></div>
@@ -201,11 +202,12 @@ if (! sql.isEmpty()) { this-&gt;setSqlQuery(sql); <span class="keywordflow">retu
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment">QString key = QxClass&lt;type_sql&gt;::getSingleton()-&gt;getKey() + this-&gt;getHashRelation() + oper; \
+<b>Value:</b><div class="fragment"><pre class="fragment">QMutexLocker locker(&amp; IxSqlQueryBuilder::getMutex()); \
+QString key = QxClass&lt;type_sql&gt;::getSingleton()-&gt;getKey() + this-&gt;getHashRelation() + oper; \
 QString sql = IxSqlQueryBuilder::listSqlQuery().value(key); \
 if (! sql.isEmpty()) { this-&gt;setSqlQuery(sql); this-&gt;listSqlQueryAlias() = IxSqlQueryBuilder::listSqlAlias().value(key); <span class="keywordflow">return</span> (* <span class="keyword">this</span>); }
 </pre></div>
-<p>Definition at line <a class="el" href="_qx_sql_query_builder_8h_source.html#l00063">63</a> of file <a class="el" href="_qx_sql_query_builder_8h_source.html">QxSqlQueryBuilder.h</a>.</p>
+<p>Definition at line <a class="el" href="_qx_sql_query_builder_8h_source.html#l00064">64</a> of file <a class="el" href="_qx_sql_query_builder_8h_source.html">QxSqlQueryBuilder.h</a>.</p>
 
 </div>
 </div>
@@ -259,7 +261,7 @@ if (! sql.isEmpty()) { this-&gt;setSqlQuery(sql); this-&gt;listSqlQueryAlias() =
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:16 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:23 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

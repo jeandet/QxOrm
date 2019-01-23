@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -186,6 +186,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_many.html#a8282cc9108343aca2638396e976a17fb">qx::QxSqlRelation_OneToMany&lt; DataType, Owner &gt;</a>
 , <a class="el" href="classqx_1_1_qx_sql_relation___one_to_one.html#ac24b7962f0cbea97a5970535084ac3ce">qx::QxSqlRelation_OneToOne&lt; DataType, Owner &gt;</a>
 </li>
+<li>onBeforeSqlPrepare()
+: <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#afa9c5e06ef42877f0ee33fed9e0efe8b">qx::dao::detail::IxSqlGenerator</a>
+, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a062f2691bcb530df3eeccda6d8058259">qx::dao::detail::QxSqlGenerator_Standard</a>
+</li>
 <li>onBeforeUpdate()
 : <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#af2869cf18ff973d6ead3376d1f4c76bb">qx::dao::detail::IxSqlGenerator</a>
 , <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a6847f14e3153bcb39ecc20369db41c40">qx::dao::detail::QxSqlGenerator_Standard</a>
@@ -245,57 +249,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1memory_1_1____debug__new__recorder.html#ac634b63cd5f5df741d50c54265d2c503">qx::memory::__debug_new_recorder</a>
 </li>
 <li>operator&lt;&lt;
-: <a class="el" href="classqx_1_1_qx_invalid_value_x.html#aea09e7c97553bdf1080ac4ccb17ba547">qx::QxInvalidValueX</a>
-, <a class="el" href="classqx_1_1_qx_bool.html#a5a901e7552c00841523b0bac18295b29">qx::QxBool</a>
+: <a class="el" href="classqx_1_1service_1_1_qx_transaction.html#a32e549809dc4d0df0e7f0bfaa9db8c45">qx::service::QxTransaction</a>
+, <a class="el" href="classqx_1_1_qx_invalid_value.html#ab793e0b167c6782313e09088530d1696">qx::QxInvalidValue</a>
+, <a class="el" href="classqx_1_1_qx_invalid_value_x.html#aa82298ec6f5c0f9bfce841e035eeeda0">qx::QxInvalidValueX</a>
+, <a class="el" href="classqx_1_1_qx_bool.html#a208c2acad50898ad4b6cb140f39455ca">qx::QxBool</a>
 , <a class="el" href="classqx_1_1dao_1_1ptr.html#a5cc8519be0e7b56770fa5b4c1d3276d1">qx::dao::ptr&lt; T &gt;</a>
-, <a class="el" href="classqx_1_1_qx_date_neutral.html#a0f8b1318d381c226906bb7268415ffec">qx::QxDateNeutral</a>
-, <a class="el" href="classqx_1_1_qx_date_time_neutral.html#a1cf140fd34dbbd331b4fdac81ddc5c80">qx::QxDateTimeNeutral</a>
-, <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#a46ef8e31391c16fe24347ed586302046">qx::dao::detail::IxSqlElement</a>
-, <a class="el" href="classqx_1_1_qx_sql_query.html#a85c33589de762c177014a5b5aac71022">qx::QxSqlQuery</a>
-, <a class="el" href="classqx_1_1_qx_time_neutral.html#a06908648d11e1697d91b5060e369d3f9">qx::QxTimeNeutral</a>
-, <a class="el" href="classqx_1_1service_1_1_ix_parameter.html#ac17139d3ef5d129c1d3a5bfd5028ae76">qx::service::IxParameter</a>
-, <a class="el" href="classqx_1_1service_1_1_ix_service.html#a920367d7819e3a55f474b0ac0936fb3e">qx::service::IxService</a>
-, <a class="el" href="classqx_1_1service_1_1_qx_transaction.html#a4de08c6d4187443cc601bc6c868bb90c">qx::service::QxTransaction</a>
-, <a class="el" href="classqx_1_1_qx_invalid_value.html#a00ab01a30ee5c9835253cad61d005605">qx::QxInvalidValue</a>
+, <a class="el" href="classqx_1_1_qx_date_neutral.html#a30e5a6dd94c832d43d9daec3fe5f2bb4">qx::QxDateNeutral</a>
+, <a class="el" href="classqx_1_1_qx_date_time_neutral.html#ac6bf05ba0e388be656dc1c4eebf4961b">qx::QxDateTimeNeutral</a>
+, <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#af9332bc87de7957e7b82cd3511dc210e">qx::dao::detail::IxSqlElement</a>
+, <a class="el" href="classqx_1_1_qx_sql_query.html#ae08964be1e16b4739f85e385f484c549">qx::QxSqlQuery</a>
+, <a class="el" href="classqx_1_1_qx_time_neutral.html#aa8ce9bac7fc66e485f73eabd118db3f3">qx::QxTimeNeutral</a>
+, <a class="el" href="classqx_1_1service_1_1_ix_parameter.html#ac863df818b867a570cc325a7afa9bdb0">qx::service::IxParameter</a>
+, <a class="el" href="classqx_1_1service_1_1_ix_service.html#a25e3558fe28a39be313ea7cb7b32c6df">qx::service::IxService</a>
 </li>
 <li>operator=()
-: <a class="el" href="classqx_1_1_qx_collection.html#ab295cf7958a205a19b4bcbb6c72de822">qx::QxCollection&lt; Key, Value &gt;</a>
+: <a class="el" href="classqx_1_1dao_1_1ptr.html#a96aeb680b9107afd712c4e9f56ab59eb">qx::dao::ptr&lt; T &gt;</a>
+, <a class="el" href="classqx_1_1_qx_collection.html#ab295cf7958a205a19b4bcbb6c72de822">qx::QxCollection&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1_qx_collection_iterator.html#acf669198d167ae4e6025d153827a63c0">qx::QxCollectionIterator&lt; Key, Value &gt;</a>
 , <a class="el" href="classqx_1_1any.html#a43e6e91bacb619d9dece179aa0c36fb7">qx::any</a>
-, <a class="el" href="structqx_1_1any_1_1holder.html#ae24043dde85225b2f2720acf892456bf">qx::any::holder&lt; ValueType &gt;</a>
 , <a class="el" href="classqx_1_1_qx_bool.html#aff65628d95866e3913fac37d3930c5f6">qx::QxBool</a>
 , <a class="el" href="classqx_1_1dao_1_1ptr.html#a7ae7e3b539f69cc00c1e482154c5122c">qx::dao::ptr&lt; T &gt;</a>
 , <a class="el" href="classqx_1_1_qx_session.html#ad8adf0c4f1d1e7d6900e25c5a5e033bf">qx::QxSession</a>
-, <a class="el" href="classqx_1_1_ix_boost_serialize_register_helper.html#ab440d091e2dfb83600375d268e7ec854">qx::IxBoostSerializeRegisterHelper</a>
+, <a class="el" href="classqx_1_1_ix_factory.html#a675128c8b68cdba97a059d1d2d4be997">qx::IxFactory</a>
 , <a class="el" href="classqx_1_1memory_1_1bool__array_1_1___element.html#a1e66574eb41fb91ad976a05f6a89227e">qx::memory::bool_array::_Element</a>
 , <a class="el" href="classqx_1_1memory_1_1____debug__new__recorder.html#a70ca0c0e22c79afcbbc598c45ce0d2ae">qx::memory::__debug_new_recorder</a>
 , <a class="el" href="classqx_1_1memory_1_1fast__mutex.html#a7dab7eb60549ec2caa8fd9fef5683609">qx::memory::fast_mutex</a>
-, <a class="el" href="classqx_1_1memory_1_1object__level__lock_1_1lock.html#ada98cc4edc14b01214a9ca37924c7550">qx::memory::object_level_lock&lt; _Host &gt;::lock</a>
-, <a class="el" href="classqx_1_1memory_1_1static__mem__pool__set.html#acc1dd8ddeb22beb1677f02d5d7002444">qx::memory::static_mem_pool_set</a>
-, <a class="el" href="classqx_1_1memory_1_1static__mem__pool.html#a0a989f4b3dcfd02eee4a53a96e6934b9">qx::memory::static_mem_pool&lt; _Sz, _Gid &gt;</a>
-, <a class="el" href="classqx_1_1_ix_singleton.html#a2d93562b12e658b22d46d70632048b90">qx::IxSingleton</a>
-, <a class="el" href="classqx_1_1_ix_factory.html#a675128c8b68cdba97a059d1d2d4be997">qx::IxFactory</a>
 , <a class="el" href="classqx_1_1memory_1_1fast__mutex__autolock.html#aa5f216ab8e74ad4ba2378d8581f5c6c5">qx::memory::fast_mutex_autolock</a>
-, <a class="el" href="classqx_1_1dao_1_1ptr.html#a01b752b850a30045bd9e281d258fad86">qx::dao::ptr&lt; T &gt;</a>
-, <a class="el" href="classqx_1_1_qx_bool.html#ac6937d6a02b5a7449a534410d3d00888">qx::QxBool</a>
+, <a class="el" href="classqx_1_1memory_1_1object__level__lock_1_1lock.html#ada98cc4edc14b01214a9ca37924c7550">qx::memory::object_level_lock&lt; _Host &gt;::lock</a>
+, <a class="el" href="classqx_1_1memory_1_1static__mem__pool.html#a0a989f4b3dcfd02eee4a53a96e6934b9">qx::memory::static_mem_pool&lt; _Sz, _Gid &gt;</a>
+, <a class="el" href="classqx_1_1_ix_boost_serialize_register_helper.html#ab440d091e2dfb83600375d268e7ec854">qx::IxBoostSerializeRegisterHelper</a>
+, <a class="el" href="classqx_1_1_ix_singleton.html#a2d93562b12e658b22d46d70632048b90">qx::IxSingleton</a>
+, <a class="el" href="classqx_1_1memory_1_1static__mem__pool__set.html#acc1dd8ddeb22beb1677f02d5d7002444">qx::memory::static_mem_pool_set</a>
+, <a class="el" href="classqx_1_1dao_1_1ptr.html#ae3da92cc62c8f8bbf2aeba401b5f5fed">qx::dao::ptr&lt; T &gt;</a>
+, <a class="el" href="structqx_1_1any_1_1holder.html#ae24043dde85225b2f2720acf892456bf">qx::any::holder&lt; ValueType &gt;</a>
 </li>
 <li>operator==()
 : <a class="el" href="classqx_1_1_qx_bool.html#a0786df148c1259ffb6219d6938cf6eff">qx::QxBool</a>
 , <a class="el" href="classqx_1_1_qx_collection.html#a2529e650813e0d172c3f5cc11c0b36a2">qx::QxCollection&lt; Key, Value &gt;</a>
+, <a class="el" href="classqx_1_1_qx_bool.html#af3189f969d9c059a2d548ccf181253da">qx::QxBool</a>
 </li>
 <li>operator&gt;&gt;
-: <a class="el" href="classqx_1_1_qx_date_neutral.html#a7e2347294dc1d702890066f5ebfa79bd">qx::QxDateNeutral</a>
-, <a class="el" href="classqx_1_1_qx_date_time_neutral.html#a45ca207e50ee7617af8713d5b8736ad4">qx::QxDateTimeNeutral</a>
-, <a class="el" href="classqx_1_1service_1_1_ix_parameter.html#a3344df241159c0dc46368f1c97a7f941">qx::service::IxParameter</a>
-, <a class="el" href="classqx_1_1service_1_1_ix_service.html#a5ff9eea6e03a92ddb9a154add2aaa881">qx::service::IxService</a>
-, <a class="el" href="classqx_1_1_qx_time_neutral.html#aea2131966d72ab15c71bd8ccdd66ca4f">qx::QxTimeNeutral</a>
-, <a class="el" href="classqx_1_1_qx_invalid_value.html#aa0a43c484e316ec6f12186beca0d2ec4">qx::QxInvalidValue</a>
-, <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#a40386f59891f35c8a85c3f52d44c95b6">qx::dao::detail::IxSqlElement</a>
-, <a class="el" href="classqx_1_1_qx_sql_query.html#aa681d8b7229d5e884667d3681c199442">qx::QxSqlQuery</a>
+: <a class="el" href="classqx_1_1service_1_1_qx_transaction.html#a5c99af25a4e46cc0f31e5ee6c9248e40">qx::service::QxTransaction</a>
+, <a class="el" href="classqx_1_1service_1_1_ix_parameter.html#a422e7e1ddc73034662e887f1b437e55c">qx::service::IxParameter</a>
+, <a class="el" href="classqx_1_1_qx_bool.html#af5d47484be5942c9dfe5fe7dd9924060">qx::QxBool</a>
+, <a class="el" href="classqx_1_1service_1_1_ix_service.html#a38b6c6b40ab379313e8226e7b924ab30">qx::service::IxService</a>
+, <a class="el" href="classqx_1_1_qx_date_neutral.html#a2113a45f0bffc2f0d303dca45ae0cbdf">qx::QxDateNeutral</a>
+, <a class="el" href="classqx_1_1_qx_date_time_neutral.html#a7361eb98bfad581ce17b3900e2d01131">qx::QxDateTimeNeutral</a>
+, <a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_element.html#adcbdb39cd9adf4d49589bbb8bcc8efdd">qx::dao::detail::IxSqlElement</a>
+, <a class="el" href="classqx_1_1_qx_time_neutral.html#a42789ac9ba384aa6c483447aae2272b0">qx::QxTimeNeutral</a>
 , <a class="el" href="classqx_1_1dao_1_1ptr.html#aca6e23661cb7e264ddc639dcf32adaaf">qx::dao::ptr&lt; T &gt;</a>
-, <a class="el" href="classqx_1_1service_1_1_qx_transaction.html#ac3d868d57dbd26c8a07357c24b82ff5b">qx::service::QxTransaction</a>
-, <a class="el" href="classqx_1_1_qx_bool.html#a2be57df0e5870cdff6e7474c79d120f2">qx::QxBool</a>
-, <a class="el" href="classqx_1_1_qx_invalid_value_x.html#a5ad8b8ad2293e310b02543b99c337018">qx::QxInvalidValueX</a>
+, <a class="el" href="classqx_1_1_qx_invalid_value.html#a5c9d1841d4c9bb785f5a133cd67e461d">qx::QxInvalidValue</a>
+, <a class="el" href="classqx_1_1_qx_invalid_value_x.html#a1294f0aa2f4906b3531a17f31998f9c2">qx::QxInvalidValueX</a>
+, <a class="el" href="classqx_1_1_qx_sql_query.html#a7cd0cd7c947b1b2fbfabe54afc3a59b8">qx::QxSqlQuery</a>
 </li>
 <li>operator[]()
 : <a class="el" href="classqx_1_1memory_1_1bool__array.html#aa98ae517547d1011fdd5560d718fcda7">qx::memory::bool_array</a>
@@ -310,10 +315,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classqx_1_1_qx_sql_query.html#ab9308d02993698a2e91d34cc23436bb7">qx::QxSqlQuery</a>
 </li>
 <li>orderAsc()
-: <a class="el" href="classqx_1_1_qx_sql_query.html#aa3fcf60c397b15c96817785fe1df691c">qx::QxSqlQuery</a>
+: <a class="el" href="classqx_1_1_qx_sql_query.html#a60fecfd38799c517e1b1ff45a5201c6e">qx::QxSqlQuery</a>
 </li>
 <li>orderDesc()
-: <a class="el" href="classqx_1_1_qx_sql_query.html#aa8103bf04a402bf14178002f8175e860">qx::QxSqlQuery</a>
+: <a class="el" href="classqx_1_1_qx_sql_query.html#ab27d01d92909888cb92b35c216e0ccb0">qx::QxSqlQuery</a>
 </li>
 <li>output_object()
 : <a class="el" href="structqx_1_1memory_1_1output__object.html#af07b8672abb04108a69f6a821d9f21b1">qx::memory::output_object&lt; _OutputStrm, _StringType &gt;</a>
@@ -344,7 +349,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:19 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:24 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

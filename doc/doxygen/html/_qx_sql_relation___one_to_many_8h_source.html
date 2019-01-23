@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_qx_sql_relation___one_to_many_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -157,12 +157,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00065"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a1387ab00c437ba3a527212a168346ff4">00065</a>    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classqx_1_1trait_1_1no__type.html">type_generic_container::type_iterator</a> <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a1387ab00c437ba3a527212a168346ff4">type_iterator</a>;
 <a name="l00066"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6ffe591af5af17565a8e7658f762598d">00066</a>    <span class="keyword">typedef</span> <span class="keyword">typename</span> type_item::type_value <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6ffe591af5af17565a8e7658f762598d">type_value</a>;
 <a name="l00067"></a>00067 
-<a name="l00068"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#acb2b95893642a4d30e9a3bfcfd99f188a92336ce7a0bc6d566c7cd84a25e840c6">00068</a>    <span class="keyword">enum</span> { <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#acb2b95893642a4d30e9a3bfcfd99f188a92336ce7a0bc6d566c7cd84a25e840c6">is_data_container</a> = <a class="code" href="classqx_1_1_qx_sql_relation.html" title="qx::QxSqlRelation&lt;DataType, Owner&gt; : base class for all relationships defined between 2 classes (or b...">QxSqlRelation&lt;DataType, Owner&gt;::is_data_container</a> };
+<a name="l00068"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a37dce70f9446762169fafbce347d4d3ea92336ce7a0bc6d566c7cd84a25e840c6">00068</a>    <span class="keyword">enum</span> { <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a37dce70f9446762169fafbce347d4d3ea92336ce7a0bc6d566c7cd84a25e840c6">is_data_container</a> = <a class="code" href="classqx_1_1_qx_sql_relation.html" title="qx::QxSqlRelation&lt;DataType, Owner&gt; : base class for all relationships defined between 2 classes (or b...">QxSqlRelation&lt;DataType, Owner&gt;::is_data_container</a> };
 <a name="l00069"></a>00069 
 <a name="l00070"></a>00070 <span class="keyword">public</span>:
 <a name="l00071"></a>00071 
 <a name="l00072"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#ab37e11e18399813e7334ec35333dd461">00072</a>    <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#ab37e11e18399813e7334ec35333dd461">QxSqlRelation_OneToMany</a>(<a class="code" href="classqx_1_1_ix_data_member.html" title="qx::IxDataMember : common interface for all class properties registered into QxOrm context...">IxDataMember</a> * p, <span class="keyword">const</span> QString &amp; sForeignKey) : <a class="code" href="classqx_1_1_qx_sql_relation.html" title="qx::QxSqlRelation&lt;DataType, Owner&gt; : base class for all relationships defined between 2 classes (or b...">QxSqlRelation</a>&lt;DataType, Owner&gt;(p) { this-&gt;<a class="code" href="classqx_1_1_ix_sql_relation.html#ab6a3a10448ec27dc527a423dd4224885">setRelationType</a>(<a class="code" href="classqx_1_1_ix_sql_relation.html#a441efa61172fbe9986756e69693c60c1a111a6622227b39e1746756d2b1e283c7">qx::IxSqlRelation::one_to_many</a>); this-&gt;<a class="code" href="classqx_1_1_ix_sql_relation.html#a17287a3bdad28acd6eb401142f5febf6">setForeignKey</a>(sForeignKey); <a class="code" href="_qx_macro_8h.html#a70ab6c4ed8eb3e23107f171e0b41d612">qAssert</a>(! this-&gt;<a class="code" href="classqx_1_1_ix_sql_relation.html#a728a6ef7de2d10b3d5086fd60f60c157">getForeignKey</a>().isEmpty()); }
-<a name="l00073"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#aa32abd50a78f5677134f0b3229b5d959">00073</a>    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#aa32abd50a78f5677134f0b3229b5d959">~QxSqlRelation_OneToMany</a>() { static_assert(<a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#acb2b95893642a4d30e9a3bfcfd99f188a92336ce7a0bc6d566c7cd84a25e840c6">is_data_container</a>, <span class="stringliteral">&quot;is_data_container&quot;</span>); }
+<a name="l00073"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#aa32abd50a78f5677134f0b3229b5d959">00073</a>    <span class="keyword">virtual</span> <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#aa32abd50a78f5677134f0b3229b5d959">~QxSqlRelation_OneToMany</a>() { static_assert(<a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a37dce70f9446762169fafbce347d4d3ea92336ce7a0bc6d566c7cd84a25e840c6">is_data_container</a>, <span class="stringliteral">&quot;is_data_container&quot;</span>); }
 <a name="l00074"></a>00074 
 <a name="l00075"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a140869396fd64a642e86f49422f8bb94">00075</a>    <span class="keyword">virtual</span> QString <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a140869396fd64a642e86f49422f8bb94">getDescription</a>()<span class="keyword"> const                                     </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;relation one-to-many&quot;</span>; }
 <a name="l00076"></a><a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6ec80753fc6f2a90a737cc3a6003bb40">00076</a>    <span class="keyword">virtual</span> QString <a class="code" href="classqx_1_1_qx_sql_relation___one_to_many.html#a6ec80753fc6f2a90a737cc3a6003bb40">createExtraTable</a>()<span class="keyword"> const                                   </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }
@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:13 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

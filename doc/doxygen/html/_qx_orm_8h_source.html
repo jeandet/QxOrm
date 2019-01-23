@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="_qx_orm_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/****************************************************************************</span>
 <a name="l00002"></a>00002 <span class="comment">**</span>
-<a name="l00003"></a>00003 <span class="comment">** http://www.qxorm.com/</span>
+<a name="l00003"></a>00003 <span class="comment">** https://www.qxorm.com/</span>
 <a name="l00004"></a>00004 <span class="comment">** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)</span>
 <a name="l00005"></a>00005 <span class="comment">**</span>
 <a name="l00006"></a>00006 <span class="comment">** This file is part of the QxOrm library</span>
@@ -203,53 +203,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00120"></a>00120 <span class="preprocessor">#include &lt;<a class="code" href="_qx_time_neutral_8h.html" title="Helper class to store a time value into database under neutral format (HHMMSS) =&gt; cross database comp...">QxDao/QxTimeNeutral.h</a>&gt;</span>
 <a name="l00121"></a>00121 <span class="preprocessor">#include &lt;<a class="code" href="_qx_date_time_neutral_8h.html" title="Helper class to store a date-time value into database under neutral format (YYYYMMDDHHMMSS) =&gt; cross ...">QxDao/QxDateTimeNeutral.h</a>&gt;</span>
 <a name="l00122"></a>00122 <span class="preprocessor">#include &lt;<a class="code" href="_ix_persistable_8h.html" title="Common interface (abstract class) for persistents classes using QX_PERSISTABLE_HPP() and QX_PERSISTAB...">QxDao/IxPersistable.h</a>&gt;</span>
-<a name="l00123"></a>00123 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_join_8h.html" title="Define how to join 2 tables into SQL query (LEFT OUTER JOIN, INNER JOIN, etc...)">QxDao/QxSqlJoin.h</a>&gt;</span>
-<a name="l00124"></a>00124 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_relation_linked_8h.html" title="Hierarchy of relationships to build SQL query.">QxDao/QxSqlRelationLinked.h</a>&gt;</span>
-<a name="l00125"></a>00125 <span class="preprocessor">#include &lt;<a class="code" href="_qx_dao_async_8h.html" title="Helper class to execute SQL queries in another thread (asynchronous way) using qx::IxPersistable inte...">QxDao/QxDaoAsync.h</a>&gt;</span>
-<a name="l00126"></a>00126 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_save_mode_8h.html" title="To improve performance, if you know that you are just inserting or updating items in database...">QxDao/QxSqlSaveMode.h</a>&gt;</span>
-<a name="l00127"></a>00127 
-<a name="l00128"></a>00128 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_element_8h.html">QxDao/QxSqlElement/QxSqlElement.h</a>&gt;</span>
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_generator_8h.html">QxDao/QxSqlGenerator/QxSqlGenerator.h</a>&gt;</span>
-<a name="l00131"></a>00131 
-<a name="l00132"></a>00132 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00133"></a>00133 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_8h.html" title="Include all files necessary to serialize most used classes defined into stl, boost and Qt libraries...">QxSerialize/QxSerialize.h</a>&gt;</span>
-<a name="l00134"></a>00134 <span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
-<a name="l00135"></a>00135 <span class="preprocessor"></span>
-<a name="l00136"></a>00136 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_data_stream_8h.html" title="Used when _QX_ENABLE_BOOST_SERIALIZATION compilation option is not defined to provide serialization e...">QxSerialize/QxSerializeQDataStream.h</a>&gt;</span>
-<a name="l00137"></a>00137 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_data_stream__all__include_8h.html" title="Include all Qt QDataStream serialization method (save/load) provided by QxOrm library.">QxSerialize/QDataStream/QxSerializeQDataStream_all_include.h</a>&gt;</span>
-<a name="l00138"></a>00138 <span class="preprocessor">#include &lt;<a class="code" href="_qx_clone_8h.html" title="Clone all classes registered into QxOrm context using QxOrm library serialization engine...">QxSerialize/QxClone.h</a>&gt;</span>
-<a name="l00139"></a>00139 <span class="preprocessor">#include &lt;<a class="code" href="_qx_dump_8h.html" title="Dump all classes registered into QxOrm context using XML and JSON serialization engine.">QxSerialize/QxDump.h</a>&gt;</span>
-<a name="l00140"></a>00140 
-<a name="l00141"></a>00141 <span class="preprocessor">#ifndef _QX_NO_JSON</span>
-<a name="l00142"></a>00142 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_json__all__include_8h.html" title="Include all Qt QJson serialization method (save/load) provided by QxOrm library.">QxSerialize/QJson/QxSerializeQJson_all_include.h</a>&gt;</span>
-<a name="l00143"></a>00143 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_json_8h.html" title="Provide a serialization engine with Qt QJson classes (this feature requires Qt5)">QxSerialize/QxSerializeQJson.h</a>&gt;</span>
-<a name="l00144"></a>00144 <span class="preprocessor">#endif // _QX_NO_JSON</span>
-<a name="l00145"></a>00145 <span class="preprocessor"></span>
-<a name="l00146"></a>00146 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert_8h.html" title="qx::cvt : namespace to provide global functions to convert any kind of objects to/from QString and QV...">QxConvert/QxConvert.h</a>&gt;</span>
-<a name="l00147"></a>00147 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert___impl_8h.html">QxConvert/QxConvert_Impl.h</a>&gt;</span>
-<a name="l00148"></a>00148 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert___export_8h.html">QxConvert/QxConvert_Export.h</a>&gt;</span>
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150 <span class="preprocessor">#include &lt;<a class="code" href="_ix_class_8h.html" title="Common interface for all classes registered into QxOrm context.">QxRegister/IxClass.h</a>&gt;</span>
-<a name="l00151"></a>00151 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_8h.html" title="Concrete class registered into QxOrm context.">QxRegister/QxClass.h</a>&gt;</span>
-<a name="l00152"></a>00152 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_x_8h.html" title="List of all classes registered into QxOrm context.">QxRegister/QxClassX.h</a>&gt;</span>
-<a name="l00153"></a>00153 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_name_8h.html" title="Provide a class helper to retrieve the class name under const char * format.">QxRegister/QxClassName.h</a>&gt;</span>
-<a name="l00154"></a>00154 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_8h.html" title="Provide macros to register a class into QxOrm context.">QxRegister/QxRegister.h</a>&gt;</span>
-<a name="l00155"></a>00155 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_internal_helper_8h.html">QxRegister/QxRegisterInternalHelper.h</a>&gt;</span>
-<a name="l00156"></a>00156 <span class="preprocessor">#include &lt;<a class="code" href="_ix_type_info_8h.html">QxRegister/IxTypeInfo.h</a>&gt;</span>
-<a name="l00157"></a>00157 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_qt_property_8h.html" title="Register automatically Qt meta-property defined with Q_PROPERTY() macro into QxOrm context...">QxRegister/QxRegisterQtProperty.h</a>&gt;</span>
-<a name="l00158"></a>00158 <span class="preprocessor">#include &lt;<a class="code" href="_qx_version_8h.html" title="Register a version number per class.">QxRegister/QxVersion.h</a>&gt;</span>
-<a name="l00159"></a>00159 
-<a name="l00160"></a>00160 <span class="preprocessor">#include &lt;<a class="code" href="_ix_validator_8h.html" title="Common interface for validator engine.">QxValidator/IxValidator.h</a>&gt;</span>
-<a name="l00161"></a>00161 <span class="preprocessor">#include &lt;<a class="code" href="_ix_validator_x_8h.html" title="Common interface for a list of validators.">QxValidator/IxValidatorX.h</a>&gt;</span>
-<a name="l00162"></a>00162 <span class="preprocessor">#include &lt;<a class="code" href="_qx_invalid_value_8h.html" title="Invalid value when a property fails to pass a constraint.">QxValidator/QxInvalidValue.h</a>&gt;</span>
-<a name="l00163"></a>00163 <span class="preprocessor">#include &lt;<a class="code" href="_qx_invalid_value_x_8h.html" title="List of invalid values.">QxValidator/QxInvalidValueX.h</a>&gt;</span>
-<a name="l00164"></a>00164 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_8h.html" title="Concrete class for a custom or recursive validator.">QxValidator/QxValidator.h</a>&gt;</span>
-<a name="l00165"></a>00165 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_x_8h.html" title="Concrete class for a list of validators associated to a type registered into QxOrm context...">QxValidator/QxValidatorX.h</a>&gt;</span>
-<a name="l00166"></a>00166 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_error_8h.html" title="Define a validator error exception (for example, inserting or updating an element into database) and ...">QxValidator/QxValidatorError.h</a>&gt;</span>
-<a name="l00167"></a>00167 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_fct_8h.html" title="Implementation of qx::validate&lt;T&gt;() function (validator engine)">QxValidator/QxValidatorFct.h</a>&gt;</span>
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169 <span class="preprocessor">#endif // _QX_ORM_H_</span>
+<a name="l00123"></a>00123 <span class="preprocessor">#include &lt;<a class="code" href="_ix_persistable_collection_8h.html" title="Common interface (abstract class) for collection persistent classes based on qx::IxPersistable and qx...">QxDao/IxPersistableCollection.h</a>&gt;</span>
+<a name="l00124"></a>00124 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_join_8h.html" title="Define how to join 2 tables into SQL query (LEFT OUTER JOIN, INNER JOIN, etc...)">QxDao/QxSqlJoin.h</a>&gt;</span>
+<a name="l00125"></a>00125 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_relation_linked_8h.html" title="Hierarchy of relationships to build SQL query.">QxDao/QxSqlRelationLinked.h</a>&gt;</span>
+<a name="l00126"></a>00126 <span class="preprocessor">#include &lt;<a class="code" href="_qx_dao_async_8h.html" title="Helper class to execute SQL queries in another thread (asynchronous way) using qx::IxPersistable inte...">QxDao/QxDaoAsync.h</a>&gt;</span>
+<a name="l00127"></a>00127 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_save_mode_8h.html" title="To improve performance, if you know that you are just inserting or updating items in database...">QxDao/QxSqlSaveMode.h</a>&gt;</span>
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_element_8h.html">QxDao/QxSqlElement/QxSqlElement.h</a>&gt;</span>
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 <span class="preprocessor">#include &lt;<a class="code" href="_qx_sql_generator_8h.html">QxDao/QxSqlGenerator/QxSqlGenerator.h</a>&gt;</span>
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133 <span class="preprocessor">#ifdef _QX_ENABLE_MONGODB</span>
+<a name="l00134"></a>00134 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="_qx_mongo_d_b___helper_8h.html">QxDao/QxMongoDB/QxMongoDB_Helper.h</a>&gt;</span>
+<a name="l00135"></a>00135 <span class="preprocessor">#endif // _QX_ENABLE_MONGODB</span>
+<a name="l00136"></a>00136 <span class="preprocessor"></span>
+<a name="l00137"></a>00137 <span class="preprocessor">#ifdef _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00138"></a>00138 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_8h.html" title="Include all files necessary to serialize most used classes defined into stl, boost and Qt libraries...">QxSerialize/QxSerialize.h</a>&gt;</span>
+<a name="l00139"></a>00139 <span class="preprocessor">#endif // _QX_ENABLE_BOOST_SERIALIZATION</span>
+<a name="l00140"></a>00140 <span class="preprocessor"></span>
+<a name="l00141"></a>00141 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_data_stream_8h.html" title="Used when _QX_ENABLE_BOOST_SERIALIZATION compilation option is not defined to provide serialization e...">QxSerialize/QxSerializeQDataStream.h</a>&gt;</span>
+<a name="l00142"></a>00142 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_data_stream__all__include_8h.html" title="Include all Qt QDataStream serialization method (save/load) provided by QxOrm library.">QxSerialize/QDataStream/QxSerializeQDataStream_all_include.h</a>&gt;</span>
+<a name="l00143"></a>00143 <span class="preprocessor">#include &lt;<a class="code" href="_qx_clone_8h.html" title="Clone all classes registered into QxOrm context using QxOrm library serialization engine...">QxSerialize/QxClone.h</a>&gt;</span>
+<a name="l00144"></a>00144 <span class="preprocessor">#include &lt;<a class="code" href="_qx_dump_8h.html" title="Dump all classes registered into QxOrm context using XML and JSON serialization engine.">QxSerialize/QxDump.h</a>&gt;</span>
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146 <span class="preprocessor">#ifndef _QX_NO_JSON</span>
+<a name="l00147"></a>00147 <span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_json__all__include_8h.html" title="Include all Qt QJson serialization method (save/load) provided by QxOrm library.">QxSerialize/QJson/QxSerializeQJson_all_include.h</a>&gt;</span>
+<a name="l00148"></a>00148 <span class="preprocessor">#include &lt;<a class="code" href="_qx_serialize_q_json_8h.html" title="Provide a serialization engine with Qt QJson classes (this feature requires Qt5)">QxSerialize/QxSerializeQJson.h</a>&gt;</span>
+<a name="l00149"></a>00149 <span class="preprocessor">#endif // _QX_NO_JSON</span>
+<a name="l00150"></a>00150 <span class="preprocessor"></span>
+<a name="l00151"></a>00151 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert_8h.html" title="qx::cvt : namespace to provide global functions to convert any kind of objects to/from QString and QV...">QxConvert/QxConvert.h</a>&gt;</span>
+<a name="l00152"></a>00152 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert___impl_8h.html">QxConvert/QxConvert_Impl.h</a>&gt;</span>
+<a name="l00153"></a>00153 <span class="preprocessor">#include &lt;<a class="code" href="_qx_convert___export_8h.html">QxConvert/QxConvert_Export.h</a>&gt;</span>
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155 <span class="preprocessor">#include &lt;<a class="code" href="_ix_class_8h.html" title="Common interface for all classes registered into QxOrm context.">QxRegister/IxClass.h</a>&gt;</span>
+<a name="l00156"></a>00156 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_8h.html" title="Concrete class registered into QxOrm context.">QxRegister/QxClass.h</a>&gt;</span>
+<a name="l00157"></a>00157 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_x_8h.html" title="List of all classes registered into QxOrm context.">QxRegister/QxClassX.h</a>&gt;</span>
+<a name="l00158"></a>00158 <span class="preprocessor">#include &lt;<a class="code" href="_qx_class_name_8h.html" title="Provide a class helper to retrieve the class name under const char * format.">QxRegister/QxClassName.h</a>&gt;</span>
+<a name="l00159"></a>00159 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_8h.html" title="Provide macros to register a class into QxOrm context.">QxRegister/QxRegister.h</a>&gt;</span>
+<a name="l00160"></a>00160 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_internal_helper_8h.html">QxRegister/QxRegisterInternalHelper.h</a>&gt;</span>
+<a name="l00161"></a>00161 <span class="preprocessor">#include &lt;<a class="code" href="_ix_type_info_8h.html">QxRegister/IxTypeInfo.h</a>&gt;</span>
+<a name="l00162"></a>00162 <span class="preprocessor">#include &lt;<a class="code" href="_qx_register_qt_property_8h.html" title="Register automatically Qt meta-property defined with Q_PROPERTY() macro into QxOrm context...">QxRegister/QxRegisterQtProperty.h</a>&gt;</span>
+<a name="l00163"></a>00163 <span class="preprocessor">#include &lt;<a class="code" href="_qx_version_8h.html" title="Register a version number per class.">QxRegister/QxVersion.h</a>&gt;</span>
+<a name="l00164"></a>00164 
+<a name="l00165"></a>00165 <span class="preprocessor">#include &lt;<a class="code" href="_ix_validator_8h.html" title="Common interface for validator engine.">QxValidator/IxValidator.h</a>&gt;</span>
+<a name="l00166"></a>00166 <span class="preprocessor">#include &lt;<a class="code" href="_ix_validator_x_8h.html" title="Common interface for a list of validators.">QxValidator/IxValidatorX.h</a>&gt;</span>
+<a name="l00167"></a>00167 <span class="preprocessor">#include &lt;<a class="code" href="_qx_invalid_value_8h.html" title="Invalid value when a property fails to pass a constraint.">QxValidator/QxInvalidValue.h</a>&gt;</span>
+<a name="l00168"></a>00168 <span class="preprocessor">#include &lt;<a class="code" href="_qx_invalid_value_x_8h.html" title="List of invalid values.">QxValidator/QxInvalidValueX.h</a>&gt;</span>
+<a name="l00169"></a>00169 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_8h.html" title="Concrete class for a custom or recursive validator.">QxValidator/QxValidator.h</a>&gt;</span>
+<a name="l00170"></a>00170 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_x_8h.html" title="Concrete class for a list of validators associated to a type registered into QxOrm context...">QxValidator/QxValidatorX.h</a>&gt;</span>
+<a name="l00171"></a>00171 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_error_8h.html" title="Define a validator error exception (for example, inserting or updating an element into database) and ...">QxValidator/QxValidatorError.h</a>&gt;</span>
+<a name="l00172"></a>00172 <span class="preprocessor">#include &lt;<a class="code" href="_qx_validator_fct_8h.html" title="Implementation of qx::validate&lt;T&gt;() function (validator engine)">QxValidator/QxValidatorFct.h</a>&gt;</span>
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="preprocessor">#endif // _QX_ORM_H_</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
@@ -270,7 +275,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:14 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:21 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

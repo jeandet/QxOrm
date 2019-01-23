@@ -1,6 +1,6 @@
 /****************************************************************************
 **
-** http://www.qxorm.com/
+** https://www.qxorm.com/
 ** Copyright (C) 2013 Lionel Marty (contact@qxorm.com)
 **
 ** This file is part of the QxOrm library
@@ -46,8 +46,6 @@
 #include <QtCore/qhash.h>
 #include <QtCore/qstring.h>
 #include <QtCore/qvariant.h>
-
-#include <memory>
 
 namespace qx {
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>QxOrm: qx::IxPersistableCollection&lt; T &gt; Class Template Reference</title>
+<title>QxOrm: qx::IxPersistableCollection Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -100,93 +100,152 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pri-types">Private Types</a>  </div>
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">qx::IxPersistableCollection&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group___qx_dao.html">QxDao : QxOrm library database communication used by persistence engine (ORM - Object Relational Mapping)</a></div></div>  </div>
+<div class="title">qx::IxPersistableCollection Class Reference<div class="ingroups"><a class="el" href="group___qx_dao.html">QxDao : QxOrm library database communication used by persistence engine (ORM - Object Relational Mapping)</a></div></div>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="qx::IxPersistableCollection" -->
-<p><a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">qx::IxPersistableCollection&lt;T&gt;::type</a> : return the collection type used by <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> interface, <a class="el" href="classqx_1_1_qx_collection.html" title="qx::QxCollection&lt;Key, Value&gt; : QxOrm container (keep insertion order + quick access by index + quick ...">qx::QxCollection</a>&lt;type_primary_key, std::shared_ptr&lt;my_type&gt;&gt;  
+<!-- doxytag: class="qx::IxPersistableCollection" --><!-- doxytag: inherits="qx::IxPersistable" -->
+<p><a class="el" href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas...">qx::IxPersistableCollection</a> : common interface (abstract class) for collection persistent classes based on <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> and <a class="el" href="classqx_1_1_ix_collection.html" title="qx::IxCollection : common interface for all QxOrm containers qx::QxCollection&lt;Key, Value&gt;">qx::IxCollection</a>  
  <a href="classqx_1_1_ix_persistable_collection.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_ix_persistable_collection_8h_source.html">IxPersistableCollection.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for qx::IxPersistableCollection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classqx_1_1_ix_persistable_collection.png" usemap="#qx::IxPersistableCollection_map" alt=""/>
+  <map id="qx::IxPersistableCollection_map" name="qx::IxPersistableCollection_map">
+<area href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP..." alt="qx::IxPersistable" shape="rect" coords="0,0,268,24"/>
+<area href="classqx_1_1_qx_persistable_collection.html" title="qx::QxPersistableCollection&lt;Key, Value, T&gt; : concrete class for collection persistent classes based o..." alt="qx::QxPersistableCollection&lt; Key, Value, T &gt;" shape="rect" coords="0,112,268,136"/>
+</map>
+ </div></div>
 
 <p><a href="classqx_1_1_ix_persistable_collection-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classqx_1_1_qx_collection.html">qx::QxCollection</a><br class="typebreak"/>
-&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html#a10134763cae51be56e696aba65f0794d">qx_type_primary_key</a>, <br class="typebreak"/>
-<a class="el" href="classqx_1_1_ix_persistable_collection.html#aac21a9c6c764ce8c13d29103f97a901e">qx_type_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">type</a></td></tr>
-<tr><td colspan="2"><h2><a name="pri-types"></a>
-Private Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
-<a class="el" href="classqx_1_1trait_1_1get__primary__key.html">qx::trait::get_primary_key</a>&lt; T &gt;<br class="typebreak"/>
-::<a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a10134763cae51be56e696aba65f0794d">qx_type_primary_key</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#aac21a9c6c764ce8c13d29103f97a901e">qx_type_ptr</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#adfb50d501d584f7abdbfdc47db61a263">IxPersistableCollection</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a4d4accaedb6a77d5826e2f34d58271ff">~IxPersistableCollection</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a19c0126835da9685fafd5846d8471da6">__count</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#ab1ed4e82bd7d452a0a157d13d8ae346b">__clear</a> ()=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#a0efe8ee2e0e7b69bac1229c2d334d4c0">__remove</a> (long idx)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceqx.html#a729bd4751253e67005acad39c0788ffc">qx::IxPersistable_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable_collection.html#ac30f68b64e949c175fd5bae194e634da">__at</a> (long idx) const =0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br/>
-class qx::IxPersistableCollection&lt; T &gt;</h3>
+<div class="textblock"><p><a class="el" href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas...">qx::IxPersistableCollection</a> : common interface (abstract class) for collection persistent classes based on <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> and <a class="el" href="classqx_1_1_ix_collection.html" title="qx::IxCollection : common interface for all QxOrm containers qx::QxCollection&lt;Key, Value&gt;">qx::IxCollection</a> </p>
 
-<p><a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">qx::IxPersistableCollection&lt;T&gt;::type</a> : return the collection type used by <a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> interface, <a class="el" href="classqx_1_1_qx_collection.html" title="qx::QxCollection&lt;Key, Value&gt; : QxOrm container (keep insertion order + quick access by index + quick ...">qx::QxCollection</a>&lt;type_primary_key, std::shared_ptr&lt;my_type&gt;&gt; </p>
-
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00338">338</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
-</div><hr/><h2>Member Typedef Documentation</h2>
-<a class="anchor" id="a10134763cae51be56e696aba65f0794d"></a><!-- doxytag: member="qx::IxPersistableCollection::qx_type_primary_key" ref="a10134763cae51be56e696aba65f0794d" args="" -->
+<p>Definition at line <a class="el" href="_ix_persistable_collection_8h_source.html#l00063">63</a> of file <a class="el" href="_ix_persistable_collection_8h_source.html">IxPersistableCollection.h</a>.</p>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="adfb50d501d584f7abdbfdc47db61a263"></a><!-- doxytag: member="qx::IxPersistableCollection::IxPersistableCollection" ref="adfb50d501d584f7abdbfdc47db61a263" args="()" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classqx_1_1trait_1_1get__primary__key.html">qx::trait::get_primary_key</a>&lt;T&gt;::<a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">type</a> <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; T &gt;::<a class="el" href="classqx_1_1_ix_persistable_collection.html#a10134763cae51be56e696aba65f0794d">qx_type_primary_key</a><code> [private]</code></td>
+          <td class="memname">qx::IxPersistableCollection::IxPersistableCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00343">343</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="aac21a9c6c764ce8c13d29103f97a901e"></a><!-- doxytag: member="qx::IxPersistableCollection::qx_type_ptr" ref="aac21a9c6c764ce8c13d29103f97a901e" args="" -->
+<a class="anchor" id="a4d4accaedb6a77d5826e2f34d58271ff"></a><!-- doxytag: member="qx::IxPersistableCollection::~IxPersistableCollection" ref="a4d4accaedb6a77d5826e2f34d58271ff" args="()" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;T&gt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; T &gt;::<a class="el" href="classqx_1_1_ix_persistable_collection.html#aac21a9c6c764ce8c13d29103f97a901e">qx_type_ptr</a><code> [private]</code></td>
+          <td class="memname">virtual qx::IxPersistableCollection::~IxPersistableCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00344">344</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a1d18f71fc2f7ef6587b246033e3322b5"></a><!-- doxytag: member="qx::IxPersistableCollection::type" ref="a1d18f71fc2f7ef6587b246033e3322b5" args="" -->
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac30f68b64e949c175fd5bae194e634da"></a><!-- doxytag: member="qx::IxPersistableCollection::__at" ref="ac30f68b64e949c175fd5bae194e634da" args="(long idx) const =0" -->
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classqx_1_1_qx_collection.html">qx::QxCollection</a>&lt;<a class="el" href="classqx_1_1_ix_persistable_collection.html#a10134763cae51be56e696aba65f0794d">qx_type_primary_key</a>, <a class="el" href="classqx_1_1_ix_persistable_collection.html#aac21a9c6c764ce8c13d29103f97a901e">qx_type_ptr</a>&gt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&lt; T &gt;::<a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">type</a></td>
+          <td class="memname">virtual <a class="el" href="namespaceqx.html#a729bd4751253e67005acad39c0788ffc">qx::IxPersistable_ptr</a> qx::IxPersistableCollection::__at </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00348">348</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a0705dbd6f1288426c1223cca1b9fe793">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1ed4e82bd7d452a0a157d13d8ae346b"></a><!-- doxytag: member="qx::IxPersistableCollection::__clear" ref="ab1ed4e82bd7d452a0a157d13d8ae346b" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void qx::IxPersistableCollection::__clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#ae501d29681725b85646cdd7f2ad55844">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19c0126835da9685fafd5846d8471da6"></a><!-- doxytag: member="qx::IxPersistableCollection::__count" ref="a19c0126835da9685fafd5846d8471da6" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long qx::IxPersistableCollection::__count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a37e64e33cb1e8413b8e0dbc303091d68">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0efe8ee2e0e7b69bac1229c2d334d4c0"></a><!-- doxytag: member="qx::IxPersistableCollection::__remove" ref="a0efe8ee2e0e7b69bac1229c2d334d4c0" args="(long idx)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool qx::IxPersistableCollection::__remove </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a159681ddd0f5869d1f912f708fef431d">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Dvlp/_Perso/QxOrm/include/QxDao/<a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a></li>
+<li>C:/Dvlp/_Perso/QxOrm/include/QxDao/<a class="el" href="_ix_persistable_collection_8h_source.html">IxPersistableCollection.h</a></li>
 </ul>
 </div>
 </div>
@@ -209,7 +268,7 @@ template&lt;typename T &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:22 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:26 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

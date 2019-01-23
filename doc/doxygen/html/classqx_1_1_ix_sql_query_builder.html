@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -168,7 +168,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a5c6968b92299e8d929a3286e03562723">addSqlQueryAlias</a> (const QString &amp;sql, const QString &amp;sqlAlias)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#ae2225d63d0b6539988f561406a38f17b">getAddAutoIncrementIdToUpdateQuery</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#aced1a74b5d7c63c8687e5dc4013f5d7a">replaceSqlQueryAlias</a> (QString &amp;sql) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#adab90c6d09fbfc3e254b43ebc34fabc1">displaySqlQuery</a> (int time_ms=-1, int time_db=-1) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a52a836bd8797dda15f8bc7e153a80897">displaySqlQuery</a> (int time_ms=-1, int time_db=-1, const QString &amp;query=QString()) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a024195b75be2ecffa307b727f2ab1781">init</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a986662b64d6c1ff6fda26a9884d5ef73">clone</a> (const <a class="el" href="classqx_1_1_ix_sql_query_builder.html">IxSqlQueryBuilder</a> &amp;other)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_ix_sql_query_builder.html">IxSqlQueryBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a21efd44b30c5258c1292ca65fd261be8">buildSql</a> (const QStringList &amp;columns=QStringList(), <a class="el" href="classqx_1_1_qx_sql_relation_linked.html">QxSqlRelationLinked</a> *pRelationX=NULL)=0</td></tr>
@@ -210,6 +210,7 @@ Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QHash&lt; QString, QString &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a64fea54460c98a340635284697f3d51a">listSqlQuery</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QHash&lt; QString, QHash<br class="typebreak"/>
 &lt; QString, QString &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#ab7aaf9a2b8c8a9685ad5673ab377a627">listSqlAlias</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QMutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_sql_query_builder.html#a30827aaf5c5370ed24a68be2ad7af66a">getMutex</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::unique_ptr<br class="typebreak"/>
@@ -346,7 +347,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adab90c6d09fbfc3e254b43ebc34fabc1"></a><!-- doxytag: member="qx::IxSqlQueryBuilder::displaySqlQuery" ref="adab90c6d09fbfc3e254b43ebc34fabc1" args="(int time_ms=&#45;1, int time_db=&#45;1) const " -->
+<a class="anchor" id="a52a836bd8797dda15f8bc7e153a80897"></a><!-- doxytag: member="qx::IxSqlQueryBuilder::displaySqlQuery" ref="a52a836bd8797dda15f8bc7e153a80897" args="(int time_ms=&#45;1, int time_db=&#45;1, const QString &amp;query=QString()) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -360,7 +361,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>time_db</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>time_db</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>query</em> = <code>QString()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -543,6 +550,22 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a30827aaf5c5370ed24a68be2ad7af66a"></a><!-- doxytag: member="qx::IxSqlQueryBuilder::getMutex" ref="a30827aaf5c5370ed24a68be2ad7af66a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QMutex&amp; qx::IxSqlQueryBuilder::getMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [static, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1632,7 +1655,7 @@ Private Attributes</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:22 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:26 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

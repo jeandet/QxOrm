@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -155,7 +155,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#ae66390caf1eee67cbdbb525883cbc797">implementIxPersistable</a> (const QString &amp;sKey, bool bTraceIfFalse=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classqx_1_1_qx_collection.html">QxCollection</a>&lt; QString, <br class="typebreak"/>
 <a class="el" href="classqx_1_1_ix_class.html">IxClass</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#a0da14b6fd900726adb2e0b6c027188ec">getAllClasses</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#a079d46b7f111d96e8886572bdbd24026">registerAllClasses</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#af5062ce78713e76d0025d12bc05a017d">registerAllClasses</a> (bool bInitAllRelations=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#ac138c90aa8b1d2c63f3e6953eff9207f">dumpAllClasses</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#a66fecc977a313adeed00ff50c3d2cc05">dumpSqlSchema</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QHash&lt; QString, QString &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_class_x.html#a1a554ad6c8b1f10c4a2e4068054a5d75">getAllValidatorMessage</a> ()</td></tr>
@@ -1088,14 +1088,15 @@ template&lt;class U &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a079d46b7f111d96e8886572bdbd24026"></a><!-- doxytag: member="qx::QxClassX::registerAllClasses" ref="a079d46b7f111d96e8886572bdbd24026" args="()" -->
+<a class="anchor" id="af5062ce78713e76d0025d12bc05a017d"></a><!-- doxytag: member="qx::QxClassX::registerAllClasses" ref="af5062ce78713e76d0025d12bc05a017d" args="(bool bInitAllRelations=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">static void qx::QxClassX::registerAllClasses </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bInitAllRelations</em> = <code>false</code></td><td>)</td>
           <td><code> [static]</code></td>
         </tr>
       </table>
@@ -1317,7 +1318,7 @@ template&lt;class U &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:25 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:28 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -134,6 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a5c32cbe1a30a6851ebbf5373bcff9d85">init</a> ()=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a993ba780d35a45a6f2d85aac260705b4">getAutoIncrement</a> () const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a4f480476f9a5ab6812e2db0ef4f203f8">getWildCard</a> () const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a8ca368e111dd8c11242ab4a4f1bf7a9e">getTableAliasSep</a> () const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a8f168c55aed14b0af3661e2ce94d8d67">getLimit</a> (const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a4f8d532ef969cba01d9f62f418b495a2">resolveLimit</a> (QSqlQuery &amp;query, const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#abb112b299208e7fb5bd7950be75c17ef">postProcess</a> (QString &amp;sql, const <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_limit.html">QxSqlLimit</a> *pLimit) const =0</td></tr>
@@ -144,6 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#a17861f3e880aa30b1c4175bc0c9a9882">onBeforeDelete</a> (<a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *pDaoHelper, void *pOwner) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#ac71dd32ab3a4e8547c360b3bfeb9bac5">onAfterDelete</a> (<a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *pDaoHelper, void *pOwner) const =0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#ac9ddb277c96d88e955d55c44e85deb66">checkSqlInsert</a> (<a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *pDaoHelper, QString &amp;sql) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#afa9c5e06ef42877f0ee33fed9e0efe8b">onBeforeSqlPrepare</a> (<a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *pDaoHelper, QString &amp;sql) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html#aad1f9ea33a2a4dc744fcd2f7d59031ed">formatSqlQuery</a> (<a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *pDaoHelper, QString &amp;sql) const =0</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_sql_generator.html" title="qx::dao::detail::IxSqlGenerator : common interface for all SQL generators to build SQL query specific...">qx::dao::detail::IxSqlGenerator</a> : common interface for all SQL generators to build SQL query specific for each database </p>
@@ -212,6 +215,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aad1f9ea33a2a4dc744fcd2f7d59031ed"></a><!-- doxytag: member="qx::dao::detail::IxSqlGenerator::formatSqlQuery" ref="aad1f9ea33a2a4dc744fcd2f7d59031ed" args="(IxDao_Helper *pDaoHelper, QString &amp;sql) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void qx::dao::detail::IxSqlGenerator::formatSqlQuery </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *&#160;</td>
+          <td class="paramname"><em>pDaoHelper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>sql</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#ac140ca343e0910213ec198fc0b8ebc71">qx::dao::detail::QxSqlGenerator_Standard</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a993ba780d35a45a6f2d85aac260705b4"></a><!-- doxytag: member="qx::dao::detail::IxSqlGenerator::getAutoIncrement" ref="a993ba780d35a45a6f2d85aac260705b4" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +277,25 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a474ccb93e363156fb9b3e805528a7392">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#accb9ec65c1a0455dc1fa1e3b0717b7c0">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a4813ad83a7809d44a493a68c0e5a64fa">qx::dao::detail::QxSqlGenerator_Oracle</a>.</p>
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a474ccb93e363156fb9b3e805528a7392">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a4813ad83a7809d44a493a68c0e5a64fa">qx::dao::detail::QxSqlGenerator_Oracle</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#accb9ec65c1a0455dc1fa1e3b0717b7c0">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ca368e111dd8c11242ab4a4f1bf7a9e"></a><!-- doxytag: member="qx::dao::detail::IxSqlGenerator::getTableAliasSep" ref="a8ca368e111dd8c11242ab4a4f1bf7a9e" args="() const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString qx::dao::detail::IxSqlGenerator::getTableAliasSep </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#ab110830473234d17f1c4606b42fe08ec">qx::dao::detail::QxSqlGenerator_Standard</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#acf93dd28401d78907b68c871794a6555">qx::dao::detail::QxSqlGenerator_Oracle</a>.</p>
 
 </div>
 </div>
@@ -430,6 +480,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afa9c5e06ef42877f0ee33fed9e0efe8b"></a><!-- doxytag: member="qx::dao::detail::IxSqlGenerator::onBeforeSqlPrepare" ref="afa9c5e06ef42877f0ee33fed9e0efe8b" args="(IxDao_Helper *pDaoHelper, QString &amp;sql) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void qx::dao::detail::IxSqlGenerator::onBeforeSqlPrepare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classqx_1_1dao_1_1detail_1_1_ix_dao___helper.html">IxDao_Helper</a> *&#160;</td>
+          <td class="paramname"><em>pDaoHelper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>sql</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a062f2691bcb530df3eeccda6d8058259">qx::dao::detail::QxSqlGenerator_Standard</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af2869cf18ff973d6ead3376d1f4c76bb"></a><!-- doxytag: member="qx::dao::detail::IxSqlGenerator::onBeforeUpdate" ref="af2869cf18ff973d6ead3376d1f4c76bb" args="(IxDao_Helper *pDaoHelper, void *pOwner) const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -484,7 +563,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#ab1ed53aa5cec60b3419cdc1415857495">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#a17833dd58279dfa510c2b1bf478ae495">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#ac6aba9644abb321c593b029838db1242">qx::dao::detail::QxSqlGenerator_Oracle</a>.</p>
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#ab1ed53aa5cec60b3419cdc1415857495">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#ac6aba9644abb321c593b029838db1242">qx::dao::detail::QxSqlGenerator_Oracle</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#a17833dd58279dfa510c2b1bf478ae495">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>.</p>
 
 </div>
 </div>
@@ -513,7 +592,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a41389abeff99fa8b4b886920ebac2d99">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#a2a6ad207bd3b38101fc41c5bc96ab60b">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a1506cccc88247ee4ed6d9fb10c05f6a3">qx::dao::detail::QxSqlGenerator_Oracle</a>.</p>
+<p>Implemented in <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___standard.html#a41389abeff99fa8b4b886920ebac2d99">qx::dao::detail::QxSqlGenerator_Standard</a>, <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___oracle.html#a1506cccc88247ee4ed6d9fb10c05f6a3">qx::dao::detail::QxSqlGenerator_Oracle</a>, and <a class="el" href="classqx_1_1dao_1_1detail_1_1_qx_sql_generator___m_s_s_q_l_server.html#a2a6ad207bd3b38101fc41c5bc96ab60b">qx::dao::detail::QxSqlGenerator_MSSQLServer</a>.</p>
 
 </div>
 </div>
@@ -543,7 +622,7 @@ Public Member Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:30 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:30 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

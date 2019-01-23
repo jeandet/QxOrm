@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -139,12 +139,12 @@ Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, <a class="el" href="classqx_1_1_ix_factory.html">IxFactory</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a3fb203d57003bd925bfebb7ec433fbf6">getAllFactory</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a60cf17c57e375d33b321993c96066253">registerFactory</a> (const QString &amp;sKey, <a class="el" href="classqx_1_1_ix_factory.html">IxFactory</a> *pFactory)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a44b36a1c08f1277e0dd0f2266c2bcfff">unregisterFactory</a> (const QString &amp;sKey)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#ae7b5eb875c4e4f1925f66daf248ae9c6">createObject</a> (const QString &amp;sKey) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a489bb354e7ba38b48c47ab8850f64d4e">createObject</a> (const QString &amp;sKey, bool bRawPointer=false) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#af320f30affff505d682f48a54b11ddd9">createObjectNudePtr</a> (const QString &amp;sKey) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#abcbbc0af99d06a9397ad082be649443d">typeInfo</a> (const QString &amp;sKey) const </td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#af9b04a4abe05555e9ca62ead8730f294">createInstance</a> (const QString &amp;sKey)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#aae57b1c5abf045acff7160bb89329c2e">createInstance</a> (const QString &amp;sKey, bool bRawPointer=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#acdf35e63f5c8f040d3ea6cac10bae5e2">createInstanceNudePtr</a> (const QString &amp;sKey)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const std::type_info &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a7ff02f4f597d645aadba67c4c13880a6">getTypeInfo</a> (const QString &amp;sKey)</td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
@@ -152,8 +152,8 @@ Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a3a3cfaca9be1f62950580ca8d7ff2e7e">QxClassX</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a453d7986963dd7b359500ef3ae07a0f0">IxFactory</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#aabe7be872b05dd033ae0a9a2d20ae94b">QxSingleton&lt; QxFactoryX &gt;</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#aedd3755aae25952cc27041a430f2d153">create</a> (const QString &amp;sKey)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using <a class="el" href="classqx_1_1any.html">qx::any</a> type (for example : <a class="el" href="group___qx_factory.html#gad28f15dddd9ef479e5344c037aedd34c" title="Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using qx::a...">qx::create</a>("drug") return a new instance of smart-pointer drug class into <a class="el" href="classqx_1_1any.html">qx::any</a> type)  <a href="#aedd3755aae25952cc27041a430f2d153"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classqx_1_1any.html">qx::any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#ab62144f706366ddd8039d74a3a4cf654">create</a> (const QString &amp;sKey, bool bRawPointer)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using <a class="el" href="classqx_1_1any.html">qx::any</a> type (for example : <a class="el" href="group___qx_factory.html#ga64df33b5626b1966f9da40b7462d428c" title="Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using qx::a...">qx::create</a>("drug") return a new instance of smart-pointer drug class into <a class="el" href="classqx_1_1any.html">qx::any</a> type)  <a href="#ab62144f706366ddd8039d74a3a4cf654"></a><br/></td></tr>
 <tr><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classqx_1_1_qx_factory_x.html#a2dc71a7211f7eab09eb2fa34fde5e052">create_nude_ptr</a> (const QString &amp;sKey)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a nude pointer (be careful with memory leak) of type T associated by key sKey, or return NULL if sKey is not registered into factory engine.  <a href="#a2dc71a7211f7eab09eb2fa34fde5e052"></a><br/></td></tr>
@@ -202,7 +202,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af9b04a4abe05555e9ca62ead8730f294"></a><!-- doxytag: member="qx::QxFactoryX::createInstance" ref="af9b04a4abe05555e9ca62ead8730f294" args="(const QString &amp;sKey)" -->
+<a class="anchor" id="aae57b1c5abf045acff7160bb89329c2e"></a><!-- doxytag: member="qx::QxFactoryX::createInstance" ref="aae57b1c5abf045acff7160bb89329c2e" args="(const QString &amp;sKey, bool bRawPointer=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -210,8 +210,18 @@ Friends</h2></td></tr>
           <td class="memname">static <a class="el" href="classqx_1_1any.html">qx::any</a> qx::QxFactoryX::createInstance </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>sKey</em></td><td>)</td>
-          <td><code> [inline, static, private]</code></td>
+          <td class="paramname"><em>sKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRawPointer</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, static, private]</code></td>
         </tr>
       </table>
 </div>
@@ -240,7 +250,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7b5eb875c4e4f1925f66daf248ae9c6"></a><!-- doxytag: member="qx::QxFactoryX::createObject" ref="ae7b5eb875c4e4f1925f66daf248ae9c6" args="(const QString &amp;sKey) const " -->
+<a class="anchor" id="a489bb354e7ba38b48c47ab8850f64d4e"></a><!-- doxytag: member="qx::QxFactoryX::createObject" ref="a489bb354e7ba38b48c47ab8850f64d4e" args="(const QString &amp;sKey, bool bRawPointer=false) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -248,8 +258,18 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="classqx_1_1any.html">qx::any</a> qx::QxFactoryX::createObject </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>sKey</em></td><td>)</td>
-          <td> const<code> [private]</code></td>
+          <td class="paramname"><em>sKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRawPointer</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const<code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -373,7 +393,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" id="aedd3755aae25952cc27041a430f2d153"></a><!-- doxytag: member="qx::QxFactoryX::create" ref="aedd3755aae25952cc27041a430f2d153" args="(const QString &amp;sKey)" -->
+<a class="anchor" id="ab62144f706366ddd8039d74a3a4cf654"></a><!-- doxytag: member="qx::QxFactoryX::create" ref="ab62144f706366ddd8039d74a3a4cf654" args="(const QString &amp;sKey, bool bRawPointer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -381,14 +401,24 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="classqx_1_1any.html">qx::any</a> create </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>sKey</em></td><td>)</td>
-          <td><code> [friend]</code></td>
+          <td class="paramname"><em>sKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bRawPointer</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [friend]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using <a class="el" href="classqx_1_1any.html">qx::any</a> type (for example : <a class="el" href="group___qx_factory.html#gad28f15dddd9ef479e5344c037aedd34c" title="Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using qx::a...">qx::create</a>("drug") return a new instance of smart-pointer drug class into <a class="el" href="classqx_1_1any.html">qx::any</a> type) </p>
+<p>Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using <a class="el" href="classqx_1_1any.html">qx::any</a> type (for example : <a class="el" href="group___qx_factory.html#ga64df33b5626b1966f9da40b7462d428c" title="Return a smart-pointer new instance of object (std::shared_ptr&lt;T&gt;) associated by key sKey using qx::a...">qx::create</a>("drug") return a new instance of smart-pointer drug class into <a class="el" href="classqx_1_1any.html">qx::any</a> type) </p>
 
 </div>
 </div>
@@ -536,7 +566,7 @@ template&lt;typename T &gt; </div>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:24 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:27 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

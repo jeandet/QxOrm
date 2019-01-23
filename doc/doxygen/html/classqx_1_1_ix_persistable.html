@@ -34,7 +34,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">QxOrm
-   &#160;<span id="projectnumber">1.4.4</span>
+   &#160;<span id="projectnumber">1.4.5</span>
    </div>
    <div id="projectbrief">C++ Object Relational Mapping library</div>
   </td>
@@ -111,6 +111,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classqx_1_1_ix_persistable.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for qx::IxPersistable:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classqx_1_1_ix_persistable.png" usemap="#qx::IxPersistable_map" alt=""/>
+  <map id="qx::IxPersistable_map" name="qx::IxPersistable_map">
+<area href="classqx_1_1_ix_persistable_collection.html" title="qx::IxPersistableCollection : common interface (abstract class) for collection persistent classes bas..." alt="qx::IxPersistableCollection" shape="rect" coords="0,56,268,80"/>
+<area href="classqx_1_1_qx_persistable_collection.html" title="qx::QxPersistableCollection&lt;Key, Value, T&gt; : concrete class for collection persistent classes based o..." alt="qx::QxPersistableCollection&lt; Key, Value, T &gt;" shape="rect" coords="0,112,268,136"/>
+</map>
+ </div></div>
 
 <p><a href="classqx_1_1_ix_persistable-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -124,10 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of lines in the table (database) mapped to the current C++ class (registered into QxOrm context) and filtered by a user SQL query.  <a href="#a5901d8aa71a69b074a4033664bf9a434"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a876805a6095b64ef1f4b35d5376dba6a">qxFetchById</a> (const QVariant &amp;id=QVariant(), const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch current instance (retrieve all its properties) mapped to a table in the database (current instance must have a valid id before to be fetched without error, or pass the id to the first parameter of this method)  <a href="#a876805a6095b64ef1f4b35d5376dba6a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a740c2181f4c42ab633a9fd36cc181a25">qxFetchAll</a> (<a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;list, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a list of objects (retrieve all elements and properties associated) of current type (container registered into QxOrm context) mapped to a table in the database.  <a href="#a740c2181f4c42ab633a9fd36cc181a25"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a73f21e52a5c2285feae6d496e6e789c7">qxFetchByQuery</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, <a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;list, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a list of objects (retrieve all elements and properties associated) of current type (container registered into QxOrm context) mapped to a table in the database and filtered by a user SQL query.  <a href="#a73f21e52a5c2285feae6d496e6e789c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a964bd038bc7aaad026021ceb76566be5">qxFetchAll</a> (<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *list=NULL, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a list of objects (retrieve all elements and properties associated) of current type (container registered into QxOrm context) mapped to a table in the database.  <a href="#a964bd038bc7aaad026021ceb76566be5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#adeb87dd24ff63649a87f2b26694c6cff">qxFetchByQuery</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *list=NULL, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a list of objects (retrieve all elements and properties associated) of current type (container registered into QxOrm context) mapped to a table in the database and filtered by a user SQL query.  <a href="#adeb87dd24ff63649a87f2b26694c6cff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a70228ab48df9be4b741af346423e7b2a">qxInsert</a> (const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert current instance into database.  <a href="#a70228ab48df9be4b741af346423e7b2a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a7b9b84ea8bf98a82c06c1c5ca8d4790a">qxUpdate</a> (const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query=<a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a>(), const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
@@ -148,21 +158,27 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete all lines of a table (database) mapped to current C++ class (registered into QxOrm context) and filtered by a user SQL query.  <a href="#a42e9465e9c339bde3a196120af16bdbc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a37a020620fbdf407b0fd2e5b391ab53a">qxExecuteQuery</a> (<a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, QSqlDatabase *pDatabase=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a custom SQL query or a stored procedure, all columns that can be mapped to the instance of type T will be fetched automatically.  <a href="#a37a020620fbdf407b0fd2e5b391ab53a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a8de88eb29cf505f843f35b4db0636fba">qxExecuteQuery</a> (<a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, <a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;list, QSqlDatabase *pDatabase=NULL)=0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a custom SQL query or a stored procedure, all columns that can be mapped to the instance of type T will be fetched automatically.  <a href="#a8de88eb29cf505f843f35b4db0636fba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QSqlError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a33bcbfae2c4e462b9da951548a41e298">qxExecuteQuery</a> (<a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *list=NULL, QSqlDatabase *pDatabase=NULL)=0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a custom SQL query or a stored procedure, all columns that can be mapped to the instance of type T will be fetched automatically.  <a href="#a33bcbfae2c4e462b9da951548a41e298"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#ae47c7b90be8de1b9782efe154347c7a6">qxExist</a> (const QVariant &amp;id=QVariant(), QSqlDatabase *pDatabase=NULL)=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Search if current instance already exists into database.  <a href="#ae47c7b90be8de1b9782efe154347c7a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_qx_invalid_value_x.html">qx::QxInvalidValueX</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#aff7650c2b97324a9cedd6ec5f6d8d7a3">qxValidate</a> (const QStringList &amp;groups=QStringList())=0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if current instance is valid or not.  <a href="#aff7650c2b97324a9cedd6ec5f6d8d7a3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a9e06a9fa15db0989e8771110b6e8492a">qxNewPersistableCollection</a> () const =0</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new collection smart-pointer to fetch a list of items of current class type.  <a href="#a9e06a9fa15db0989e8771110b6e8492a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#aa06d62d73514d43c8ba7ea35c6fa56a8">qxNewPersistableCollection</a> () const =0</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new collection smart-pointer to fetch a list of items of current class type.  <a href="#aa06d62d73514d43c8ba7ea35c6fa56a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classqx_1_1_ix_class.html">qx::IxClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#abef7c3a8c5c974e416266accfcee3994">qxClass</a> () const =0</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to introspection engine (or reflection engine) of QxOrm library.  <a href="#abef7c3a8c5c974e416266accfcee3994"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a977f3c4b35958a923e1651b651aa07ef">toJson</a> (const QString &amp;format=QString()) const =0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a25ca2c9b4575e7599877f3b0477e25fc">fromJson</a> (const QString &amp;json, const QString &amp;format=QString())=0</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#af1952e55bfa996e5855e84799f575dd5">qxFetchAll</a> (const QString &amp;className, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a3794758637e6bdea9da6e02afb937888">qxFetchByQuery</a> (const QString &amp;className, const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#ab329236df42c737f5929a44c0d559d6e">qxExecuteQuery</a> (const QString &amp;className, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, QSqlDatabase *pDatabase=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a4b55af7d3f7376892bdcab3471636c22">qxFetchAll</a> (const QString &amp;className, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#a57872c467f8aa22f574fd9e118ff9b50">qxFetchByQuery</a> (const QString &amp;className, const <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classqx_1_1_ix_persistable.html#ad4a84164d81f6b8cbb0d481ff20b5622">qxExecuteQuery</a> (const QString &amp;className, <a class="el" href="classqx_1_1_qx_sql_query.html">qx::QxSqlQuery</a> &amp;query, QSqlDatabase *pDatabase=NULL)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> : common interface (abstract class) for persistents classes using <a class="el" href="_ix_persistable_8h.html#a311d8fc0e6c4fc1c42e43a54f2dc44da">QX_PERSISTABLE_HPP()</a> and <a class="el" href="_ix_persistable_8h.html#a8c17d818d8f1dbf25636a9d0ed2f96bd">QX_PERSISTABLE_CPP()</a> macros </p>
@@ -170,12 +186,12 @@ Static Public Member Functions</h2></td></tr>
  <b>1-</b> inherit your persistent class from <em><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a></em> ; <br/>
  <b>2-</b> into your class definition (<em>myClass.h</em> for example), add <em><a class="el" href="_ix_persistable_8h.html#a311d8fc0e6c4fc1c42e43a54f2dc44da">QX_PERSISTABLE_HPP(myClass)</a></em> macro ; <br/>
  <b>3-</b> into your class implementation (<em>myClass.cpp</em> for example), add <em><a class="el" href="_ix_persistable_8h.html#a8c17d818d8f1dbf25636a9d0ed2f96bd">QX_PERSISTABLE_CPP(myClass)</a></em> macro.</p>
-<p><b>Note :</b> for a list of objects (<em><a class="el" href="classqx_1_1_ix_persistable.html#a740c2181f4c42ab633a9fd36cc181a25" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchAll()</a></em> method or <em><a class="el" href="classqx_1_1_ix_persistable.html#a73f21e52a5c2285feae6d496e6e789c7" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchByQuery()</a></em> method), use <em><a class="el" href="classqx_1_1_qx_collection.html" title="qx::QxCollection&lt;Key, Value&gt; : QxOrm container (keep insertion order + quick access by index + quick ...">qx::QxCollection</a>&lt;type_primary_key, std::shared_ptr&lt;my_type&gt;&gt;</em> type. Or just use <em><a class="el" href="classqx_1_1_ix_persistable_collection.html#a1d18f71fc2f7ef6587b246033e3322b5">qx::IxPersistableCollection&lt;T&gt;::type</a></em> to retrieve your persistent collection type. A convenient way to fetch a list of objects is to use following static methods <em><a class="el" href="classqx_1_1_ix_persistable.html#a740c2181f4c42ab633a9fd36cc181a25" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchAll()</a></em> and <em><a class="el" href="classqx_1_1_ix_persistable.html#a73f21e52a5c2285feae6d496e6e789c7" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchByQuery()</a></em> : </p>
-<div class="fragment"><pre class="fragment"><a class="code" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> lst = <a class="code" href="classqx_1_1_ix_persistable.html#a740c2181f4c42ab633a9fd36cc181a25" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qx::IxPersistable::qxFetchAll</a>(<span class="stringliteral">&quot;myClass&quot;</span>);
+<p><b>Note :</b> for a list of objects (<em><a class="el" href="classqx_1_1_ix_persistable.html#a964bd038bc7aaad026021ceb76566be5" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchAll()</a></em> method or <em><a class="el" href="classqx_1_1_ix_persistable.html#adeb87dd24ff63649a87f2b26694c6cff" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchByQuery()</a></em> method), use <em><a class="el" href="classqx_1_1_qx_collection.html" title="qx::QxCollection&lt;Key, Value&gt; : QxOrm container (keep insertion order + quick access by index + quick ...">qx::QxCollection</a>&lt;type_primary_key, std::shared_ptr&lt;my_type&gt;&gt;</em> type. Or just use <em><a class="el" href="classqx_1_1_qx_persistable_collection_helper.html#a958dfa24feb5b41589b4d0b0208805dc">qx::QxPersistableCollectionHelper&lt;T&gt;::type</a></em> to retrieve your persistent collection type. A convenient way to fetch a list of objects is to use following static methods <em><a class="el" href="classqx_1_1_ix_persistable.html#a964bd038bc7aaad026021ceb76566be5" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchAll()</a></em> and <em><a class="el" href="classqx_1_1_ix_persistable.html#adeb87dd24ff63649a87f2b26694c6cff" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qxFetchByQuery()</a></em> : </p>
+<div class="fragment"><pre class="fragment">std::shared_ptr&lt;qx::IxPersistableCollection&gt; lst = <a class="code" href="classqx_1_1_ix_persistable.html#a964bd038bc7aaad026021ceb76566be5" title="Fetch a list of objects (retrieve all elements and properties associated) of current type (container ...">qx::IxPersistable::qxFetchAll</a>(<span class="stringliteral">&quot;myClass&quot;</span>);
 <span class="keywordflow">for</span> (<span class="keywordtype">long</span> l = 0; l &lt; lst-&gt;_count(); l++)
 { <a class="code" href="namespaceqx.html#a729bd4751253e67005acad39c0788ffc">qx::IxPersistable_ptr</a> ptr = lst-&gt;_get&lt;<a class="code" href="namespaceqx.html#a729bd4751253e67005acad39c0788ffc">qx::IxPersistable_ptr</a>&gt;(l); etc... }
 </pre></div> 
-<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00078">78</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
+<p>Definition at line <a class="el" href="_ix_persistable_8h_source.html#l00080">80</a> of file <a class="el" href="_ix_persistable_8h_source.html">IxPersistable.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3ddce6d10d4e6c853026d706c1032b12"></a><!-- doxytag: member="qx::IxPersistable::IxPersistable" ref="a3ddce6d10d4e6c853026d706c1032b12" args="()" -->
 <div class="memitem">
@@ -210,6 +226,35 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a25ca2c9b4575e7599877f3b0477e25fc"></a><!-- doxytag: member="qx::IxPersistable::fromJson" ref="a25ca2c9b4575e7599877f3b0477e25fc" args="(const QString &amp;json, const QString &amp;format=QString())=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_qx_bool_8h.html#a40069a4245b458585997dadea3a86b33">qx_bool</a> qx::IxPersistable::fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>format</em> = <code>QString()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a1eaac0f552d63da641ef8d276a03a21d">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="abef7c3a8c5c974e416266accfcee3994"></a><!-- doxytag: member="qx::IxPersistable::qxClass" ref="abef7c3a8c5c974e416266accfcee3994" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
@@ -226,6 +271,8 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Access to introspection engine (or reflection engine) of QxOrm library. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Return a <a class="el" href="classqx_1_1_ix_class.html" title="qx::IxClass : common interface for all classes registered into QxOrm context">qx::IxClass</a> pointer to access to introspection engine (or reflection engine) of QxOrm library, and get some informations about current class (properties, methods, etc...) </dd></dl>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a164a070576548f1436619f0c166acbb9">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -265,6 +312,8 @@ Static Public Member Functions</h2></td></tr>
 <p><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> * p = ...;<br/>
  p-&gt;qxCount(...) execute following SQL query :<br/>
  <em>SELECT COUNT(*) FROM my_table</em> + <em>WHERE my_query...</em> </p>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#ade6c6acd10f87cb731283719307c36fc">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -312,6 +361,8 @@ Static Public Member Functions</h2></td></tr>
  p-&gt;qxCount(...) execute following SQL query :<br/>
  <em>SELECT COUNT(*) FROM my_table</em> + <em>WHERE my_query...</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a4a1032831d343343fa463e4f3082b1d4">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad7db92b5dcc9b7ea10743520bd7fa6aa"></a><!-- doxytag: member="qx::IxPersistable::qxDeleteAll" ref="ad7db92b5dcc9b7ea10743520bd7fa6aa" args="(QSqlDatabase *pDatabase=NULL)=0" -->
@@ -343,6 +394,8 @@ Static Public Member Functions</h2></td></tr>
  <br/>
  If a soft delete behavior is defined for current class, p-&gt;qxDeleteAll(...) execute following SQL query :<br/>
  <em>UPDATE my_table SET is_deleted='1'</em> </p>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a0c06789966ae6f149ae7ff3b72b07c47">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -387,6 +440,8 @@ Static Public Member Functions</h2></td></tr>
  If a soft delete behavior is defined for current class, p-&gt;qxDeleteById(...) execute following SQL query :<br/>
  <em>UPDATE my_table SET is_deleted='1' WHERE my_id = ?</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a7f20de36f0dc08aa372517eea7da0a3b">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2208812267cec1882ffc10d5b1023f72"></a><!-- doxytag: member="qx::IxPersistable::qxDeleteByQuery" ref="a2208812267cec1882ffc10d5b1023f72" args="(const qx::QxSqlQuery &amp;query, QSqlDatabase *pDatabase=NULL)=0" -->
@@ -430,6 +485,8 @@ Static Public Member Functions</h2></td></tr>
  If a soft delete behavior is defined for current class, p-&gt;qxDeleteByQuery(...) execute following SQL query :<br/>
  <em>UPDATE my_table SET is_deleted='1'</em> + <em>WHERE my_query...</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a70a3af0e669161692f314c0c425a1fa6">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a10e638848ee413aba09d456b4716ccff"></a><!-- doxytag: member="qx::IxPersistable::qxDestroyAll" ref="a10e638848ee413aba09d456b4716ccff" args="(QSqlDatabase *pDatabase=NULL)=0" -->
@@ -459,6 +516,8 @@ Static Public Member Functions</h2></td></tr>
  p-&gt;qxDestroyAll(...) execute following SQL query :<br/>
  <em>DELETE FROM my_table</em><br/>
  </p>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a39dab0e6931d5864af309539e407c5dd">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -501,6 +560,8 @@ Static Public Member Functions</h2></td></tr>
  <em>DELETE FROM my_table WHERE my_id = ?</em><br/>
  </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a04ab979a936ca833182fdd369cff37c9">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a42e9465e9c339bde3a196120af16bdbc"></a><!-- doxytag: member="qx::IxPersistable::qxDestroyByQuery" ref="a42e9465e9c339bde3a196120af16bdbc" args="(const qx::QxSqlQuery &amp;query, QSqlDatabase *pDatabase=NULL)=0" -->
@@ -542,6 +603,8 @@ Static Public Member Functions</h2></td></tr>
  <em>DELETE FROM my_table</em> + <em>WHERE my_query...</em><br/>
  </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a791e12b5016dd9f3e01346d92c8269e7">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a37a020620fbdf407b0fd2e5b391ab53a"></a><!-- doxytag: member="qx::IxPersistable::qxExecuteQuery" ref="a37a020620fbdf407b0fd2e5b391ab53a" args="(qx::QxSqlQuery &amp;query, QSqlDatabase *pDatabase=NULL)=0" -->
@@ -579,9 +642,11 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Empty QSqlError object (from Qt library) if no error occurred; otherwise QSqlError contains a description of database error executing SQL query </dd></dl>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a862a76f0b52612f08a58eec0961bace0">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a8de88eb29cf505f843f35b4db0636fba"></a><!-- doxytag: member="qx::IxPersistable::qxExecuteQuery" ref="a8de88eb29cf505f843f35b4db0636fba" args="(qx::QxSqlQuery &amp;query, qx::IxCollection &amp;list, QSqlDatabase *pDatabase=NULL)=0" -->
+<a class="anchor" id="a33bcbfae2c4e462b9da951548a41e298"></a><!-- doxytag: member="qx::IxPersistable::qxExecuteQuery" ref="a33bcbfae2c4e462b9da951548a41e298" args="(qx::QxSqlQuery &amp;query, qx::IxPersistableCollection *list=NULL, QSqlDatabase *pDatabase=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -594,8 +659,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
+          <td class="paramtype"><a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *&#160;</td>
+          <td class="paramname"><em>list</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -623,14 +688,16 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Empty QSqlError object (from Qt library) if no error occurred; otherwise QSqlError contains a description of database error executing SQL query </dd></dl>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a746fcdb7c8edc34aede69552b0556381">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="ab329236df42c737f5929a44c0d559d6e"></a><!-- doxytag: member="qx::IxPersistable::qxExecuteQuery" ref="ab329236df42c737f5929a44c0d559d6e" args="(const QString &amp;className, qx::QxSqlQuery &amp;query, QSqlDatabase *pDatabase=NULL)" -->
+<a class="anchor" id="ad4a84164d81f6b8cbb0d481ff20b5622"></a><!-- doxytag: member="qx::IxPersistable::qxExecuteQuery" ref="ad4a84164d81f6b8cbb0d481ff20b5622" args="(const QString &amp;className, qx::QxSqlQuery &amp;query, QSqlDatabase *pDatabase=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> qx::IxPersistable::qxExecuteQuery </td>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&gt; qx::IxPersistable::qxExecuteQuery </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
@@ -696,17 +763,19 @@ Static Public Member Functions</h2></td></tr>
  p-&gt;qxExist(...) execute following SQL query :<br/>
  <em>SELECT * FROM my_table WHERE my_id = ?</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a563eb43d293d1621d5335462e703ee55">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a740c2181f4c42ab633a9fd36cc181a25"></a><!-- doxytag: member="qx::IxPersistable::qxFetchAll" ref="a740c2181f4c42ab633a9fd36cc181a25" args="(qx::IxCollection &amp;list, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0" -->
+<a class="anchor" id="a964bd038bc7aaad026021ceb76566be5"></a><!-- doxytag: member="qx::IxPersistable::qxFetchAll" ref="a964bd038bc7aaad026021ceb76566be5" args="(qx::IxPersistableCollection *list=NULL, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual QSqlError qx::IxPersistable::qxFetchAll </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
+          <td class="paramtype"><a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *&#160;</td>
+          <td class="paramname"><em>list</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -747,18 +816,20 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Empty QSqlError object (from Qt library) if no error occurred; otherwise QSqlError contains a description of database error executing SQL query</dd></dl>
 <p><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> * p = ...;<br/>
- <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> lst = p-&gt;<a class="el" href="classqx_1_1_ix_persistable.html#a9e06a9fa15db0989e8771110b6e8492a" title="Create a new collection smart-pointer to fetch a list of items of current class type.">qxNewPersistableCollection()</a>;<br/>
+ std::shared_ptr&lt;qx::IxPersistableCollection&gt; lst = p-&gt;<a class="el" href="classqx_1_1_ix_persistable.html#aa06d62d73514d43c8ba7ea35c6fa56a8" title="Create a new collection smart-pointer to fetch a list of items of current class type.">qxNewPersistableCollection()</a>;<br/>
  p-&gt;qxFetchAll(&amp; lst, ...) execute following SQL query :<br/>
  <em>SELECT * FROM my_table</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#aa592dffa8b7e1850f1b3b32642cbf3ca">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="af1952e55bfa996e5855e84799f575dd5"></a><!-- doxytag: member="qx::IxPersistable::qxFetchAll" ref="af1952e55bfa996e5855e84799f575dd5" args="(const QString &amp;className, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)" -->
+<a class="anchor" id="a4b55af7d3f7376892bdcab3471636c22"></a><!-- doxytag: member="qx::IxPersistable::qxFetchAll" ref="a4b55af7d3f7376892bdcab3471636c22" args="(const QString &amp;className, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> qx::IxPersistable::qxFetchAll </td>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&gt; qx::IxPersistable::qxFetchAll </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
@@ -844,9 +915,11 @@ Static Public Member Functions</h2></td></tr>
  p-&gt;qxFetchById(...) execute following SQL query :<br/>
  <em>SELECT * FROM my_table WHERE my_id = ?</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a8e6c70296217b1f6964fae1ce9488d12">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a73f21e52a5c2285feae6d496e6e789c7"></a><!-- doxytag: member="qx::IxPersistable::qxFetchByQuery" ref="a73f21e52a5c2285feae6d496e6e789c7" args="(const qx::QxSqlQuery &amp;query, qx::IxCollection &amp;list, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0" -->
+<a class="anchor" id="adeb87dd24ff63649a87f2b26694c6cff"></a><!-- doxytag: member="qx::IxPersistable::qxFetchByQuery" ref="adeb87dd24ff63649a87f2b26694c6cff" args="(const qx::QxSqlQuery &amp;query, qx::IxPersistableCollection *list=NULL, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -859,8 +932,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classqx_1_1_ix_collection.html">qx::IxCollection</a> &amp;&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
+          <td class="paramtype"><a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a> *&#160;</td>
+          <td class="paramname"><em>list</em> = <code>NULL</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -902,18 +975,20 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Empty QSqlError object (from Qt library) if no error occurred; otherwise QSqlError contains a description of database error executing SQL query</dd></dl>
 <p><a class="el" href="classqx_1_1_ix_persistable.html" title="qx::IxPersistable : common interface (abstract class) for persistents classes using QX_PERSISTABLE_HP...">qx::IxPersistable</a> * p = ...;<br/>
- <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> lst = p-&gt;<a class="el" href="classqx_1_1_ix_persistable.html#a9e06a9fa15db0989e8771110b6e8492a" title="Create a new collection smart-pointer to fetch a list of items of current class type.">qxNewPersistableCollection()</a>;<br/>
+ std::shared_ptr&lt;qx::IxPersistableCollection&gt; lst = p-&gt;<a class="el" href="classqx_1_1_ix_persistable.html#aa06d62d73514d43c8ba7ea35c6fa56a8" title="Create a new collection smart-pointer to fetch a list of items of current class type.">qxNewPersistableCollection()</a>;<br/>
  p-&gt;qxFetchByQuery(my_query, &amp; lst, ...) execute following SQL query :<br/>
  <em>SELECT * FROM my_table</em> + <em>WHERE my_query...</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#aed743bf202d50efa9c77c8b9a9863c66">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a3794758637e6bdea9da6e02afb937888"></a><!-- doxytag: member="qx::IxPersistable::qxFetchByQuery" ref="a3794758637e6bdea9da6e02afb937888" args="(const QString &amp;className, const qx::QxSqlQuery &amp;query, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)" -->
+<a class="anchor" id="a57872c467f8aa22f574fd9e118ff9b50"></a><!-- doxytag: member="qx::IxPersistable::qxFetchByQuery" ref="a57872c467f8aa22f574fd9e118ff9b50" args="(const QString &amp;className, const qx::QxSqlQuery &amp;query, const QStringList &amp;columns=QStringList(), const QStringList &amp;relation=QStringList(), QSqlDatabase *pDatabase=NULL)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> qx::IxPersistable::qxFetchByQuery </td>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&gt; qx::IxPersistable::qxFetchByQuery </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>className</em>, </td>
@@ -991,14 +1066,16 @@ Static Public Member Functions</h2></td></tr>
  p-&gt;qxInsert(...) execute following SQL query :<br/>
  <em>INSERT INTO my_table (my_column_1, my_column_2, etc.) VALUES (?, ?, etc.)</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a50eed33a0010835b46279f50b8e56f9d">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a9e06a9fa15db0989e8771110b6e8492a"></a><!-- doxytag: member="qx::IxPersistable::qxNewPersistableCollection" ref="a9e06a9fa15db0989e8771110b6e8492a" args="() const =0" -->
+<a class="anchor" id="aa06d62d73514d43c8ba7ea35c6fa56a8"></a><!-- doxytag: member="qx::IxPersistable::qxNewPersistableCollection" ref="aa06d62d73514d43c8ba7ea35c6fa56a8" args="() const =0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespaceqx.html#a4bed6e1a367e5a69479d8b76e9e383a4">qx::IxCollection_ptr</a> qx::IxPersistable::qxNewPersistableCollection </td>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classqx_1_1_ix_persistable_collection.html">qx::IxPersistableCollection</a>&gt; qx::IxPersistable::qxNewPersistableCollection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const<code> [pure virtual]</code></td>
@@ -1009,6 +1086,8 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Create a new collection smart-pointer to fetch a list of items of current class type. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Return a new collection smart-pointer to fetch a list of items of current class type </dd></dl>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a81527f03739a5bc04309e322ce5ca839">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1051,6 +1130,8 @@ Static Public Member Functions</h2></td></tr>
  <em>INSERT INTO my_table (my_column_1, my_column_2, etc.) VALUES (?, ?, etc.)</em> <br/>
 or (if already exist into database) :<br/>
  <em>UPDATE my_table SET my_column_1 = ?, my_column_2 = ?, etc.</em> </p>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#abd3a25ae24b44b408bb7ec454aca6c09">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1106,6 +1187,8 @@ or (if already exist into database) :<br/>
  p-&gt;qxUpdate(...) execute following SQL query :<br/>
  <em>UPDATE my_table SET my_column_1 = ?, my_column_2 = ?, etc.</em> + <em>WHERE my_query...</em> </p>
 
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#a643a21126ec860b9f2d0e85b3a480fc7">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aff7650c2b97324a9cedd6ec5f6d8d7a3"></a><!-- doxytag: member="qx::IxPersistable::qxValidate" ref="aff7650c2b97324a9cedd6ec5f6d8d7a3" args="(const QStringList &amp;groups=QStringList())=0" -->
@@ -1131,7 +1214,28 @@ or (if already exist into database) :<br/>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Return list of invalid values (if empty, current instance is valid)</dd></dl>
-<p>For more details about <b><a class="el" href="classqx_1_1_qx_validator.html" title="qx::QxValidator&lt;Owner&gt; : concrete class for a custom validator">QxValidator</a></b> module : <a href="http://www.qxorm.com/qxorm_en/faq.html#faq_250">http://www.qxorm.com/qxorm_en/faq.html#faq_250</a> </p>
+<p>For more details about <b><a class="el" href="classqx_1_1_qx_validator.html" title="qx::QxValidator&lt;Owner&gt; : concrete class for a custom validator">QxValidator</a></b> module : <a href="https://www.qxorm.com/qxorm_en/faq.html#faq_250">https://www.qxorm.com/qxorm_en/faq.html#faq_250</a> </p>
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#ac2fe37963a80b911f49f72b9249a2f65">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a977f3c4b35958a923e1651b651aa07ef"></a><!-- doxytag: member="qx::IxPersistable::toJson" ref="a977f3c4b35958a923e1651b651aa07ef" args="(const QString &amp;format=QString()) const =0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QString qx::IxPersistable::toJson </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>format</em> = <code>QString()</code></td><td>)</td>
+          <td> const<code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Implemented in <a class="el" href="classqx_1_1_qx_persistable_collection.html#ab6b390ae58062fef04dba2ddab28e72d">qx::QxPersistableCollection&lt; Key, Value, T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1263,7 @@ or (if already exist into database) :<br/>
 </div>
 
 
-    <li class="footer">Generated on Sat Jun 3 2017 15:17:22 for QxOrm by
+    <li class="footer">Generated on Tue Sep 4 2018 11:41:26 for QxOrm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>
